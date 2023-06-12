@@ -1,0 +1,51 @@
+﻿[2023-06-06 09:14:38.539 GMT 121	Information	100313	Orleans.OutsideRuntimeClient]	---------- Initializing OutsideRuntimeClient on wens-MacBook-Pro.local at 192.168.0.123 Client Id = *cli/5bb68392 ----------	
+[2023-06-06 09:14:38.539 GMT 121	Information	100314	Orleans.OutsideRuntimeClient]	---------- Starting OutsideRuntimeClient with runtime Version='3.6.5. Commit Hash: 54382a15b653f80784520c9055614cbf429a1b16+54382a15b653f80784520c9055614cbf429a1b16 (Release).' in AppDomain=<AppDomain.Id=1, AppDomain.FriendlyName=testhost>	
+[2023-06-06 09:14:38.543 GMT 140	Information	101309	Orleans.Messaging.GatewayManager]	Found 2 gateways: [gwy.tcp://127.0.0.1:42410/0, gwy.tcp://127.0.0.1:42411/0]	
+[2023-06-06 09:14:38.543 GMT 160	Information	0	Orleans.Networking]	Establishing connection to endpoint S127.0.0.1:42410:0	
+[2023-06-06 09:14:38.544 GMT 96	Information	0	Orleans.Networking]	Connected to endpoint S127.0.0.1:42410:0	
+[2023-06-06 09:14:38.544 GMT 96	Information	0	Orleans.Networking]	Connection [Local: 127.0.0.1:56715, Remote: 127.0.0.1:42410, ConnectionId: 0HMR6DJBO14D3] established with S127.0.0.1:42410:0	
+[2023-06-06 09:14:38.545 GMT 160	Information	0	Orleans.Networking]	Establishing connection to endpoint S127.0.0.1:42411:0	
+[2023-06-06 09:14:38.545 GMT 125	Information	0	Orleans.Networking]	Connected to endpoint S127.0.0.1:42411:0	
+[2023-06-06 09:14:38.545 GMT 125	Information	0	Orleans.Networking]	Connection [Local: 127.0.0.1:56716, Remote: 127.0.0.1:42411, ConnectionId: 0HMR6DJBO14D4] established with S127.0.0.1:42411:0	
+[2023-06-06 09:14:38.546 GMT 96	Information	100929	Orleans.OutsideRuntimeClient]	---------- Started OutsideRuntimeClient with Global Client ID: C192.168.0.123:0:-423738878*cli/5bb68392@8cda66a2, client GUID ID: *cli/5bb68392	
+[2023-06-06 09:14:38.546 GMT 96	Information	0	Orleans.ClientOptionsLogger]	Configuration Orleans.Configuration.ClientMessagingOptions: 
+ClientSenderBuckets: 8192
+PreferredFamily: InterNetwork
+NetworkInterfaceName: 
+LocalAddress: 
+ResponseTimeout: 00:00:30
+ResponseTimeoutWithDebugger: 00:30:00
+DropExpiredMessages: True
+BufferPoolBufferSize: 4096
+BufferPoolMaxSize: 10000
+BufferPoolPreallocationSize: 250
+PropagateActivityId: False
+LargeMessageWarningThreshold: 85000
+MaxMessageHeaderSize: 10485760
+MaxMessageBodySize: 104857600
+	
+[2023-06-06 09:14:38.546 GMT 96	Information	0	Orleans.ClientOptionsLogger]	Configuration Orleans.Configuration.ClusterOptions: 
+ClusterId: testcluster-2023-06-06t09-14-38-95
+ServiceId: b1e7409bdbaa43a38bc8fd96b5e19d82
+	
+[2023-06-06 09:14:38.546 GMT 96	Information	0	Orleans.ClientOptionsLogger]	Configuration Orleans.Configuration.ConnectionOptions: 
+ProtocolVersion: Version1
+ConnectionsPerEndpoint: 1
+ConnectionRetryDelay: 00:00:01
+OpenConnectionTimeout: 00:00:05
+	
+[2023-06-06 09:14:38.546 GMT 96	Information	0	Orleans.ClientOptionsLogger]	Configuration Orleans.Configuration.SimpleMessageStreamProviderOptions-AElfIndexer: 
+FireAndForgetDelivery: False
+OptimizeForImmutableData: True
+PubSubType: ExplicitGrainBasedAndImplicit
+	
+[2023-06-06 09:14:38.546 GMT 96	Information	0	Orleans.ClientOptionsLogger]	Configuration Orleans.Configuration.StaticGatewayListProviderOptions: 
+Gateways.0: gwy.tcp://127.0.0.1:42410/0
+Gateways.1: gwy.tcp://127.0.0.1:42411/0
+	
+[2023-06-06 09:14:38.546 GMT 96	Information	0	Orleans.ClientOptionsLogger]	Configuration Orleans.Configuration.StatisticsOptions: 
+PerfCountersWriteInterval: 00:00:30
+LogWriteInterval: 00:05:00
+CollectionLevel: Info
+	
+[2023-06-06 09:15:38.543 GMT 166	Information	101309	Orleans.Messaging.GatewayManager]	Refreshed the live gateway list. Found 2 gateways from gateway list provider: [S127.0.0.1:42410:0, S127.0.0.1:42411:0]. Picked only known live out of them. Now has 2 live gateways: [S127.0.0.1:42410:0, S127.0.0.1:42411:0]. Previous refresh time was = 06/06/2023 09:14:38	

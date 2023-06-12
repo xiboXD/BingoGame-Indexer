@@ -1,0 +1,354 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.CA.Tests/BingoGame.Indexer.CA.Tests.csproj": {}
+  },
+  "projects": {
+    "/Users/xibo/practice/bingo-indexer/src/BingoGame.Indexer.CA/BingoGame.Indexer.CA.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/xibo/practice/bingo-indexer/src/BingoGame.Indexer.CA/BingoGame.Indexer.CA.csproj",
+        "projectName": "BingoGame.Indexer.CA",
+        "projectPath": "/Users/xibo/practice/bingo-indexer/src/BingoGame.Indexer.CA/BingoGame.Indexer.CA.csproj",
+        "packagesPath": "/Users/xibo/.nuget/packages/",
+        "outputPath": "/Users/xibo/practice/bingo-indexer/src/BingoGame.Indexer.CA/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/xibo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AElfIndexer.Client": {
+              "target": "Package",
+              "version": "[1.0.0-24, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.CA.Tests/BingoGame.Indexer.CA.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.CA.Tests/BingoGame.Indexer.CA.Tests.csproj",
+        "projectName": "BingoGame.Indexer.CA.Tests",
+        "projectPath": "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.CA.Tests/BingoGame.Indexer.CA.Tests.csproj",
+        "packagesPath": "/Users/xibo/.nuget/packages/",
+        "outputPath": "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.CA.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/xibo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/xibo/practice/bingo-indexer/src/BingoGame.Indexer.CA/BingoGame.Indexer.CA.csproj": {
+                "projectPath": "/Users/xibo/practice/bingo-indexer/src/BingoGame.Indexer.CA/BingoGame.Indexer.CA.csproj"
+              },
+              "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.Orleans.TestBase/BingoGame.Indexer.Orleans.TestBase.csproj": {
+                "projectPath": "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.Orleans.TestBase/BingoGame.Indexer.Orleans.TestBase.csproj"
+              },
+              "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.TestBase/BingoGame.Indexer.TestBase.csproj": {
+                "projectPath": "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.TestBase/BingoGame.Indexer.TestBase.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.5.0, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.Orleans.TestBase/BingoGame.Indexer.Orleans.TestBase.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.Orleans.TestBase/BingoGame.Indexer.Orleans.TestBase.csproj",
+        "projectName": "BingoGame.Indexer.Orleans.TestBase",
+        "projectPath": "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.Orleans.TestBase/BingoGame.Indexer.Orleans.TestBase.csproj",
+        "packagesPath": "/Users/xibo/.nuget/packages/",
+        "outputPath": "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.Orleans.TestBase/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/xibo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.TestBase/BingoGame.Indexer.TestBase.csproj": {
+                "projectPath": "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.TestBase/BingoGame.Indexer.TestBase.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AElf.Orleans.EventSourcing.Snapshot": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.Orleans.Client": {
+              "target": "Package",
+              "version": "[3.6.5, )"
+            },
+            "Microsoft.Orleans.CodeGenerator.MSBuild": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.6.5, )"
+            },
+            "Microsoft.Orleans.Core": {
+              "target": "Package",
+              "version": "[3.6.5, )"
+            },
+            "Microsoft.Orleans.Core.Abstractions": {
+              "target": "Package",
+              "version": "[3.6.5, )"
+            },
+            "Microsoft.Orleans.Server": {
+              "target": "Package",
+              "version": "[3.6.5, )"
+            },
+            "Microsoft.Orleans.TestingHost": {
+              "target": "Package",
+              "version": "[3.6.5, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
+            "xunit.runner.console": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.TestBase/BingoGame.Indexer.TestBase.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.TestBase/BingoGame.Indexer.TestBase.csproj",
+        "projectName": "BingoGame.Indexer.TestBase",
+        "projectPath": "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.TestBase/BingoGame.Indexer.TestBase.csproj",
+        "packagesPath": "/Users/xibo/.nuget/packages/",
+        "outputPath": "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.TestBase/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/xibo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.5.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.4, )"
+            },
+            "NSubstitute": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Shouldly": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Volo.Abp.Authorization": {
+              "target": "Package",
+              "version": "[7.0.0-rc.5, )"
+            },
+            "Volo.Abp.Autofac": {
+              "target": "Package",
+              "version": "[7.0.0-rc.5, )"
+            },
+            "Volo.Abp.BackgroundJobs.Domain": {
+              "target": "Package",
+              "version": "[7.0.0-rc.5, )"
+            },
+            "Volo.Abp.TestBase": {
+              "target": "Package",
+              "version": "[7.0.0-rc.5, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
+            "xunit.extensibility.execution": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
+            "xunit.runner.console": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+﻿[2023-05-31 08:47:48.797 GMT 16	Information	100313	Orleans.OutsideRuntimeClient]	---------- Initializing OutsideRuntimeClient on wens-MacBook-Pro.local at 10.0.0.158 Client Id = *cli/07caf4a1 ----------	
+[2023-05-31 08:47:48.798 GMT 16	Information	100314	Orleans.OutsideRuntimeClient]	---------- Starting OutsideRuntimeClient with runtime Version='3.6.5. Commit Hash: 54382a15b653f80784520c9055614cbf429a1b16+54382a15b653f80784520c9055614cbf429a1b16 (Release).' in AppDomain=<AppDomain.Id=1, AppDomain.FriendlyName=testhost>	
+[2023-05-31 08:47:48.807 GMT 21	Information	101309	Orleans.Messaging.GatewayManager]	Found 2 gateways: [gwy.tcp://127.0.0.1:43815/0, gwy.tcp://127.0.0.1:43816/0]	
+[2023-05-31 08:47:48.811 GMT 19	Information	0	Orleans.Networking]	Establishing connection to endpoint S127.0.0.1:43816:0	
+[2023-05-31 08:47:48.813 GMT 17	Information	0	Orleans.Networking]	Connected to endpoint S127.0.0.1:43816:0	
+[2023-05-31 08:47:48.813 GMT 17	Information	0	Orleans.Networking]	Connection [Local: 127.0.0.1:64494, Remote: 127.0.0.1:43816, ConnectionId: 0HMR1MER28E4P] established with S127.0.0.1:43816:0	
+[2023-05-31 08:47:48.844 GMT 5	Information	0	Orleans.Networking]	Establishing connection to endpoint S127.0.0.1:43815:0	
+[2023-05-31 08:47:48.846 GMT 10	Information	0	Orleans.Networking]	Connected to endpoint S127.0.0.1:43815:0	
+[2023-05-31 08:47:48.846 GMT 10	Information	0	Orleans.Networking]	Connection [Local: 127.0.0.1:64495, Remote: 127.0.0.1:43815, ConnectionId: 0HMR1MER28E4Q] established with S127.0.0.1:43815:0	
+[2023-05-31 08:47:48.924 GMT 25	Information	100929	Orleans.OutsideRuntimeClient]	---------- Started OutsideRuntimeClient with Global Client ID: C10.0.0.158:0:-423218868*cli/07caf4a1@85b907b9, client GUID ID: *cli/07caf4a1	
+[2023-05-31 08:47:48.925 GMT 25	Information	0	Orleans.ClientOptionsLogger]	Configuration Orleans.Configuration.ClientMessagingOptions: 
+ClientSenderBuckets: 8192
+PreferredFamily: InterNetwork
+NetworkInterfaceName: 
+LocalAddress: 
+ResponseTimeout: 00:30:00
+ResponseTimeoutWithDebugger: 00:30:00
+DropExpiredMessages: True
+BufferPoolBufferSize: 4096
+BufferPoolMaxSize: 10000
+BufferPoolPreallocationSize: 250
+PropagateActivityId: False
+LargeMessageWarningThreshold: 85000
+MaxMessageHeaderSize: 10485760
+MaxMessageBodySize: 104857600
+	
+[2023-05-31 08:47:48.925 GMT 25	Information	0	Orleans.ClientOptionsLogger]	Configuration Orleans.Configuration.ClusterOptions: 
+ClusterId: testcluster-2023-05-31t08-47-48-777
+ServiceId: 2a50a57fdf6045c787147375457fbbf9
+	
+[2023-05-31 08:47:48.925 GMT 25	Information	0	Orleans.ClientOptionsLogger]	Configuration Orleans.Configuration.ConnectionOptions: 
+ProtocolVersion: Version1
+ConnectionsPerEndpoint: 1
+ConnectionRetryDelay: 00:00:01
+OpenConnectionTimeout: 00:00:05
+	
+[2023-05-31 08:47:48.925 GMT 25	Information	0	Orleans.ClientOptionsLogger]	Configuration Orleans.Configuration.SimpleMessageStreamProviderOptions-AElfIndexer: 
+FireAndForgetDelivery: False
+OptimizeForImmutableData: True
+PubSubType: ExplicitGrainBasedAndImplicit
+	
+[2023-05-31 08:47:48.925 GMT 25	Information	0	Orleans.ClientOptionsLogger]	Configuration Orleans.Configuration.StaticGatewayListProviderOptions: 
+Gateways.0: gwy.tcp://127.0.0.1:43815/0
+Gateways.1: gwy.tcp://127.0.0.1:43816/0
+	
+[2023-05-31 08:47:48.925 GMT 25	Information	0	Orleans.ClientOptionsLogger]	Configuration Orleans.Configuration.StatisticsOptions: 
+PerfCountersWriteInterval: 00:00:30
+LogWriteInterval: 00:05:00
+CollectionLevel: Info
+	
+[2023-05-31 08:48:55.780 GMT 24	Information	101309	Orleans.Messaging.GatewayManager]	Refreshed the live gateway list. Found 2 gateways from gateway list provider: [S127.0.0.1:43815:0, S127.0.0.1:43816:0]. Picked only known live out of them. Now has 2 live gateways: [S127.0.0.1:43815:0, S127.0.0.1:43816:0]. Previous refresh time was = 05/31/2023 08:47:48	
+[2023-05-31 08:50:02.061 GMT 17	Information	101309	Orleans.Messaging.GatewayManager]	Refreshed the live gateway list. Found 2 gateways from gateway list provider: [S127.0.0.1:43815:0, S127.0.0.1:43816:0]. Picked only known live out of them. Now has 2 live gateways: [S127.0.0.1:43815:0, S127.0.0.1:43816:0]. Previous refresh time was = 05/31/2023 08:48:55	
+[2023-05-31 08:51:05.129 GMT 17	Information	101309	Orleans.Messaging.GatewayManager]	Refreshed the live gateway list. Found 2 gateways from gateway list provider: [S127.0.0.1:43815:0, S127.0.0.1:43816:0]. Picked only known live out of them. Now has 2 live gateways: [S127.0.0.1:43815:0, S127.0.0.1:43816:0]. Previous refresh time was = 05/31/2023 08:50:02	

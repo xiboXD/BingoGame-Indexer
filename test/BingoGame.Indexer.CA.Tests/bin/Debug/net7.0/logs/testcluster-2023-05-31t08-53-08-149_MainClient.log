@@ -1,0 +1,8 @@
+﻿[2023-05-31 08:53:09.182 GMT 17	Information	100313	Orleans.OutsideRuntimeClient]	---------- Initializing OutsideRuntimeClient on wens-MacBook-Pro.local at 10.0.0.158 Client Id = *cli/322a76a9 ----------	
+[2023-05-31 08:53:09.183 GMT 17	Information	100314	Orleans.OutsideRuntimeClient]	---------- Starting OutsideRuntimeClient with runtime Version='3.6.5. Commit Hash: 54382a15b653f80784520c9055614cbf429a1b16+54382a15b653f80784520c9055614cbf429a1b16 (Release).' in AppDomain=<AppDomain.Id=1, AppDomain.FriendlyName=testhost>	
+[2023-05-31 08:53:09.192 GMT 11	Information	101309	Orleans.Messaging.GatewayManager]	Found 2 gateways: [gwy.tcp://127.0.0.1:43265/0, gwy.tcp://127.0.0.1:43266/0]	
+[2023-05-31 08:53:09.197 GMT 24	Information	0	Orleans.Networking]	Establishing connection to endpoint S127.0.0.1:43265:0	
+[2023-05-31 08:53:09.198 GMT 24	Information	0	Orleans.Networking]	Connected to endpoint S127.0.0.1:43265:0	
+[2023-05-31 08:53:09.198 GMT 24	Information	0	Orleans.Networking]	Connection [Local: 127.0.0.1:64647, Remote: 127.0.0.1:43265, ConnectionId: 0HMR1MHQGPQGN] established with S127.0.0.1:43265:0	
+[2023-05-31 08:53:09.309 GMT 18	Information	0	Orleans.Networking]	Establishing connection to endpoint S127.0.0.1:43266:0	
+[2023-05-31 08:53:09.336 GMT 20	Information	0	Orleans.Networking]	Connected to endpoint S127.0.0.1:43266:0	

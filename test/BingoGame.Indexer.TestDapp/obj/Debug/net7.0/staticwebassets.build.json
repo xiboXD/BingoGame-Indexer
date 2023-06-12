@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "5xVj/lIWzBNQsT7QvnJbYWnmlz6z1eCZHqKc35VIqf4=",
+  "Source": "BingoGame.Indexer.TestDapp",
+  "BasePath": "_content/BingoGame.Indexer.TestDapp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

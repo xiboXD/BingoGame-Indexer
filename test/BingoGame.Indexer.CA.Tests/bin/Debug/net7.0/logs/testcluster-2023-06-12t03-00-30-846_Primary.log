@@ -1,0 +1,696 @@
+﻿[2023-06-12 03:00:30.275 GMT 10	Information	100404	Orleans.Runtime.Silo]	Silo starting with GC settings: ServerGC=False GCLatencyMode=Interactive	
+[2023-06-12 03:00:30.275 GMT 10	Warning	100405	Orleans.Runtime.Silo]	Note: Silo not running with ServerGC turned on - recommend checking app config : <configuration>-<runtime>-<gcServer enabled="true">	
+[2023-06-12 03:00:30.275 GMT 10	Warning	100405	Orleans.Runtime.Silo]	Note: ServerGC only kicks in on multi-core systems (settings enabling ServerGC have no effect on single-core machines).	
+[2023-06-12 03:00:30.275 GMT 10	Information	100403	Orleans.Runtime.Silo]	-------------- Initializing silo on host wens-MacBook-Pro.local MachineName wens-MacBook-Pro at 127.0.0.1:26650, gen 424234830 --------------	
+[2023-06-12 03:00:30.275 GMT 10	Information	100415	Orleans.Runtime.Silo]	Starting silo Primary	
+[2023-06-12 03:00:30.314 GMT 10	Information	0	Orleans.Runtime.ConsistentRing.VirtualBucketsRingProvider]	Starting VirtualBucketsRingProvider on silo S127.0.0.1:26650:424234830/x96ADD030.	
+[2023-06-12 03:00:30.320 GMT 10	Information	103003	Orleans.Runtime.ConsistentRing.VirtualBucketsRingProvider]	Added Server S127.0.0.1:26650:424234830/x96ADD030. Current view: [S127.0.0.1:26650:424234830 -> <MultiRange: Size=x100000000, %Ring=100.000%>]	
+[2023-06-12 03:00:30.320 GMT 10	Information	103005	Orleans.Runtime.ConsistentRing.VirtualBucketsRingProvider]	-NotifyLocalRangeSubscribers about old <(0 0], Size=x100000000, %Ring=100.000%> new <MultiRange: Size=x100000000, %Ring=100.000%> increased? True	
+[2023-06-12 03:00:30.352 GMT 10	Information	100422	Orleans.Runtime.Silo]	-------------- Started silo S127.0.0.1:26650:424234830, ConsistentHashCode 96ADD030 --------------	
+[2023-06-12 03:00:30.355 GMT 17	Information	100453	Orleans.Runtime.SiloLifecycleSubject]	Stage First (-2147483648): Orleans.Runtime.SiloOptionsLogger	
+[2023-06-12 03:00:30.355 GMT 17	Information	100453	Orleans.Runtime.SiloLifecycleSubject]	Stage 1999: ConnectionManager, SiloConnectionListener, GatewayConnectionListener	
+[2023-06-12 03:00:30.355 GMT 17	Information	100453	Orleans.Runtime.SiloLifecycleSubject]	Stage RuntimeInitialize (2000): Orleans.Runtime.InsideRuntimeClient, SiloStatusListenerManager, ClusterMembershipService, SiloConnectionMaintainer, Orleans.Runtime.Silo	
+[2023-06-12 03:00:30.355 GMT 17	Information	100453	Orleans.Runtime.SiloLifecycleSubject]	Stage 2001: MembershipAgent	
+[2023-06-12 03:00:30.355 GMT 17	Information	100453	Orleans.Runtime.SiloLifecycleSubject]	Stage RuntimeServices (4000): Orleans.Runtime.Silo	
+[2023-06-12 03:00:30.355 GMT 17	Information	100453	Orleans.Runtime.SiloLifecycleSubject]	Stage RuntimeGrainServices (8000): MembershipTableManager, HostedClient, Orleans.Runtime.Silo	
+[2023-06-12 03:00:30.355 GMT 17	Information	100453	Orleans.Runtime.SiloLifecycleSubject]	Stage AfterRuntimeGrainServices (8100): MembershipAgent, SiloStatusListenerManager	
+[2023-06-12 03:00:30.355 GMT 17	Information	100453	Orleans.Runtime.SiloLifecycleSubject]	Stage ApplicationServices (10000): Orleans.Runtime.Versions.GrainVersionStore	
+[2023-06-12 03:00:30.355 GMT 17	Information	100453	Orleans.Runtime.SiloLifecycleSubject]	Stage BecomeActive (19999): MembershipAgent, IncomingRequestMonitor, Orleans.ClientLoggingHelper, Orleans.Runtime.Silo	
+[2023-06-12 03:00:30.355 GMT 17	Information	100453	Orleans.Runtime.SiloLifecycleSubject]	Stage Active (20000): ClusterHealthMonitor, Orleans.Runtime.MembershipService.LocalSiloHealthMonitor, MembershipTableCleanupAgent, GatewayConnectionListener, Orleans.Runtime.Silo	
+[2023-06-12 03:00:30.359 GMT 17	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.ActivationCountBasedPlacementOptions: 
+ChooseOutOf: 2
+	
+[2023-06-12 03:00:30.359 GMT 17	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.ClusterMembershipOptions: 
+NumMissedTableIAmAliveLimit: 2
+LivenessEnabled: True
+ProbeTimeout: 00:00:05
+TableRefreshTimeout: 00:01:00
+DeathVoteExpirationTimeout: 00:02:00
+IAmAliveTablePublishTimeout: 00:05:00
+MaxJoinAttemptTime: 00:05:00
+ValidateInitialConnectivity: True
+UseLivenessGossip: True
+NumProbedSilos: 3
+NumMissedProbesLimit: 3
+NumVotesForDeathDeclaration: 2
+DefunctSiloExpiration: 7.00:00:00
+DefunctSiloCleanupPeriod: 01:00:00
+IsRunningAsUnitTest: False
+LocalHealthDegradationMonitoringPeriod: 00:00:10
+ExtendProbeTimeoutDuringDegradation: False
+EnableIndirectProbes: False
+	
+[2023-06-12 03:00:30.359 GMT 17	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.ClusterOptions: 
+ClusterId: testcluster-2023-06-12t03-00-30-846
+ServiceId: fe6d389399d742c5938ccbc17aafc339
+	
+[2023-06-12 03:00:30.359 GMT 17	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.ConnectionOptions: 
+ProtocolVersion: Version1
+ConnectionsPerEndpoint: 1
+ConnectionRetryDelay: 00:00:01
+OpenConnectionTimeout: 00:00:05
+	
+[2023-06-12 03:00:30.359 GMT 17	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.ConsistentRingOptions: 
+NumVirtualBucketsConsistentRing: 30
+UseVirtualBucketsConsistentRing: True
+	
+[2023-06-12 03:00:30.359 GMT 17	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.EndpointOptions: 
+AdvertisedIPAddress: 127.0.0.1
+SiloPort: 26650
+GatewayPort: 49465
+SiloListeningEndpoint: 127.0.0.1:26650
+GatewayListeningEndpoint: 127.0.0.1:49465
+	
+[2023-06-12 03:00:30.360 GMT 17	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.GrainCollectionOptions: 
+CollectionQuantum: 00:01:00
+CollectionAge: 02:00:00
+DeactivationTimeout: 00:00:30
+	
+[2023-06-12 03:00:30.360 GMT 17	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.GrainDirectoryOptions: 
+CachingStrategy: Adaptive
+CacheSize: 1000000
+InitialCacheTTL: 00:00:30
+MaximumCacheTTL: 00:04:00
+CacheTTLExtensionFactor: 2
+LazyDeregistrationDelay: 00:01:00
+	
+[2023-06-12 03:00:30.360 GMT 17	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.GrainVersioningOptions: 
+DefaultCompatibilityStrategy: BackwardCompatible
+DefaultVersionSelectorStrategy: AllCompatibleVersions
+	
+[2023-06-12 03:00:30.360 GMT 17	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.LoadSheddingOptions: 
+LoadSheddingEnabled: False
+LoadSheddingLimit: 95
+	
+[2023-06-12 03:00:30.360 GMT 17	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.MemoryGrainStorageOptions-Default: 
+NumStorageGrains: 10
+InitStage: 10000
+	
+[2023-06-12 03:00:30.360 GMT 17	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.MemoryGrainStorageOptions-PubSubStore: 
+NumStorageGrains: 10
+InitStage: 10000
+	
+[2023-06-12 03:00:30.360 GMT 17	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.PerformanceTuningOptions: 
+DefaultConnectionLimit: 200
+Expect100Continue: False
+UseNagleAlgorithm: False
+MinDotNetThreadPoolSize: 0
+MinIOThreadPoolSize: 0
+	
+[2023-06-12 03:00:30.360 GMT 17	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.SchedulingOptions: 
+PerformDeadlockDetection: False
+AllowCallChainReentrancy: True
+MaxActiveThreads: 10
+DelayWarningThreshold: 00:00:10
+ActivationSchedulingQuantum: 00:00:00.1000000
+TurnWarningLengthThreshold: 00:00:00.2000000
+MaxPendingWorkItemsSoftLimit: 0
+EnableWorkerThreadInjection: False
+StoppedActivationWarningInterval: 00:01:00
+	
+[2023-06-12 03:00:30.360 GMT 17	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.SerializationProviderOptions: 
+FallbackSerializationProvider: 
+MaxSustainedSerializationContextCapacity: 64
+	
+[2023-06-12 03:00:30.360 GMT 17	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.SiloMessagingOptions: 
+SiloSenderQueues: 10
+GatewaySenderQueues: 10
+MaxForwardCount: 2
+ClientDropTimeout: 00:01:00
+ClientRegistrationRefresh: 00:05:00
+ClientGatewayShutdownNotificationTimeout: 00:00:05
+MaxEnqueuedRequestsSoftLimit: 0
+MaxEnqueuedRequestsHardLimit: 0
+MaxEnqueuedRequestsSoftLimit_StatelessWorker: 0
+MaxEnqueuedRequestsHardLimit_StatelessWorker: 0
+MaxRequestProcessingTime: 02:00:00
+AssumeHomogenousSilosForTesting: False
+DEFAULT_SHUTDOWN_REROUTE_TIMEOUT: 00:00:10
+ShutdownRerouteTimeout: 00:00:10
+SystemResponseTimeout: 00:30:00
+GrainWorkloadAnalysisPeriod: 00:00:15
+RequestProcessingWarningTime: 00:00:05
+RequestQueueDelayWarningTime: 00:00:10
+WaitForMessageToBeQueuedForOutboundTime: 00:00:02
+ResponseTimeout: 00:30:00
+ResponseTimeoutWithDebugger: 00:30:00
+DropExpiredMessages: True
+BufferPoolBufferSize: 4096
+BufferPoolMaxSize: 10000
+BufferPoolPreallocationSize: 250
+PropagateActivityId: False
+LargeMessageWarningThreshold: 85000
+MaxMessageHeaderSize: 10485760
+MaxMessageBodySize: 104857600
+	
+[2023-06-12 03:00:30.360 GMT 17	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.SiloOptions: 
+SiloName: Primary
+	
+[2023-06-12 03:00:30.360 GMT 17	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.SimpleMessageStreamProviderOptions-AElfIndexer: 
+FireAndForgetDelivery: False
+OptimizeForImmutableData: True
+PubSubType: ExplicitGrainBasedAndImplicit
+	
+[2023-06-12 03:00:30.361 GMT 17	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.StatisticsOptions: 
+PerfCountersWriteInterval: 00:00:30
+LogWriteInterval: 00:05:00
+CollectionLevel: Info
+	
+[2023-06-12 03:00:30.361 GMT 17	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.TelemetryOptions: 
+	
+[2023-06-12 03:00:30.361 GMT 17	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.TypeManagementOptions: 
+TypeMapRefreshInterval: 00:01:00
+	
+[2023-06-12 03:00:30.361 GMT 17	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Orleans.Runtime.SiloOptionsLogger started in stage First (-2147483648) in 4.1662 Milliseconds	
+[2023-06-12 03:00:30.361 GMT 17	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Starting lifecycle stage First (-2147483648) took 4.5768 Milliseconds	
+[2023-06-12 03:00:30.361 GMT 17	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	ConnectionManager started in stage 1999 in 0.0132 Milliseconds	
+[2023-06-12 03:00:30.363 GMT 17	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	GatewayConnectionListener started in stage 1999 in 1.5163 Milliseconds	
+[2023-06-12 03:00:30.363 GMT 17	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	SiloConnectionListener started in stage 1999 in 2.4666 Milliseconds	
+[2023-06-12 03:00:30.363 GMT 17	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Starting lifecycle stage 1999 took 2.6117 Milliseconds	
+[2023-06-12 03:00:30.365 GMT 17	Information	101711	Orleans.Runtime.GrainTypeManager]	Loaded grain type summary for 22 types: 
+Grain class AElfIndexer.Grains.Grain.Blocks.AElfIndexer.Grains.Grain.Blocks.BlockBranchGrain [-1896501614 (0x8EF5AE92)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.Blocks.IBlockBranchGrain [-1542033403 (0xA4167005)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class AElfIndexer.Grains.Grain.Blocks.AElfIndexer.Grains.Grain.Blocks.BlockGrain [-1672887292 (0x9C49C404)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.Blocks.IBlockGrain [717565127 (0x2AC52CC7)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class AElfIndexer.Grains.Grain.Blocks.AElfIndexer.Grains.Grain.Blocks.PrimaryKeyGrain [1963531123 (0x75091B73)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.Blocks.IPrimaryKeyGrain [-1914615838 (0x8DE147E2)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class AElfIndexer.Grains.Grain.BlockScan.AElfIndexer.Grains.Grain.BlockScan.BlockScanCheckGrain [-288810813 (0xEEC918C3)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.BlockScan.IBlockScanCheckGrain [-971113694 (0xC61DFB22)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)], Orleans.IRemindable [-831689659 (0xCE6D6C45)]
+Grain class AElfIndexer.Grains.Grain.BlockScan.AElfIndexer.Grains.Grain.BlockScan.BlockScanGrain [-769025296 (0xD2299AF0)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.BlockScan.IBlockScanGrain [-2123083974 (0x81744F3A)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class AElfIndexer.Grains.Grain.BlockScan.AElfIndexer.Grains.Grain.BlockScan.BlockScanInfoGrain [-862647960 (0xCC950968)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.BlockScan.IBlockScanInfoGrain [1940952844 (0x73B0970C)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class AElfIndexer.Grains.Grain.BlockScan.AElfIndexer.Grains.Grain.BlockScan.BlockScanManagerGrain [2115597917 (0x7E19765D)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.BlockScan.IBlockScanManagerGrain [282002822 (0x10CF0586)]
+Grain class AElfIndexer.Grains.Grain.BlockScan.AElfIndexer.Grains.Grain.BlockScan.ClientGrain [-990250568 (0xC4F9F9B8)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.BlockScan.IClientGrain [-1596927619 (0xA0D0D17D)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class AElfIndexer.Grains.Grain.Chains.AElfIndexer.Grains.Grain.Chains.ChainGrain [1866434816 (0x6F3F8900)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.Chains.IChainGrain [-603471288 (0xDC07C248)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class AElfIndexer.Grains.Grain.Client.AElfIndexer.Grains.Grain.Client.BlockStateSetBucketGrain<T> [2141215091 (0x7FA05973)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.Client.IBlockStateSetBucketGrain<T> [-1827166963 (0x9317A50D)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class AElfIndexer.Grains.Grain.Client.AElfIndexer.Grains.Grain.Client.BlockStateSetGrain<T> [1588119705 (0x5EA8C899)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.Client.IBlockStateSetGrain<T> [-836490589 (0xCE242AA3)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class AElfIndexer.Grains.Grain.Client.AElfIndexer.Grains.Grain.Client.BlockStateSetInfoGrain [-1427109622 (0xAAF0090A)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.Client.IBlockStateSetInfoGrain [-1965857817 (0x8AD363E7)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class AElfIndexer.Grains.Grain.Client.AElfIndexer.Grains.Grain.Client.DappDataGrain [-2005669052 (0x8873EB44)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.Client.IDappDataGrain [-1249095191 (0xB58C51E9)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class Orleans.LogConsistency.Orleans.LogConsistency.LogConsistentGrain<TView> [-319513858 (0xECF49AFE)] from Orleans.Core.dll implementing interfaces: 
+Grain class Orleans.Providers.Orleans.Providers.MemoryStreamQueueGrain [1359359215 (0x51062CEF)] from OrleansProviders.dll implementing interfaces: Orleans.Providers.IMemoryStreamQueueGrain [1158152105 (0x4507FFA9)]
+Grain class Orleans.Runtime.Development.Orleans.Runtime.Development.DevelopmentLeaseProviderGrain [940524075 (0x380F422B)] from Orleans.Runtime.dll implementing interfaces: Orleans.Runtime.Development.IDevelopmentLeaseProviderGrain [-1234611069 (0xB6695483)]
+Grain class Orleans.Runtime.Management.Orleans.Runtime.Management.ManagementGrain [1954798034 (0x7483D9D2)] from Orleans.Runtime.dll implementing interfaces: Orleans.Runtime.IManagementGrain [-1734666656 (0x989B1660)]
+Grain class Orleans.Runtime.ReminderService.Orleans.Runtime.ReminderService.GrainBasedReminderTable [-55315191 (0xFCB3F509)] from Orleans.Runtime.dll implementing interfaces: Orleans.IReminderTableGrain [-1135060418 (0xBC585A3E)]
+Grain class Orleans.Runtime.Versions.Orleans.Runtime.Versions.VersionStoreGrain [331003096 (0x13BAB4D8)] from Orleans.Runtime.dll implementing interfaces: Orleans.Runtime.Versions.IVersionStoreGrain [-297600501 (0xEE42FA0B)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class Orleans.Storage.Orleans.Storage.MemoryStorageGrain [819348208 (0x30D642F0)] from OrleansProviders.dll implementing interfaces: Orleans.Storage.IMemoryStorageGrain [577125491 (0x22663C73)]
+Grain class Orleans.Streams.Orleans.Streams.PubSubRendezvousGrain [1903070868 (0x716E8E94)] from Orleans.Runtime.dll implementing interfaces: Orleans.Streams.IPubSubRendezvousGrain [1746702088 (0x681C8F08)]
+Grain class Orleans.TestingHost.Orleans.TestingHost.StorageFaultGrain [165808213 (0x9E20855)] from Orleans.TestingHost.dll implementing interfaces: Orleans.TestingHost.IStorageFaultGrain [-1063077025 (0xC0A2BB5F)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+	
+[2023-06-12 03:00:30.366 GMT 17	Information	100452	Orleans.Runtime.InsideRuntimeClient]	Start InsideRuntimeClient took 2 Milliseconds	
+[2023-06-12 03:00:30.366 GMT 17	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Orleans.Runtime.InsideRuntimeClient started in stage RuntimeInitialize (2000) in 2.5941 Milliseconds	
+[2023-06-12 03:00:30.366 GMT 17	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	SiloStatusListenerManager started in stage RuntimeInitialize (2000) in 0.0134 Milliseconds	
+[2023-06-12 03:00:30.366 GMT 17	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	ClusterMembershipService started in stage RuntimeInitialize (2000) in 0.041 Milliseconds	
+[2023-06-12 03:00:30.366 GMT 17	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	SiloConnectionMaintainer started in stage RuntimeInitialize (2000) in 0.1553 Milliseconds	
+[2023-06-12 03:00:30.366 GMT 10	Information	100401	Orleans.Runtime.Silo]	Silo Start()	
+[2023-06-12 03:00:30.367 GMT 10	Information	100436	Orleans.Runtime.Silo]	Configured .NET ServicePointManager to Expect100Continue=False, DefaultConnectionLimit=200, UseNagleAlgorithm=False to improve Azure storage performance.	
+[2023-06-12 03:00:30.367 GMT 10	Information	100452	Orleans.Runtime.Silo]	ConfigureThreadPoolAndServicePointSettings took 0 Milliseconds to finish	
+[2023-06-12 03:00:30.367 GMT 10	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Orleans.Runtime.Silo started in stage RuntimeInitialize (2000) in 0.6987 Milliseconds	
+[2023-06-12 03:00:30.367 GMT 10	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Starting lifecycle stage RuntimeInitialize (2000) took 3.5229 Milliseconds	
+[2023-06-12 03:00:30.367 GMT 10	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	MembershipAgent started in stage 2001 in 0.0142 Milliseconds	
+[2023-06-12 03:00:30.367 GMT 10	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Starting lifecycle stage 2001 took 0.0193 Milliseconds	
+[2023-06-12 03:00:30.367 GMT 17	Information	100452	Orleans.Runtime.Silo]	Start Message center took 0 Milliseconds to finish	
+[2023-06-12 03:00:30.367 GMT 17	Information	0	Orleans.Runtime.GrainDirectory.LocalGrainDirectory]	Start	
+[2023-06-12 03:00:30.368 GMT 17	Information	0	Runtime.GrainDirectory.AdaptiveDirectoryCacheMaintainer]	Starting AsyncAgent Runtime.GrainDirectory.AdaptiveDirectoryCacheMaintainer on managed thread 17	
+[2023-06-12 03:00:30.368 GMT 17	Information	100452	Orleans.Runtime.Silo]	Start local grain directory took 0 Milliseconds to finish	
+[2023-06-12 03:00:30.369 GMT 17	Information	100452	Orleans.Runtime.Silo]	Init implicit stream subscribe table took 1 Milliseconds to finish	
+[2023-06-12 03:00:30.375 GMT 5	Information	100452	Orleans.Runtime.Silo]	Create system targets and inject dependencies took 5 Milliseconds to finish	
+[2023-06-12 03:00:30.375 GMT 17	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Orleans.Runtime.Silo started in stage RuntimeServices (4000) in 8.5851 Milliseconds	
+[2023-06-12 03:00:30.375 GMT 17	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Starting lifecycle stage RuntimeServices (4000) took 8.5963 Milliseconds	
+[2023-06-12 03:00:30.376 GMT 5	Information	100603	Orleans.Runtime.MembershipService.MembershipTableManager]	MembershipOracle starting on host wens-MacBook-Pro.local with SiloAddress S127.0.0.1:26650:424234830 at 2023-06-12 03:00:30.296 GMT	
+[2023-06-12 03:00:30.377 GMT 17	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	HostedClient started in stage RuntimeGrainServices (8000) in 0.6935 Milliseconds	
+[2023-06-12 03:00:30.402 GMT 5	Information	100635	Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable]	Creating in-memory membership table	
+[2023-06-12 03:00:30.403 GMT 5	Information	100637	Orleans.Runtime.MembershipService.MembershipTableSystemTarget]	GrainBasedMembershipTable Activated.	
+[2023-06-12 03:00:30.404 GMT 17	Information	100452	Orleans.Runtime.Silo]	Init grain services took 0 Milliseconds to finish	
+[2023-06-12 03:00:30.408 GMT 17	Information	100452	Orleans.Runtime.Silo]	Init type manager took 3 Milliseconds to finish	
+[2023-06-12 03:00:30.408 GMT 17	Information	100702	Orleans.Runtime.CounterStatistic]	Starting Windows perf counter stats collection with frequency=00:00:30	
+[2023-06-12 03:00:30.408 GMT 17	Information	100452	Orleans.Runtime.Silo]	Start silo statistics took 0 Milliseconds to finish	
+[2023-06-12 03:00:30.409 GMT 13	Information	0	Orleans.Runtime.DeploymentLoadPublisher]	Starting DeploymentLoadPublisher.	
+[2023-06-12 03:00:30.411 GMT 13	Information	0	Orleans.Runtime.DeploymentLoadPublisher]	Started DeploymentLoadPublisher.	
+[2023-06-12 03:00:30.411 GMT 13	Information	100452	Orleans.Runtime.Silo]	Start deployment load collector took 2 Milliseconds to finish	
+[2023-06-12 03:00:30.411 GMT 13	Information	0	Orleans.Runtime.Watchdog]	Starting Silo Watchdog.	
+[2023-06-12 03:00:30.411 GMT 10	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Orleans.Runtime.Silo started in stage RuntimeGrainServices (8000) in 34.5024 Milliseconds	
+[2023-06-12 03:00:30.419 GMT 17	Information	100631	Orleans.Runtime.MembershipService.SystemTargetBasedMembershipTable]	-Connected to membership table provider.	
+[2023-06-12 03:00:30.422 GMT 10	Information	100645	Orleans.Runtime.MembershipService.MembershipTableManager]	ProcessTableUpdate (called from Refresh) membership table: 0 silos, 0 are Active, 0 are Dead, Version=<0, 0>. All silos: []	
+[2023-06-12 03:00:30.424 GMT 5	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	MembershipTableManager started in stage RuntimeGrainServices (8000) in 48.417 Milliseconds	
+[2023-06-12 03:00:30.424 GMT 5	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Starting lifecycle stage RuntimeGrainServices (8000) took 48.4305 Milliseconds	
+[2023-06-12 03:00:30.424 GMT 17	Information	100663	Orleans.Runtime.MembershipService.MembershipAgent]	-Joining	
+[2023-06-12 03:00:30.425 GMT 5	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	SiloStatusListenerManager started in stage AfterRuntimeGrainServices (8100) in 0.0584 Milliseconds	
+[2023-06-12 03:00:30.457 GMT 17	Information	100645	Orleans.Runtime.MembershipService.MembershipTableManager]	ProcessTableUpdate (called from TryUpdateMyStatusGlobalOnce) membership table: 1 silos, 0 are Active, 0 are Dead, 1 are Joining, Version=<1, 0>. All silos: [SiloAddress=S127.0.0.1:26650:424234830 SiloName=Primary Status=Joining]	
+[2023-06-12 03:00:30.458 GMT 10	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	MembershipAgent started in stage AfterRuntimeGrainServices (8100) in 34.1666 Milliseconds	
+[2023-06-12 03:00:30.458 GMT 10	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Starting lifecycle stage AfterRuntimeGrainServices (8100) took 34.1775 Milliseconds	
+[2023-06-12 03:00:30.459 GMT 10	Information	0	Orleans.Storage.MemoryGrainStorage]	Init: Name=Default NumStorageGrains=10	
+[2023-06-12 03:00:30.459 GMT 10	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Orleans.Runtime.Versions.GrainVersionStore started in stage ApplicationServices (10000) in 0.5114 Milliseconds	
+[2023-06-12 03:00:30.459 GMT 10	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Starting lifecycle stage ApplicationServices (10000) took 0.5198 Milliseconds	
+[2023-06-12 03:00:30.459 GMT 17	Information	100604	Orleans.Runtime.MembershipService.MembershipAgent]	-BecomeActive	
+[2023-06-12 03:00:30.459 GMT 10	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	IncomingRequestMonitor started in stage BecomeActive (19999) in 0.0396 Milliseconds	
+[2023-06-12 03:00:30.459 GMT 10	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Orleans.ClientLoggingHelper started in stage BecomeActive (19999) in 0.0593 Milliseconds	
+[2023-06-12 03:00:30.460 GMT 18	Information	0	Runtime.Messaging.GatewayClientCleanupAgent]	Starting AsyncAgent Runtime.Messaging.GatewayClientCleanupAgent on managed thread 18	
+[2023-06-12 03:00:30.460 GMT 18	Information	100452	Orleans.Runtime.Silo]	Start gateway took 0 Milliseconds to finish	
+[2023-06-12 03:00:30.460 GMT 18	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Orleans.Runtime.Silo started in stage BecomeActive (19999) in 0.3567 Milliseconds	
+[2023-06-12 03:00:30.488 GMT 17	Information	100645	Orleans.Runtime.MembershipService.MembershipTableManager]	ProcessTableUpdate (called from TryUpdateMyStatusGlobalOnce) membership table: 1 silos, 1 are Active, 0 are Dead, Version=<2, 2>. All silos: [SiloAddress=S127.0.0.1:26650:424234830 SiloName=Primary Status=Active]	
+[2023-06-12 03:00:30.488 GMT 17	Information	100605	Orleans.Runtime.MembershipService.MembershipAgent]	-Finished BecomeActive.	
+[2023-06-12 03:00:30.488 GMT 10	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	MembershipAgent started in stage BecomeActive (19999) in 29.5861 Milliseconds	
+[2023-06-12 03:00:30.488 GMT 10	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Starting lifecycle stage BecomeActive (19999) took 29.5983 Milliseconds	
+[2023-06-12 03:00:30.488 GMT 10	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	ClusterHealthMonitor started in stage Active (20000) in 0.0441 Milliseconds	
+[2023-06-12 03:00:30.488 GMT 10	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor started in stage Active (20000) in 0.0344 Milliseconds	
+[2023-06-12 03:00:30.488 GMT 10	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	MembershipTableCleanupAgent started in stage Active (20000) in 0.0355 Milliseconds	
+[2023-06-12 03:00:30.542 GMT 10	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	GatewayConnectionListener started in stage Active (20000) in 53.57 Milliseconds	
+[2023-06-12 03:00:30.542 GMT 5	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Orleans.Runtime.Silo started in stage Active (20000) in 1.0768 Milliseconds	
+[2023-06-12 03:00:30.542 GMT 5	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Starting lifecycle stage Active (20000) took 53.934 Milliseconds	
+[2023-06-12 03:00:30.792 GMT 20	Information	0	Orleans.Networking]	Connection [Local: 127.0.0.1:26650, Remote: 127.0.0.1:59457, ConnectionId: 0HMRAU4NCN6D6] established with S127.0.0.1:26651:424234830	
+[2023-06-12 03:00:31.004 GMT 13	Information	0	Orleans.Networking]	Connection [Local: 127.0.0.1:26650, Remote: 127.0.0.1:59458, ConnectionId: 0HMRAU4NCN6D8] established with S127.0.0.1:26651:424234830	
+[2023-06-12 03:00:31.008 GMT 10	Information	0	Orleans.Runtime.MembershipService.MembershipTableManager]	Received cluster membership snapshot via gossip: [Version: 3, 2 silos, SiloAddress=S127.0.0.1:26651:424234830 SiloName=Secondary_1 Status=Joining, SiloAddress=S127.0.0.1:26650:424234830 SiloName=Primary Status=Active]	
+[2023-06-12 03:00:31.051 GMT 18	Information	0	Orleans.Runtime.MembershipService.MembershipTableManager]	Received cluster membership snapshot via gossip: [Version: 4, 2 silos, SiloAddress=S127.0.0.1:26651:424234830 SiloName=Secondary_1 Status=Active, SiloAddress=S127.0.0.1:26650:424234830 SiloName=Primary Status=Active]	
+[2023-06-12 03:00:31.052 GMT 23	Information	103003	Orleans.Runtime.ConsistentRing.VirtualBucketsRingProvider]	Added Server S127.0.0.1:26651:424234830/x1F36EFA2. Current view: [S127.0.0.1:26651:424234830 -> <MultiRange: Size=x47107F3F, %Ring=27.760%>, S127.0.0.1:26650:424234830 -> <MultiRange: Size=xB8EF80C1, %Ring=72.240%>]	
+[2023-06-12 03:00:31.052 GMT 23	Information	103005	Orleans.Runtime.ConsistentRing.VirtualBucketsRingProvider]	-NotifyLocalRangeSubscribers about old <MultiRange: Size=x100000000, %Ring=100.000%> new <MultiRange: Size=xB8EF80C1, %Ring=72.240%> increased? True	
+[2023-06-12 03:00:31.052 GMT 23	Information	0	Orleans.Runtime.TypeManager]	Expediting cluster type map refresh due to new silo, S127.0.0.1:26651:424234830	
+[2023-06-12 03:00:31.132 GMT 20	Information	100612	Orleans.Runtime.MembershipService.ClusterHealthMonitor]	Will watch (actively ping) 1 silos: [S127.0.0.1:26651:424234830]	
+[2023-06-12 03:00:31.220 GMT 23	Information	Orleans.Messaging.Dispatcher.ForwardingMultiple	Orleans.Messaging]	Forwarding 1 requests destined for address S127.0.0.1:26650:424234830*grn/Orleans.Runtime.Versions.VersionStoreGrain/0+testcluster-2023-06-12t03-00-30-846@477e46b5 to address S127.0.0.1:26651:424234830*grn/Orleans.Runtime.Versions.VersionStoreGrain/0+testcluster-2023-06-12t03-00-30-846@40dd92b6 after Duplicate activation	
+[2023-06-12 03:00:31.221 GMT 23	Information	Orleans.Messaging.Dispatcher.Forwarding	Orleans.Messaging]	Trying to forward NewPlacement Request S127.0.0.1:26650:424234830*stg/TypeManager/00000011@S00000011->S127.0.0.1:26650:424234830*grn/Orleans.Runtime.Versions.VersionStoreGrain/0+testcluster-2023-06-12t03-00-30-846@477e46b5 InvokeMethodRequest Orleans.Runtime.Versions.IVersionStoreGrain:GetCompatibilityStrategy #21 from S127.0.0.1:26650:424234830*grn/Orleans.Runtime.Versions.VersionStoreGrain/0+testcluster-2023-06-12t03-00-30-846@477e46b5 to S127.0.0.1:26651:424234830*grn/Orleans.Runtime.Versions.VersionStoreGrain/0+testcluster-2023-06-12t03-00-30-846@40dd92b6 after Duplicate activation. Attempt 0	
+[2023-06-12 03:00:31.225 GMT 23	Information	0	Orleans.Storage.MemoryStorageGrain]	OnActivateAsync	
+[2023-06-12 03:00:31.444 GMT 5	Information	101301	Orleans.Runtime.Messaging.Gateway]	Recorded opened connection from endpoint 127.0.0.1:59460, client ID *cli/421724a8.	
+[2023-06-12 03:21:11.268 GMT 19	Warning	100150	Orleans.Runtime.Watchdog]	.NET Runtime Platform stalled for 00:20:38.8078890 - possibly GC? We are now using total of 46MB memory. gc=15, 7, 5	
+[2023-06-12 03:21:11.654 GMT 17	Warning	0	Orleans.Runtime.AsyncTimer.LocalSiloHealthMonitor]	Timer should have fired at 06/12/2023 03:00:40 but fired at 06/12/2023 03:21:11, which is 00:20:31.1649550 longer than expected	
+[2023-06-12 03:21:11.654 GMT 27	Warning	0	Orleans.Runtime.AsyncTimer.IncomingRequestMonitor]	Timer should have fired at 06/12/2023 03:00:45 but fired at 06/12/2023 03:21:11, which is 00:20:26.1938330 longer than expected	
+[2023-06-12 03:21:11.680 GMT 19	Warning	102603	Orleans.Runtime.Watchdog]	Watchdog had 5 health Check failure(s) out of 5 health Check participants: Orleans.Runtime.MembershipService.MembershipTableManager failed health check with reason "PeriodicallyRefreshMembershipTable timer should have fired at 12/6/2023 3:01:09 AM, which is 00:20:02.2024275 ago". Orleans.Runtime.MembershipService.ClusterHealthMonitor failed health check with reason "Monitor for S127.0.0.1:26651:424234830 is degraded with: SiloHealthMonitor timer should have fired at 12/6/2023 3:00:33 AM, which is 00:20:38.5821023 ago.". Orleans.Runtime.MembershipService.MembershipAgent failed health check with reason "UpdateIAmAlive timer should have fired at 12/6/2023 3:05:30 AM, which is 00:15:41.1391230 ago". Orleans.Runtime.MembershipService.MembershipTableCleanupAgent failed health check with reason "CleanupDefunctSilos timer should have fired at 12/6/2023 3:06:41 AM, which is 00:14:30.6188309 ago". Orleans.Runtime.Catalog failed health check with reason "Catalog.GCTimer timer should have fired at 12/6/2023 3:01:30 AM, which is 00:19:41.3056530 ago".	
+[2023-06-12 03:21:11.680 GMT 33	Warning	0	Orleans.Runtime.AsyncTimer.ClientObserverRegistrar.ClientRefreshTimer]	Timer should have fired at 06/12/2023 03:04:24 but fired at 06/12/2023 03:21:11, which is 00:16:46.7136505 longer than expected	
+[2023-06-12 03:21:11.681 GMT 17	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	Health check participant Orleans.Runtime.MembershipService.MembershipTableManager is reporting that it is unhealthy with complaint: PeriodicallyRefreshMembershipTable timer should have fired at 12/6/2023 3:01:09 AM, which is 00:20:02.4130615 ago	
+[2023-06-12 03:21:11.682 GMT 17	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	Health check participant Orleans.Runtime.MembershipService.ClusterHealthMonitor is reporting that it is unhealthy with complaint: Monitor for S127.0.0.1:26651:424234830 is degraded with: SiloHealthMonitor timer should have fired at 12/6/2023 3:00:33 AM, which is 00:20:38.6381433 ago.	
+[2023-06-12 03:21:11.682 GMT 17	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	Health check participant Orleans.Runtime.MembershipService.MembershipAgent is reporting that it is unhealthy with complaint: UpdateIAmAlive timer should have fired at 12/6/2023 3:05:30 AM, which is 00:15:41.1667300 ago	
+[2023-06-12 03:21:11.682 GMT 17	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	Health check participant Orleans.Runtime.MembershipService.MembershipTableCleanupAgent is reporting that it is unhealthy with complaint: CleanupDefunctSilos timer should have fired at 12/6/2023 3:06:41 AM, which is 00:14:30.6208269 ago	
+[2023-06-12 03:21:11.682 GMT 17	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	Health check participant Orleans.Runtime.Catalog is reporting that it is unhealthy with complaint: Catalog.GCTimer timer should have fired at 12/6/2023 3:01:30 AM, which is 00:19:41.3074350 ago	
+[2023-06-12 03:21:11.683 GMT 17	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	Self-monitoring determined that local health is degraded. Degradation score is 5/8 (lower is better). Complaints: Health check participant Orleans.Runtime.MembershipService.MembershipTableManager is reporting that it is unhealthy with complaint: PeriodicallyRefreshMembershipTable timer should have fired at 12/6/2023 3:01:09 AM, which is 00:20:02.4130615 ago
+Health check participant Orleans.Runtime.MembershipService.ClusterHealthMonitor is reporting that it is unhealthy with complaint: Monitor for S127.0.0.1:26651:424234830 is degraded with: SiloHealthMonitor timer should have fired at 12/6/2023 3:00:33 AM, which is 00:20:38.6381433 ago.
+Health check participant Orleans.Runtime.MembershipService.MembershipAgent is reporting that it is unhealthy with complaint: UpdateIAmAlive timer should have fired at 12/6/2023 3:05:30 AM, which is 00:15:41.1667300 ago
+Health check participant Orleans.Runtime.MembershipService.MembershipTableCleanupAgent is reporting that it is unhealthy with complaint: CleanupDefunctSilos timer should have fired at 12/6/2023 3:06:41 AM, which is 00:14:30.6208269 ago
+Health check participant Orleans.Runtime.Catalog is reporting that it is unhealthy with complaint: Catalog.GCTimer timer should have fired at 12/6/2023 3:01:30 AM, which is 00:19:41.3074350 ago	
+[2023-06-12 03:21:11.810 GMT 26	Warning	0	Orleans.Runtime.AsyncTimer.UpdateIAmAlive]	Timer should have fired at 06/12/2023 03:05:30 but fired at 06/12/2023 03:21:11, which is 00:15:41.2949100 longer than expected	
+[2023-06-12 03:21:11.836 GMT 29	Warning	0	Orleans.Runtime.AsyncTimer.PeriodicallyRefreshMembershipTable]	Timer should have fired at 06/12/2023 03:01:09 but fired at 06/12/2023 03:21:11, which is 00:20:02.5681695 longer than expected	
+[2023-06-12 03:21:11.915 GMT 28	Warning	0	Orleans.Runtime.AsyncTimer.Catalog.GCTimer]	Timer should have fired at 06/12/2023 03:01:30 but fired at 06/12/2023 03:21:11, which is 00:19:41.5407580 longer than expected	
+[2023-06-12 03:21:11.916 GMT 17	Warning	0	Orleans.Runtime.AsyncTimer.CleanupDefunctSilos]	Timer should have fired at 06/12/2023 03:06:41 but fired at 06/12/2023 03:21:11, which is 00:14:30.8557279 longer than expected	
+[2023-06-12 03:21:11.965 GMT 17	Warning	100662	Orleans.Runtime.MembershipService.MembershipTableCleanupAgent]	CleanupDefunctSiloEntries operation is not supported by the current implementation of IMembershipTable. Disabling the timer now.	
+[2023-06-12 03:21:11.967 GMT 32	Warning	101215	Orleans.Runtime.Scheduler.WorkItemGroup]	Task [Id=1, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:26650:424234830*stg/DirectoryCacheValidator/0000000b@S0000000b] took elapsed time 0:00:00.2318103 for execution, which is longer than 00:00:00.2000000. Running on thread 32	
+[2023-06-12 03:21:11.967 GMT 29	Warning	0	Orleans.Runtime.AsyncTimer.SiloHealthMonitor]	Timer should have fired at 06/12/2023 03:00:33 but fired at 06/12/2023 03:21:11, which is 00:20:38.9234143 longer than expected	
+[2023-06-12 03:21:12.003 GMT 28	Information	100704	Orleans.Runtime.SiloLogStatistics]	Statistics: ^^^
+App.Requests.Latency.Average.Millis=24.000
+App.Requests.LatencyHistogram.Millis=[0.1024:0.2047]=1, [0.2048:0.4095]=4, [0.4096:0.8191]=8, [0.8192:1.6383]=3, [1.6384:3.2767]=6, [3.2768:6.5535]=2, [6.5536:13.1071]=4, [13.1072:26.2143]=2, [26.2144:52.4287]=14, [52.4288:104.8575]=8, 
+App.Requests.TimedOut.Current=0
+App.Requests.Total.Requests.Current=52,      Delta=52
+Catalog.Activation.Collection.NumberOfCollections.Current=2,      Delta=2
+Catalog.Activation.ConcurrentRegistrationAttempts.Current=1,      Delta=1
+Catalog.Activation.Created.Current=3,      Delta=3
+Catalog.Activation.CurrentCount=1
+Catalog.Activation.Destroyed.Current=1,      Delta=1
+Catalog.Activation.FailedToActivate.Current=0
+Client.ConnectedGatewayCount=2
+ConsistentRing.AverageRangePercentage=50.000
+ConsistentRing.MyRange.RingDistance=xB8EF80C1
+ConsistentRing.MyRange.RingPercentage=72.240
+ConsistentRing.Ring=[S127.0.0.1:26651:424234830 -> <MultiRange: Size=x47107F3F, %Ring=27.760%>, S127.0.0.1:26650:424234830 -> <MultiRange: Size=xB8EF80C1, %Ring=72.240%>]
+ConsistentRing.RingSize=2
+Directory.CacheSize=1
+Directory.Lookups.Cache.HitRatio=0.5, Delta=0.5
+Directory.Lookups.Cache.Issued.Current=4,      Delta=4
+Directory.Lookups.Cache.Successes.Current=2,      Delta=2
+Directory.Lookups.Full.Issued.Current=4,      Delta=4
+Directory.Lookups.Local.Issued.Current=13,      Delta=13
+Directory.Lookups.Local.Successes.Current=9,      Delta=9
+Directory.Lookups.LocalDirectory.Issued.Current=13,      Delta=13
+Directory.Lookups.LocalDirectory.Successes.Current=8,      Delta=8
+Directory.Lookups.Remote.Received.Current=2,      Delta=2
+Directory.Lookups.Remote.Sent.Current=2,      Delta=2
+Directory.PartitionSize=0
+Directory.Registrations.Issued.Current=18,      Delta=18
+Directory.Registrations.Local.Current=17,      Delta=17
+Directory.Registrations.Remote.Received.Current=3,      Delta=3
+Directory.Registrations.Remote.Sent.Current=3,      Delta=3
+Directory.Registrations.SingleAct.Issued.Current=3,      Delta=3
+Directory.Registrations.SingleAct.Local.Current=3,      Delta=3
+Directory.Registrations.SingleAct.Remote.Received.Current=4,      Delta=4
+Directory.Registrations.SingleAct.Remote.Sent.Current=2,      Delta=2
+Directory.Ring=[S127.0.0.1:26650:424234830/96ADD030, S127.0.0.1:26651:424234830/1F36EFA2]
+Directory.Ring.MyPortion.AverageRingPercentage=50.000
+Directory.Ring.MyPortion.RingDistance=2290687858
+Directory.Ring.MyPortion.RingPercentage=53.334
+Directory.Ring.MyPredecessors=[S127.0.0.1:26651:424234830/1F36EFA2]
+Directory.Ring.MySuccessors=[S127.0.0.1:26651:424234830/1F36EFA2]
+Directory.Ring.RingSize=2
+Directory.UnRegistrations.Issued.Current=0
+Directory.UnRegistrations.Local.Current=0
+Directory.UnRegistrations.Remote.Received.Current=0
+Directory.UnRegistrations.Remote.Sent.Current=0
+Directory.UnRegistrationsMany.Issued.Current=0
+Directory.UnRegistrationsMany.Remote.Received.Current=0
+Directory.UnRegistrationsMany.Remote.Sent.Current=0
+Directory.Validations.Cache.Received.Current=0
+Directory.Validations.Cache.Sent.Current=1,      Delta=1
+Dispatcher.NewPlacement.Current=3,      Delta=3
+Gateway.ConnectedClients.Current=2
+Gateway.LoadShedding.Current=0
+Gateway.Received.Current=4,      Delta=4
+Gateway.Sent.Current=8,      Delta=8
+Grain.Orleans.Runtime.Versions.VersionStoreGrain.Current=1
+Grain.Orleans.Storage.MemoryStorageGrain.Current=1
+Messaging.Expired.AtDispatch.Current=0
+Messaging.Expired.AtInvoke.Current=0
+Messaging.Expired.AtReceive.Current=0
+Messaging.Expired.AtRespond.Current=0
+Messaging.Expired.AtSend.Current=0
+Messaging.Pings.Received.S127.0.0.1:26651:424234830.Current=1,      Delta=1
+Messaging.Pings.Sent.S127.0.0.1:26650:424234830.Current=2,      Delta=2
+Messaging.Processing.ActivationData.All=0
+Messaging.Processing.Dispatcher.Forwarded.Current=2,      Delta=2
+Messaging.Processing.Dispatcher.Processed.Errors.Direction.OneWay.Current=0
+Messaging.Processing.Dispatcher.Processed.Errors.Direction.Request.Current=0
+Messaging.Processing.Dispatcher.Processed.Errors.Direction.Response.Current=0
+Messaging.Processing.Dispatcher.Processed.Ok.Direction.OneWay.Current=0
+Messaging.Processing.Dispatcher.Processed.Ok.Direction.Request.Current=13,      Delta=13
+Messaging.Processing.Dispatcher.Processed.Ok.Direction.Response.Current=1,      Delta=1
+Messaging.Processing.Dispatcher.Processed.Total.Current=14,      Delta=14
+Messaging.Processing.Dispatcher.Received.Direction.OneWay.Current=0
+Messaging.Processing.Dispatcher.Received.Direction.Request.Current=14,      Delta=14
+Messaging.Processing.Dispatcher.Received.Direction.Response.Current=1,      Delta=1
+Messaging.Processing.Dispatcher.Received.OnActivationContext.Current=10,      Delta=10
+Messaging.Processing.Dispatcher.Received.OnNullContext.Current=5,      Delta=5
+Messaging.Processing.Dispatcher.Received.Total.Current=15,      Delta=15
+Messaging.Processing.IMA.Enqueued.ToActivationContex.Current=10,      Delta=10
+Messaging.Processing.IMA.Enqueued.ToNullContex.Current=5,      Delta=5
+Messaging.Processing.IMA.Enqueued.ToSystemTargetContex.Current=72,      Delta=72
+Messaging.Processing.IMA.Received.Current=87,      Delta=87
+Messaging.Received.BatchSize.PerSocketDirection.ClientToGateway=1.000
+Messaging.Received.BatchSize.PerSocketDirection.GatewayToClient=1.000
+Messaging.Received.BatchSize.PerSocketDirection.SiloToSilo=1.000
+Messaging.Received.BatchSizeBytesHistogram.Bytes.PerSocketDirection.ClientToGateway=[128:255]=3, [4096:8191]=1, 
+Messaging.Received.BatchSizeBytesHistogram.Bytes.PerSocketDirection.GatewayToClient=[128:255]=4, 
+Messaging.Received.BatchSizeBytesHistogram.Bytes.PerSocketDirection.SiloToSilo=[128:255]=26, [256:511]=23, [512:1023]=3, [4096:8191]=2, 
+Messaging.Received.Bytes.Header.Current=11360,      Delta=11360
+Messaging.Received.Bytes.Total.Current=36340,      Delta=36340
+Messaging.Received.Direction.OneWay.Current=0
+Messaging.Received.Direction.Request.Current=32,      Delta=32
+Messaging.Received.Direction.Response.Current=30,      Delta=30
+Messaging.Received.Messages.From.S127.0.0.1:26650:0.Current=10,      Delta=10
+Messaging.Received.Messages.From.S127.0.0.1:26650:424234830.Current=17,      Delta=17
+Messaging.Received.Messages.From.S127.0.0.1:26651:424234830.Current=27,      Delta=27
+Messaging.Received.Messages.From.S127.0.0.1:49465:0.Current=2,      Delta=2
+Messaging.Received.Messages.From.S127.0.0.1:49466:0.Current=2,      Delta=2
+Messaging.Received.Messages.Total.Current=62,      Delta=62
+Messaging.Received.MessageSizeHistogram.Bytes=[128:255]=33, [256:511]=23, [512:1023]=3, [4096:8191]=3, 
+Messaging.Rerouted.OneWay.Current=0
+Messaging.Rerouted.Request.Current=2,      Delta=2
+Messaging.Rerouted.Response.Current=0
+Messaging.Sent.BatchSize.PerSocketDirection.ClientToGateway=1.000
+Messaging.Sent.BatchSize.PerSocketDirection.GatewayToClient=1.000
+Messaging.Sent.BatchSize.PerSocketDirection.SiloToSilo=1.000
+Messaging.Sent.BatchSizeBytesHistogram.Bytes.PerSocketDirection.ClientToGateway=[128:255]=4, 
+Messaging.Sent.BatchSizeBytesHistogram.Bytes.PerSocketDirection.GatewayToClient=[128:255]=3, [4096:8191]=1, 
+Messaging.Sent.BatchSizeBytesHistogram.Bytes.PerSocketDirection.SiloToSilo=[128:255]=26, [256:511]=25, [512:1023]=3, [4096:8191]=2, 
+Messaging.Sent.Bytes.Header.Current=11708,      Delta=11708
+Messaging.Sent.Bytes.Total.Current=36944,      Delta=36944
+Messaging.Sent.Direction.OneWay.Current=0
+Messaging.Sent.Direction.Request.Current=34,      Delta=34
+Messaging.Sent.Direction.Response.Current=30,      Delta=30
+Messaging.Sent.LocalMessages.Current=39,      Delta=39
+Messaging.Sent.Messages.To.S127.0.0.1:26650:0.Current=5,      Delta=5
+Messaging.Sent.Messages.To.S127.0.0.1:26650:424234830.Current=22,      Delta=22
+Messaging.Sent.Messages.To.S127.0.0.1:26651:424234830.Current=29,      Delta=29
+Messaging.Sent.Messages.To.S127.0.0.1:49465:0.Current=2,      Delta=2
+Messaging.Sent.Messages.To.S127.0.0.1:49466:0.Current=2,      Delta=2
+Messaging.Sent.Messages.Total.Current=64,      Delta=64
+Messaging.Sent.MessageSizeHistogram.Bytes=[128:255]=33, [256:511]=25, [512:1023]=3, [4096:8191]=3, 
+Networking.Sockets.ClientToGateway.Closed.Current=0
+Networking.Sockets.ClientToGateway.Opened.Current=2,      Delta=2
+Networking.Sockets.GatewayToClient.Closed.Current=0
+Networking.Sockets.GatewayToClient.Opened.Current=2,      Delta=2
+Networking.Sockets.Silo.Closed.Current=0
+Networking.Sockets.Silo.Opened.Current=4,      Delta=4
+Runtime.IsOverloaded=False
+Scheduler.NumLongQueueWaitTimes.Current=0
+Scheduler.NumLongRunningTurns.Current=1,      Delta=1
+Scheduler.WorkItemGroupCount=13
+Serialization.BufferPool.AllocatedBuffers.Current=750,      Delta=750
+Serialization.BufferPool.BuffersInPool=250
+Serialization.BufferPool.CheckedInBuffers.Current=750,      Delta=750
+Serialization.BufferPool.CheckedOutBuffers.Current=750,      Delta=750
+Serialization.BufferPool.DroppedBuffers.Current=0
+Serialization.BufferPool.DroppedTooLargeBuffers.Current=0
+Serialization.BufferPool.InUse.AllocatedAndNotInPool_Buffers=500
+Serialization.BufferPool.InUse.CheckedOutAndNotCheckedIn_Buffers=0
+Silo.StartTime=2023-06-12 03:00:30.127 GMT
+Storage.Activate.Errors.Current=0
+Storage.Activate.Total.Current=0
+Storage.Clear.Errors.Current=0
+Storage.Clear.Latency=0 Secs
+Storage.Clear.Total.Current=0
+Storage.Read.Errors.Current=0
+Storage.Read.Latency=0.0120951 Secs
+Storage.Read.Total.Current=1
+Storage.Write.Errors.Current=0
+Storage.Write.Latency=0 Secs
+Storage.Write.Total.Current=0
+Watchdog.NumFailedHealthChecks.Current=2
+Watchdog.NumHealthChecks.Current=2
+	
+[2023-06-12 03:21:13.722 GMT 19	Warning	100150	Orleans.Runtime.Watchdog]	.NET Runtime Platform stalled for 00:00:02.3014340 - possibly GC? We are now using total of 49MB memory. gc=16, 7, 5	
+[2023-06-12 03:21:16.728 GMT 33	Warning	101215	Orleans.Runtime.Scheduler.WorkItemGroup]	Task [Id=25, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:26650:424234830*stg/DeploymentLoadPublisher/00000016@S00000016] took elapsed time 0:00:00.6385932 for execution, which is longer than 00:00:00.2000000. Running on thread 33	
+[2023-06-12 03:21:17.703 GMT 32	Warning	101215	Orleans.Runtime.Scheduler.WorkItemGroup]	Task [Id=27, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:26650:424234830*stg/MembershipOracle/0000000f@S0000000f] took elapsed time 0:00:00.4951791 for execution, which is longer than 00:00:00.2000000. Running on thread 32	
+[2023-06-12 03:23:00.899 GMT 19	Warning	100150	Orleans.Runtime.Watchdog]	.NET Runtime Platform stalled for 00:01:43.6678680 - possibly GC? We are now using total of 49MB memory. gc=16, 7, 5	
+[2023-06-12 03:23:01.116 GMT 38	Warning	0	Orleans.Runtime.AsyncTimer.SiloHealthMonitor]	Timer should have fired at 06/12/2023 03:21:22 but fired at 06/12/2023 03:23:01, which is 00:01:38.9078550 longer than expected	
+[2023-06-12 03:23:01.116 GMT 40	Warning	0	Orleans.Runtime.AsyncTimer.Catalog.GCTimer]	Timer should have fired at 06/12/2023 03:22:11 but fired at 06/12/2023 03:23:01, which is 00:00:49.2011670 longer than expected	
+[2023-06-12 03:23:01.211 GMT 41	Warning	0	Orleans.Runtime.AsyncTimer.PeriodicallyRefreshMembershipTable]	Timer should have fired at 06/12/2023 03:22:11 but fired at 06/12/2023 03:23:01, which is 00:00:49.3743840 longer than expected	
+[2023-06-12 03:23:01.211 GMT 31	Warning	101215	Orleans.Runtime.Scheduler.WorkItemGroup]	Task [Id=28, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:26650:424234830*stg/DeploymentLoadPublisher/00000016@S00000016] took elapsed time 0:00:00.2104035 for execution, which is longer than 00:00:00.2000000. Running on thread 31	
+[2023-06-12 03:23:01.383 GMT 44	Warning	0	Orleans.Runtime.AsyncTimer.LocalSiloHealthMonitor]	Timer should have fired at 06/12/2023 03:21:21 but fired at 06/12/2023 03:23:01, which is 00:01:39.7291270 longer than expected	
+[2023-06-12 03:23:01.383 GMT 39	Warning	0	Orleans.Runtime.AsyncTimer.IncomingRequestMonitor]	Timer should have fired at 06/12/2023 03:21:26 but fired at 06/12/2023 03:23:01, which is 00:01:34.7013750 longer than expected	
+[2023-06-12 03:23:01.434 GMT 44	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	Health check participant Orleans.Runtime.MembershipService.MembershipTableManager is reporting that it is unhealthy with complaint: PeriodicallyRefreshMembershipTable timer should have fired at 12/6/2023 3:22:11 AM, which is 00:00:49.5718820 ago	
+[2023-06-12 03:23:01.434 GMT 44	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	Health check participant Orleans.Runtime.MembershipService.ClusterHealthMonitor is reporting that it is unhealthy with complaint: Monitor for S127.0.0.1:26651:424234830 is degraded with: SiloHealthMonitor timer should have fired at 12/6/2023 3:21:22 AM, which is 00:01:39.2258810 ago.	
+[2023-06-12 03:23:01.583 GMT 44	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	Self-monitoring determined that local health is degraded. Degradation score is 2/8 (lower is better). Complaints: Health check participant Orleans.Runtime.MembershipService.MembershipTableManager is reporting that it is unhealthy with complaint: PeriodicallyRefreshMembershipTable timer should have fired at 12/6/2023 3:22:11 AM, which is 00:00:49.5718820 ago
+Health check participant Orleans.Runtime.MembershipService.ClusterHealthMonitor is reporting that it is unhealthy with complaint: Monitor for S127.0.0.1:26651:424234830 is degraded with: SiloHealthMonitor timer should have fired at 12/6/2023 3:21:22 AM, which is 00:01:39.2258810 ago.	
+[2023-06-12 03:23:07.412 GMT 39	Information	0	Orleans.Storage.MemoryStorageGrain]	OnActivateAsync	
+[2023-06-12 03:23:15.093 GMT 19	Warning	100150	Orleans.Runtime.Watchdog]	.NET Runtime Platform stalled for 00:00:03.9234470 - possibly GC? We are now using total of 52MB memory. gc=16, 7, 5	
+[2023-06-12 03:23:15.093 GMT 39	Warning	0	Orleans.Runtime.AsyncTimer.LocalSiloHealthMonitor]	Timer should have fired at 06/12/2023 03:23:11 but fired at 06/12/2023 03:23:15, which is 00:00:03.7102810 longer than expected	
+[2023-06-12 03:24:41.458 GMT 19	Warning	100150	Orleans.Runtime.Watchdog]	.NET Runtime Platform stalled for 00:01:21.8919190 - possibly GC? We are now using total of 52MB memory. gc=16, 7, 5	
+[2023-06-12 03:24:42.715 GMT 43	Warning	0	Orleans.Runtime.AsyncTimer.LocalSiloHealthMonitor]	Timer should have fired at 06/12/2023 03:23:25 but fired at 06/12/2023 03:24:42, which is 00:01:17.6222540 longer than expected	
+[2023-06-12 03:24:42.715 GMT 41	Warning	0	Orleans.Runtime.AsyncTimer.SiloHealthMonitor]	Timer should have fired at 06/12/2023 03:23:21 but fired at 06/12/2023 03:24:42, which is 00:01:21.1313120 longer than expected	
+[2023-06-12 03:24:42.716 GMT 43	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	Health check participant Orleans.Runtime.MembershipService.MembershipTableManager is reporting that it is unhealthy with complaint: PeriodicallyRefreshMembershipTable timer should have fired at 12/6/2023 3:24:01 AM, which is 00:00:41.5049420 ago	
+[2023-06-12 03:24:44.469 GMT 38	Warning	101215	Orleans.Runtime.Scheduler.WorkItemGroup]	Task [Id=32, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:26650:424234830*stg/DeploymentLoadPublisher/00000016@S00000016] took elapsed time 0:01:24.176645 for execution, which is longer than 00:00:00.2000000. Running on thread 38	
+[2023-06-12 03:24:44.469 GMT 39	Warning	0	Orleans.Runtime.AsyncTimer.IncomingRequestMonitor]	Timer should have fired at 06/12/2023 03:23:31 but fired at 06/12/2023 03:24:44, which is 00:01:12.7499830 longer than expected	
+[2023-06-12 03:24:44.469 GMT 43	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	Health check participant Orleans.Runtime.MembershipService.ClusterHealthMonitor is reporting that it is unhealthy with complaint: Monitor for S127.0.0.1:26651:424234830 is degraded with: SiloHealthMonitor timer should have fired at 12/6/2023 3:23:21 AM, which is 00:01:22.8852290 ago.	
+[2023-06-12 03:24:44.470 GMT 43	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	Health check participant Orleans.Runtime.Catalog is reporting that it is unhealthy with complaint: Catalog.GCTimer timer should have fired at 12/6/2023 3:24:01 AM, which is 00:00:43.3534620 ago	
+[2023-06-12 03:24:44.562 GMT 43	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	Self-monitoring determined that local health is degraded. Degradation score is 3/8 (lower is better). Complaints: Health check participant Orleans.Runtime.MembershipService.MembershipTableManager is reporting that it is unhealthy with complaint: PeriodicallyRefreshMembershipTable timer should have fired at 12/6/2023 3:24:01 AM, which is 00:00:41.5049420 ago
+Health check participant Orleans.Runtime.MembershipService.ClusterHealthMonitor is reporting that it is unhealthy with complaint: Monitor for S127.0.0.1:26651:424234830 is degraded with: SiloHealthMonitor timer should have fired at 12/6/2023 3:23:21 AM, which is 00:01:22.8852290 ago.
+Health check participant Orleans.Runtime.Catalog is reporting that it is unhealthy with complaint: Catalog.GCTimer timer should have fired at 12/6/2023 3:24:01 AM, which is 00:00:43.3534620 ago	
+[2023-06-12 03:24:47.396 GMT 19	Warning	100150	Orleans.Runtime.Watchdog]	.NET Runtime Platform stalled for 00:00:02.9264040 - possibly GC? We are now using total of 52MB memory. gc=16, 7, 5	
+[2023-06-12 03:24:47.419 GMT 41	Warning	101215	Orleans.Runtime.Scheduler.WorkItemGroup]	Task [Id=34, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:26650:424234830*stg/MembershipOracle/0000000f@S0000000f] took elapsed time 0:00:02.9026647 for execution, which is longer than 00:00:00.2000000. Running on thread 41	
+[2023-06-12 03:24:47.419 GMT 41	Warning	0	Orleans.Runtime.AsyncTimer.PeriodicallyRefreshMembershipTable]	Timer should have fired at 06/12/2023 03:24:01 but fired at 06/12/2023 03:24:47, which is 00:00:46.2078070 longer than expected	
+[2023-06-12 03:24:47.469 GMT 38	Warning	0	Orleans.Runtime.AsyncTimer.Catalog.GCTimer]	Timer should have fired at 06/12/2023 03:24:01 but fired at 06/12/2023 03:24:47, which is 00:00:46.3532500 longer than expected	
+[2023-06-12 03:24:54.923 GMT 19	Warning	100150	Orleans.Runtime.Watchdog]	.NET Runtime Platform stalled for 00:00:02.7586390 - possibly GC? We are now using total of 53MB memory. gc=16, 7, 5	
+[2023-06-12 03:24:54.997 GMT 51	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	.NET Thread Pool is exhibiting delays of 2.953469s. This can indicate .NET Thread Pool starvation, very long .NET GC pauses, or other runtime or machine pauses.	
+[2023-06-12 03:24:55.073 GMT 51	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	Self-monitoring determined that local health is degraded. Degradation score is 2/8 (lower is better). Complaints: .NET Thread Pool is exhibiting delays of 2.953469s. This can indicate .NET Thread Pool starvation, very long .NET GC pauses, or other runtime or machine pauses.	
+[2023-06-12 03:25:00.247 GMT 51	Warning	101215	Orleans.Runtime.Scheduler.WorkItemGroup]	Task [Id=36, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:26650:424234830*stg/DeploymentLoadPublisher/00000016@S00000016] took elapsed time 0:00:00.6906893 for execution, which is longer than 00:00:00.2000000. Running on thread 51	
+[2023-06-12 03:25:05.284 GMT 19	Warning	100150	Orleans.Runtime.Watchdog]	.NET Runtime Platform stalled for 00:00:02.0563910 - possibly GC? We are now using total of 51MB memory. gc=17, 7, 5	
+[2023-06-12 03:25:08.753 GMT 19	Warning	100150	Orleans.Runtime.Watchdog]	.NET Runtime Platform stalled for 00:00:02.1419230 - possibly GC? We are now using total of 51MB memory. gc=17, 7, 5	
+[2023-06-12 03:25:09.566 GMT 42	Warning	101215	Orleans.Runtime.Scheduler.WorkItemGroup]	Task [Id=39, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:26650:424234830*stg/DeploymentLoadPublisher/00000016@S00000016] took elapsed time 0:00:00.8126661 for execution, which is longer than 00:00:00.2000000. Running on thread 42	
+[2023-06-12 03:25:12.644 GMT 19	Warning	100150	Orleans.Runtime.Watchdog]	.NET Runtime Platform stalled for 00:00:02.5908570 - possibly GC? We are now using total of 51MB memory. gc=17, 7, 5	
+[2023-06-12 03:25:14.208 GMT 53	Information	0	Orleans.Storage.MemoryStorageGrain]	OnActivateAsync	
+[2023-06-12 03:25:17.399 GMT 53	Warning	101215	Orleans.Runtime.Scheduler.WorkItemGroup]	Task [Id=41, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:26650:424234830*stg/DeploymentLoadPublisher/00000016@S00000016] took elapsed time 0:00:00.7120987 for execution, which is longer than 00:00:00.2000000. Running on thread 53	
+[2023-06-12 03:25:24.684 GMT 19	Warning	100150	Orleans.Runtime.Watchdog]	.NET Runtime Platform stalled for 00:00:03.3436680 - possibly GC? We are now using total of 52MB memory. gc=17, 7, 5	
+[2023-06-12 03:25:25.785 GMT 40	Warning	101215	Orleans.Runtime.Scheduler.WorkItemGroup]	Task [Id=43, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:26650:424234830*stg/DeploymentLoadPublisher/00000016@S00000016] took elapsed time 0:00:01.0710834 for execution, which is longer than 00:00:00.2000000. Running on thread 40	
+[2023-06-12 03:25:33.955 GMT 19	Warning	100150	Orleans.Runtime.Watchdog]	.NET Runtime Platform stalled for 00:00:04.0282050 - possibly GC? We are now using total of 54MB memory. gc=17, 7, 5	
+[2023-06-12 03:25:38.259 GMT 19	Warning	100150	Orleans.Runtime.Watchdog]	.NET Runtime Platform stalled for 00:00:04.2782630 - possibly GC? We are now using total of 54MB memory. gc=17, 7, 5	
+[2023-06-12 03:25:38.259 GMT 39	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	Health check participant Orleans.Runtime.MembershipService.ClusterHealthMonitor is reporting that it is unhealthy with complaint: Monitor for S127.0.0.1:26651:424234830 is degraded with: SiloHealthMonitor timer should have fired at 12/6/2023 3:25:34 AM, which is 00:00:03.5488430 ago.	
+[2023-06-12 03:25:38.283 GMT 39	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	Self-monitoring determined that local health is degraded. Degradation score is 1/8 (lower is better). Complaints: Health check participant Orleans.Runtime.MembershipService.ClusterHealthMonitor is reporting that it is unhealthy with complaint: Monitor for S127.0.0.1:26651:424234830 is degraded with: SiloHealthMonitor timer should have fired at 12/6/2023 3:25:34 AM, which is 00:00:03.5488430 ago.	
+[2023-06-12 03:25:38.283 GMT 40	Warning	0	Orleans.Runtime.AsyncTimer.SiloHealthMonitor]	Timer should have fired at 06/12/2023 03:25:34 but fired at 06/12/2023 03:25:38, which is 00:00:03.5731650 longer than expected	
+[2023-06-12 03:25:44.210 GMT 19	Warning	100150	Orleans.Runtime.Watchdog]	.NET Runtime Platform stalled for 00:00:02.1915100 - possibly GC? We are now using total of 54MB memory. gc=17, 7, 5	
+[2023-06-12 03:25:49.389 GMT 19	Warning	100150	Orleans.Runtime.Watchdog]	.NET Runtime Platform stalled for 00:00:04.1361860 - possibly GC? We are now using total of 54MB memory. gc=17, 7, 5	
+[2023-06-12 03:25:54.078 GMT 51	Warning	101215	Orleans.Runtime.Scheduler.WorkItemGroup]	Task [Id=47, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:26650:424234830*stg/DeploymentLoadPublisher/00000016@S00000016] took elapsed time 0:00:00.521646 for execution, which is longer than 00:00:00.2000000. Running on thread 51	
+[2023-06-12 03:26:00.432 GMT 54	Warning	101215	Orleans.Runtime.Scheduler.WorkItemGroup]	Task [Id=49, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:26650:424234830*stg/DeploymentLoadPublisher/00000016@S00000016] took elapsed time 0:00:00.9717395 for execution, which is longer than 00:00:00.2000000. Running on thread 54	
+[2023-06-12 03:26:09.742 GMT 19	Warning	100150	Orleans.Runtime.Watchdog]	.NET Runtime Platform stalled for 00:00:05.9414530 - possibly GC? We are now using total of 56MB memory. gc=17, 7, 5	
+[2023-06-12 03:26:09.743 GMT 41	Warning	0	Orleans.Runtime.AsyncTimer.SiloHealthMonitor]	Timer should have fired at 06/12/2023 03:26:05 but fired at 06/12/2023 03:26:09, which is 00:00:04.3363240 longer than expected	
+[2023-06-12 03:26:09.767 GMT 53	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	Health check participant Orleans.Runtime.MembershipService.ClusterHealthMonitor is reporting that it is unhealthy with complaint: Monitor for S127.0.0.1:26651:424234830 is degraded with: SiloHealthMonitor timer should have fired at 12/6/2023 3:26:05 AM, which is 00:00:04.3604440 ago.	
+[2023-06-12 03:26:09.844 GMT 53	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	Self-monitoring determined that local health is degraded. Degradation score is 1/8 (lower is better). Complaints: Health check participant Orleans.Runtime.MembershipService.ClusterHealthMonitor is reporting that it is unhealthy with complaint: Monitor for S127.0.0.1:26651:424234830 is degraded with: SiloHealthMonitor timer should have fired at 12/6/2023 3:26:05 AM, which is 00:00:04.3604440 ago.	
+[2023-06-12 03:26:19.216 GMT 19	Warning	100150	Orleans.Runtime.Watchdog]	.NET Runtime Platform stalled for 00:00:09.4497790 - possibly GC? We are now using total of 56MB memory. gc=17, 7, 5	
+[2023-06-12 03:26:19.217 GMT 39	Warning	0	Orleans.Runtime.AsyncTimer.SiloHealthMonitor]	Timer should have fired at 06/12/2023 03:26:14 but fired at 06/12/2023 03:26:19, which is 00:00:04.4739160 longer than expected	
+[2023-06-12 03:26:19.242 GMT 19	Warning	102603	Orleans.Runtime.Watchdog]	Watchdog had 2 health Check failure(s) out of 5 health Check participants: Orleans.Runtime.MembershipService.ClusterHealthMonitor failed health check with reason "Monitor for S127.0.0.1:26651:424234830 is degraded with: SiloHealthMonitor timer should have fired at 12/6/2023 3:26:14 AM, which is 00:00:04.4996900 ago.". Orleans.Runtime.MembershipService.MembershipAgent failed health check with reason "UpdateIAmAlive timer should have fired at 12/6/2023 3:26:11 AM, which is 00:00:07.4326320 ago".	
+[2023-06-12 03:26:19.217 GMT 54	Warning	0	Orleans.Runtime.AsyncTimer.UpdateIAmAlive]	Timer should have fired at 06/12/2023 03:26:11 but fired at 06/12/2023 03:26:19, which is 00:00:07.4070080 longer than expected	
+[2023-06-12 03:26:19.217 GMT 41	Warning	0	Orleans.Runtime.AsyncTimer.IncomingRequestMonitor]	Timer should have fired at 06/12/2023 03:26:15 but fired at 06/12/2023 03:26:19, which is 00:00:03.8106140 longer than expected	
+[2023-06-12 03:26:19.294 GMT 39	Warning	0	Orleans.Runtime.AsyncTimer.ClientObserverRegistrar.ClientRefreshTimer]	Timer should have fired at 06/12/2023 03:26:11 but fired at 06/12/2023 03:26:19, which is 00:00:07.6145620 longer than expected	
+[2023-06-12 03:26:19.885 GMT 38	Warning	101215	Orleans.Runtime.Scheduler.WorkItemGroup]	Task [Id=52, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:26650:424234830*stg/DeploymentLoadPublisher/00000016@S00000016] took elapsed time 0:00:00.6140465 for execution, which is longer than 00:00:00.2000000. Running on thread 38	
+[2023-06-12 03:26:19.886 GMT 42	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	Health check participant Orleans.Runtime.MembershipService.ClusterHealthMonitor is reporting that it is unhealthy with complaint: Monitor for S127.0.0.1:26651:424234830 is degraded with: SiloHealthMonitor timer should have fired at 12/6/2023 3:26:14 AM, which is 00:00:05.1430680 ago.	
+[2023-06-12 03:26:19.912 GMT 42	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	Health check participant Orleans.Runtime.MembershipService.MembershipAgent is reporting that it is unhealthy with complaint: UpdateIAmAlive timer should have fired at 12/6/2023 3:26:11 AM, which is 00:00:08.1027130 ago	
+[2023-06-12 03:26:19.912 GMT 42	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	Self-monitoring determined that local health is degraded. Degradation score is 2/8 (lower is better). Complaints: Health check participant Orleans.Runtime.MembershipService.ClusterHealthMonitor is reporting that it is unhealthy with complaint: Monitor for S127.0.0.1:26651:424234830 is degraded with: SiloHealthMonitor timer should have fired at 12/6/2023 3:26:14 AM, which is 00:00:05.1430680 ago.
+Health check participant Orleans.Runtime.MembershipService.MembershipAgent is reporting that it is unhealthy with complaint: UpdateIAmAlive timer should have fired at 12/6/2023 3:26:11 AM, which is 00:00:08.1027130 ago	
+[2023-06-12 03:26:20.451 GMT 50	Warning	101215	Orleans.Runtime.Scheduler.WorkItemGroup]	Task [Id=55, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:26650:424234830*stg/DirectoryCacheValidator/0000000b@S0000000b] took elapsed time 0:00:00.5384422 for execution, which is longer than 00:00:00.2000000. Running on thread 50	
+[2023-06-12 03:26:20.527 GMT 39	Warning	101215	Orleans.Runtime.Scheduler.WorkItemGroup]	Task [Id=57, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:26650:424234830*stg/ClientObserverRegistrar/0000000d@S0000000d] took elapsed time 0:00:01.2323846 for execution, which is longer than 00:00:00.2000000. Running on thread 39	
+[2023-06-12 03:26:20.506 GMT 43	Information	100704	Orleans.Runtime.SiloLogStatistics]	Statistics: ^^^
+App.Requests.Latency.Average.Millis=714.000
+App.Requests.LatencyHistogram.Millis=[0.0512:0.1023]=2, [0.1024:0.2047]=3, [0.2048:0.4095]=16, [0.4096:0.8191]=42, [0.8192:1.6383]=60, [1.6384:3.2767]=21, [3.2768:6.5535]=4, [6.5536:13.1071]=7, [13.1072:26.2143]=33, [26.2144:52.4287]=85, [52.4288:104.8575]=98, [104.8576:209.7151]=31, [209.7152:419.4303]=7, [419.4304:838.8607]=18, [838.8608:1677.7215]=19, [1677.7216:3355.4431]=4, [3355.4432:6710.8863]=1, [53687.0912:107374.1823]=3, 
+App.Requests.TimedOut.Current=0
+App.Requests.Total.Requests.Current=454,      Delta=401
+Catalog.Activation.Collection.NumberOfCollections.Current=8,      Delta=6
+Catalog.Activation.ConcurrentRegistrationAttempts.Current=1
+Catalog.Activation.Created.Current=19,      Delta=16
+Catalog.Activation.CurrentCount=10
+Catalog.Activation.Destroyed.Current=1
+Catalog.Activation.FailedToActivate.Current=0
+Client.ConnectedGatewayCount=2
+ConsistentRing.AverageRangePercentage=50.000
+ConsistentRing.MyRange.RingDistance=xB8EF80C1
+ConsistentRing.MyRange.RingPercentage=72.240
+ConsistentRing.Ring=[S127.0.0.1:26651:424234830 -> <MultiRange: Size=x47107F3F, %Ring=27.760%>, S127.0.0.1:26650:424234830 -> <MultiRange: Size=xB8EF80C1, %Ring=72.240%>]
+ConsistentRing.RingSize=2
+Directory.CacheSize=7
+Directory.Lookups.Cache.HitRatio=0.7777778, Delta=0.7941176
+Directory.Lookups.Cache.Issued.Current=72,      Delta=68
+Directory.Lookups.Cache.Successes.Current=56,      Delta=54
+Directory.Lookups.Full.Issued.Current=26,      Delta=22
+Directory.Lookups.Local.Issued.Current=118,      Delta=105
+Directory.Lookups.Local.Successes.Current=92,      Delta=83
+Directory.Lookups.LocalDirectory.Issued.Current=72,      Delta=59
+Directory.Lookups.LocalDirectory.Successes.Current=43,      Delta=35
+Directory.Lookups.Remote.Received.Current=16,      Delta=14
+Directory.Lookups.Remote.Sent.Current=16,      Delta=14
+Directory.PartitionSize=7
+Directory.Registrations.Issued.Current=22,      Delta=4
+Directory.Registrations.Local.Current=21,      Delta=2
+Directory.Registrations.Remote.Received.Current=7
+Directory.Registrations.Remote.Sent.Current=5,      Delta=2
+Directory.Registrations.SingleAct.Issued.Current=19,      Delta=16
+Directory.Registrations.SingleAct.Local.Current=19,      Delta=16
+Directory.Registrations.SingleAct.Remote.Received.Current=20,      Delta=16
+Directory.Registrations.SingleAct.Remote.Sent.Current=10,      Delta=8
+Directory.Ring=[S127.0.0.1:26650:424234830/96ADD030, S127.0.0.1:26651:424234830/1F36EFA2]
+Directory.Ring.MyPortion.AverageRingPercentage=50.000
+Directory.Ring.MyPortion.RingDistance=2290687858
+Directory.Ring.MyPortion.RingPercentage=53.334
+Directory.Ring.MyPredecessors=[S127.0.0.1:26651:424234830/1F36EFA2]
+Directory.Ring.MySuccessors=[S127.0.0.1:26651:424234830/1F36EFA2]
+Directory.Ring.RingSize=2
+Directory.UnRegistrations.Issued.Current=0
+Directory.UnRegistrations.Local.Current=0
+Directory.UnRegistrations.Remote.Received.Current=0
+Directory.UnRegistrations.Remote.Sent.Current=0
+Directory.UnRegistrationsMany.Issued.Current=0
+Directory.UnRegistrationsMany.Remote.Received.Current=0
+Directory.UnRegistrationsMany.Remote.Sent.Current=0
+Directory.Validations.Cache.Received.Current=1,      Delta=1
+Directory.Validations.Cache.Sent.Current=3,      Delta=2
+Dispatcher.NewPlacement.Current=19,      Delta=16
+Gateway.ConnectedClients.Current=2
+Gateway.LoadShedding.Current=0
+Gateway.Received.Current=33,      Delta=28
+Gateway.Sent.Current=66,      Delta=58
+Grain.AElfIndexer.Grains.Grain.Client.BlockStateSetBucketGrain`1[[AElfIndexer.Grains.State.Client.LogEventInfo, AElfIndexer.Grains, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].Current=1
+Grain.AElfIndexer.Grains.Grain.Client.BlockStateSetBucketGrain`1[[AElfIndexer.Grains.State.Client.TransactionInfo, AElfIndexer.Grains, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].Current=1
+Grain.AElfIndexer.Grains.Grain.Client.BlockStateSetGrain`1[[AElfIndexer.Grains.State.Client.LogEventInfo, AElfIndexer.Grains, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].Current=1
+Grain.AElfIndexer.Grains.Grain.Client.BlockStateSetGrain`1[[AElfIndexer.Grains.State.Client.TransactionInfo, AElfIndexer.Grains, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].Current=1
+Grain.AElfIndexer.Grains.Grain.Client.DappDataGrain.Current=5
+Grain.Orleans.Runtime.Versions.VersionStoreGrain.Current=1
+Grain.Orleans.Storage.MemoryStorageGrain.Current=8
+Messaging.Expired.AtDispatch.Current=0
+Messaging.Expired.AtInvoke.Current=0
+Messaging.Expired.AtReceive.Current=0
+Messaging.Expired.AtRespond.Current=0
+Messaging.Expired.AtSend.Current=0
+Messaging.Pings.Received.S127.0.0.1:26650:424234830.Current=21
+Messaging.Pings.Received.S127.0.0.1:26651:424234830.Current=21,      Delta=19
+Messaging.Pings.ReplyMissed.S127.0.0.1:26650:424234830.Current=1
+Messaging.Pings.ReplyReceived.S127.0.0.1:26650:424234830.Current=19
+Messaging.Pings.ReplyReceived.S127.0.0.1:26651:424234830.Current=21
+Messaging.Pings.Sent.S127.0.0.1:26650:424234830.Current=22,      Delta=20
+Messaging.Pings.Sent.S127.0.0.1:26651:424234830.Current=22
+Messaging.Processing.ActivationData.All=0
+Messaging.Processing.Dispatcher.Forwarded.Current=2
+Messaging.Processing.Dispatcher.Processed.Errors.Direction.OneWay.Current=0
+Messaging.Processing.Dispatcher.Processed.Errors.Direction.Request.Current=0
+Messaging.Processing.Dispatcher.Processed.Errors.Direction.Response.Current=0
+Messaging.Processing.Dispatcher.Processed.Ok.Direction.OneWay.Current=0
+Messaging.Processing.Dispatcher.Processed.Ok.Direction.Request.Current=118,      Delta=105
+Messaging.Processing.Dispatcher.Processed.Ok.Direction.Response.Current=81,      Delta=80
+Messaging.Processing.Dispatcher.Processed.Total.Current=199,      Delta=185
+Messaging.Processing.Dispatcher.Received.Direction.OneWay.Current=0
+Messaging.Processing.Dispatcher.Received.Direction.Request.Current=119,      Delta=105
+Messaging.Processing.Dispatcher.Received.Direction.Response.Current=81,      Delta=80
+Messaging.Processing.Dispatcher.Received.OnActivationContext.Current=157,      Delta=147
+Messaging.Processing.Dispatcher.Received.OnNullContext.Current=43,      Delta=38
+Messaging.Processing.Dispatcher.Received.Total.Current=200,      Delta=185
+Messaging.Processing.IMA.Enqueued.ToActivationContex.Current=157,      Delta=147
+Messaging.Processing.IMA.Enqueued.ToNullContex.Current=43,      Delta=38
+Messaging.Processing.IMA.Enqueued.ToSystemTargetContex.Current=616,      Delta=536
+Messaging.Processing.IMA.Received.Current=816,      Delta=721
+Messaging.Received.BatchSize.PerSocketDirection.ClientToGateway=1.000
+Messaging.Received.BatchSize.PerSocketDirection.GatewayToClient=1.000
+Messaging.Received.BatchSize.PerSocketDirection.SiloToSilo=1.000
+Messaging.Received.BatchSizeBytesHistogram.Bytes.PerSocketDirection.ClientToGateway=[128:255]=15, [256:511]=13, [4096:8191]=5, 
+Messaging.Received.BatchSizeBytesHistogram.Bytes.PerSocketDirection.GatewayToClient=[128:255]=8, [256:511]=11, [512:1023]=10, [1024:2047]=4, 
+Messaging.Received.BatchSizeBytesHistogram.Bytes.PerSocketDirection.SiloToSilo=[128:255]=239, [256:511]=198, [512:1023]=23, [1024:2047]=13, [4096:8191]=2, 
+Messaging.Received.Bytes.Header.Current=108290,      Delta=94495
+Messaging.Received.Bytes.Total.Current=216966,      Delta=177008
+Messaging.Received.Direction.OneWay.Current=0
+Messaging.Received.Direction.Request.Current=279,      Delta=237
+Messaging.Received.Direction.Response.Current=262,      Delta=228
+Messaging.Received.Messages.From.S127.0.0.1:26650:0.Current=78,      Delta=65
+Messaging.Received.Messages.From.S127.0.0.1:26650:424234830.Current=156,      Delta=133
+Messaging.Received.Messages.From.S127.0.0.1:26651:424234830.Current=241,      Delta=209
+Messaging.Received.Messages.From.S127.0.0.1:49465:0.Current=22,      Delta=20
+Messaging.Received.Messages.From.S127.0.0.1:49466:0.Current=11,      Delta=9
+Messaging.Received.Messages.Total.Current=541,      Delta=465
+Messaging.Received.MessageSizeHistogram.Bytes=[128:255]=262, [256:511]=222, [512:1023]=33, [1024:2047]=17, [4096:8191]=7, 
+Messaging.Rerouted.OneWay.Current=0
+Messaging.Rerouted.Request.Current=31,      Delta=28
+Messaging.Rerouted.Response.Current=0
+Messaging.Sent.BatchSize.PerSocketDirection.ClientToGateway=1.000
+Messaging.Sent.BatchSize.PerSocketDirection.GatewayToClient=1.000
+Messaging.Sent.BatchSize.PerSocketDirection.SiloToSilo=1.000
+Messaging.Sent.BatchSizeBytesHistogram.Bytes.PerSocketDirection.ClientToGateway=[128:255]=8, [256:511]=11, [512:1023]=10, [1024:2047]=4, 
+Messaging.Sent.BatchSizeBytesHistogram.Bytes.PerSocketDirection.GatewayToClient=[128:255]=15, [256:511]=13, [4096:8191]=5, 
+Messaging.Sent.BatchSizeBytesHistogram.Bytes.PerSocketDirection.SiloToSilo=[128:255]=240, [256:511]=202, [512:1023]=24, [1024:2047]=13, [4096:8191]=2, 
+Messaging.Sent.Bytes.Header.Current=109346,      Delta=95029
+Messaging.Sent.Bytes.Total.Current=219416,      Delta=178673
+Messaging.Sent.Direction.OneWay.Current=0
+Messaging.Sent.Direction.Request.Current=285,      Delta=243
+Messaging.Sent.Direction.Response.Current=262,      Delta=225
+Messaging.Sent.LocalMessages.Current=396,      Delta=356
+Messaging.Sent.Messages.To.S127.0.0.1:26650:0.Current=13,      Delta=6
+Messaging.Sent.Messages.To.S127.0.0.1:26650:424234830.Current=230,      Delta=203
+Messaging.Sent.Messages.To.S127.0.0.1:26651:424234830.Current=238,      Delta=202
+Messaging.Sent.Messages.To.S127.0.0.1:49465:0.Current=16,      Delta=14
+Messaging.Sent.Messages.To.S127.0.0.1:49466:0.Current=17,      Delta=14
+Messaging.Sent.Messages.Total.Current=547,      Delta=468
+Messaging.Sent.MessageSizeHistogram.Bytes=[128:255]=263, [256:511]=226, [512:1023]=34, [1024:2047]=17, [4096:8191]=7, 
+Networking.Sockets.ClientToGateway.Closed.Current=0
+Networking.Sockets.ClientToGateway.Opened.Current=2
+Networking.Sockets.GatewayToClient.Closed.Current=0
+Networking.Sockets.GatewayToClient.Opened.Current=2
+Networking.Sockets.Silo.Closed.Current=0
+Networking.Sockets.Silo.Opened.Current=4
+Runtime.IsOverloaded=False
+Scheduler.NumLongQueueWaitTimes.Current=0
+Scheduler.NumLongRunningTurns.Current=28,      Delta=27
+Scheduler.WorkItemGroupCount=22
+Serialization.BufferPool.AllocatedBuffers.Current=750
+Serialization.BufferPool.BuffersInPool=250
+Serialization.BufferPool.CheckedInBuffers.Current=750
+Serialization.BufferPool.CheckedOutBuffers.Current=750
+Serialization.BufferPool.DroppedBuffers.Current=0
+Serialization.BufferPool.DroppedTooLargeBuffers.Current=0
+Serialization.BufferPool.InUse.AllocatedAndNotInPool_Buffers=500
+Serialization.BufferPool.InUse.CheckedOutAndNotCheckedIn_Buffers=0
+Silo.StartTime=2023-06-12 03:00:30.127 GMT
+Storage.Activate.Errors.Current=0
+Storage.Activate.Total.Current=0
+Storage.Clear.Errors.Current=0
+Storage.Clear.Latency=0 Secs
+Storage.Clear.Total.Current=0
+Storage.Read.Errors.Current=0
+Storage.Read.Latency=0.0172574 Secs
+Storage.Read.Total.Current=19,      Delta=18
+Storage.Write.Errors.Current=0
+Storage.Write.Latency=0.0189092 Secs
+Storage.Write.Total.Current=48,      Delta=48
+Watchdog.NumFailedHealthChecks.Current=4,      Delta=2
+Watchdog.NumHealthChecks.Current=4,      Delta=2
+	
+[2023-06-12 03:26:25.316 GMT 53	Warning	101215	Orleans.Runtime.Scheduler.WorkItemGroup]	Task [Id=58, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:26650:424234830*stg/DeploymentLoadPublisher/00000016@S00000016] took elapsed time 0:00:00.4765831 for execution, which is longer than 00:00:00.2000000. Running on thread 53	
+[2023-06-12 03:26:30.701 GMT 19	Warning	100150	Orleans.Runtime.Watchdog]	.NET Runtime Platform stalled for 00:00:05.8866860 - possibly GC? We are now using total of 57MB memory. gc=17, 7, 5	
+[2023-06-12 03:26:32.702 GMT 53	Warning	101215	Orleans.Runtime.Scheduler.WorkItemGroup]	Task [Id=60, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:26650:424234830*stg/DeploymentLoadPublisher/00000016@S00000016] took elapsed time 0:00:00.5649389 for execution, which is longer than 00:00:00.2000000. Running on thread 53	
+[2023-06-12 03:26:34.702 GMT 53	Warning	101215	Orleans.Runtime.Scheduler.WorkItemGroup]	Task [Id=63, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:26650:424234830*stg/DeploymentLoadPublisher/00000016@S00000016] took elapsed time 0:00:00.9909325 for execution, which is longer than 00:00:00.2000000. Running on thread 53	
+[2023-06-12 03:26:45.031 GMT 19	Warning	100150	Orleans.Runtime.Watchdog]	.NET Runtime Platform stalled for 00:00:08.6767640 - possibly GC? We are now using total of 56MB memory. gc=18, 7, 5	
+[2023-06-12 03:26:45.031 GMT 50	Warning	0	Orleans.Runtime.AsyncTimer.LocalSiloHealthMonitor]	Timer should have fired at 06/12/2023 03:26:40 but fired at 06/12/2023 03:26:45, which is 00:00:04.3302760 longer than expected	
+[2023-06-12 03:26:45.031 GMT 52	Warning	0	Orleans.Runtime.AsyncTimer.SiloHealthMonitor]	Timer should have fired at 06/12/2023 03:26:41 but fired at 06/12/2023 03:26:45, which is 00:00:03.6518020 longer than expected	
+[2023-06-12 03:26:45.054 GMT 50	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	Health check participant Orleans.Runtime.MembershipService.ClusterHealthMonitor is reporting that it is unhealthy with complaint: Monitor for S127.0.0.1:26651:424234830 is degraded with: SiloHealthMonitor timer should have fired at 12/6/2023 3:26:41 AM, which is 00:00:03.6741500 ago.	
+[2023-06-12 03:26:45.054 GMT 50	Warning	0	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor]	Self-monitoring determined that local health is degraded. Degradation score is 1/8 (lower is better). Complaints: Health check participant Orleans.Runtime.MembershipService.ClusterHealthMonitor is reporting that it is unhealthy with complaint: Monitor for S127.0.0.1:26651:424234830 is degraded with: SiloHealthMonitor timer should have fired at 12/6/2023 3:26:41 AM, which is 00:00:03.6741500 ago.	
+[2023-06-12 03:26:49.077 GMT 19	Warning	100150	Orleans.Runtime.Watchdog]	.NET Runtime Platform stalled for 00:00:02.4540890 - possibly GC? We are now using total of 56MB memory. gc=18, 7, 5	

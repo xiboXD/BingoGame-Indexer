@@ -1,0 +1,2266 @@
+﻿[2023-06-06 09:04:22.209 GMT 23	Information	100404	Orleans.Runtime.Silo]	Silo starting with GC settings: ServerGC=False GCLatencyMode=Interactive	
+[2023-06-06 09:04:22.209 GMT 23	Warning	100405	Orleans.Runtime.Silo]	Note: Silo not running with ServerGC turned on - recommend checking app config : <configuration>-<runtime>-<gcServer enabled="true">	
+[2023-06-06 09:04:22.209 GMT 23	Warning	100405	Orleans.Runtime.Silo]	Note: ServerGC only kicks in on multi-core systems (settings enabling ServerGC have no effect on single-core machines).	
+[2023-06-06 09:04:22.209 GMT 23	Information	100403	Orleans.Runtime.Silo]	-------------- Initializing silo on host wens-MacBook-Pro.local MachineName wens-MacBook-Pro at 127.0.0.1:29956, gen 423738262 --------------	
+[2023-06-06 09:04:22.209 GMT 23	Information	100415	Orleans.Runtime.Silo]	Starting silo Secondary_1	
+[2023-06-06 09:04:22.218 GMT 23	Information	0	Orleans.Runtime.ConsistentRing.VirtualBucketsRingProvider]	Starting VirtualBucketsRingProvider on silo S127.0.0.1:29956:423738262/x3E89AF07.	
+[2023-06-06 09:04:22.218 GMT 23	Information	103003	Orleans.Runtime.ConsistentRing.VirtualBucketsRingProvider]	Added Server S127.0.0.1:29956:423738262/x3E89AF07. Current view: [S127.0.0.1:29956:423738262 -> <MultiRange: Size=x100000000, %Ring=100.000%>]	
+[2023-06-06 09:04:22.218 GMT 23	Information	103005	Orleans.Runtime.ConsistentRing.VirtualBucketsRingProvider]	-NotifyLocalRangeSubscribers about old <(0 0], Size=x100000000, %Ring=100.000%> new <MultiRange: Size=x100000000, %Ring=100.000%> increased? True	
+[2023-06-06 09:04:22.301 GMT 23	Information	100422	Orleans.Runtime.Silo]	-------------- Started silo S127.0.0.1:29956:423738262, ConsistentHashCode 3E89AF07 --------------	
+[2023-06-06 09:04:22.302 GMT 7	Information	100453	Orleans.Runtime.SiloLifecycleSubject]	Stage First (-2147483648): Orleans.Runtime.SiloOptionsLogger	
+[2023-06-06 09:04:22.302 GMT 7	Information	100453	Orleans.Runtime.SiloLifecycleSubject]	Stage 1999: ConnectionManager, SiloConnectionListener, GatewayConnectionListener	
+[2023-06-06 09:04:22.302 GMT 7	Information	100453	Orleans.Runtime.SiloLifecycleSubject]	Stage RuntimeInitialize (2000): Orleans.Runtime.InsideRuntimeClient, SiloStatusListenerManager, ClusterMembershipService, SiloConnectionMaintainer, Orleans.Runtime.Silo	
+[2023-06-06 09:04:22.302 GMT 7	Information	100453	Orleans.Runtime.SiloLifecycleSubject]	Stage 2001: MembershipAgent	
+[2023-06-06 09:04:22.302 GMT 7	Information	100453	Orleans.Runtime.SiloLifecycleSubject]	Stage RuntimeServices (4000): Orleans.Runtime.Silo	
+[2023-06-06 09:04:22.302 GMT 7	Information	100453	Orleans.Runtime.SiloLifecycleSubject]	Stage RuntimeGrainServices (8000): MembershipTableManager, HostedClient, Orleans.Runtime.Silo	
+[2023-06-06 09:04:22.302 GMT 7	Information	100453	Orleans.Runtime.SiloLifecycleSubject]	Stage AfterRuntimeGrainServices (8100): MembershipAgent, SiloStatusListenerManager	
+[2023-06-06 09:04:22.302 GMT 7	Information	100453	Orleans.Runtime.SiloLifecycleSubject]	Stage ApplicationServices (10000): Orleans.Runtime.Versions.GrainVersionStore	
+[2023-06-06 09:04:22.302 GMT 7	Information	100453	Orleans.Runtime.SiloLifecycleSubject]	Stage BecomeActive (19999): MembershipAgent, IncomingRequestMonitor, Orleans.ClientLoggingHelper, Orleans.Runtime.Silo	
+[2023-06-06 09:04:22.302 GMT 7	Information	100453	Orleans.Runtime.SiloLifecycleSubject]	Stage Active (20000): ClusterHealthMonitor, Orleans.Runtime.MembershipService.LocalSiloHealthMonitor, MembershipTableCleanupAgent, GatewayConnectionListener, Orleans.Runtime.Silo	
+[2023-06-06 09:04:22.302 GMT 7	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.ActivationCountBasedPlacementOptions: 
+ChooseOutOf: 2
+	
+[2023-06-06 09:04:22.302 GMT 7	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.ClusterMembershipOptions: 
+NumMissedTableIAmAliveLimit: 2
+LivenessEnabled: True
+ProbeTimeout: 00:00:05
+TableRefreshTimeout: 00:01:00
+DeathVoteExpirationTimeout: 00:02:00
+IAmAliveTablePublishTimeout: 00:05:00
+MaxJoinAttemptTime: 00:05:00
+ValidateInitialConnectivity: True
+UseLivenessGossip: True
+NumProbedSilos: 3
+NumMissedProbesLimit: 3
+NumVotesForDeathDeclaration: 2
+DefunctSiloExpiration: 7.00:00:00
+DefunctSiloCleanupPeriod: 01:00:00
+IsRunningAsUnitTest: False
+LocalHealthDegradationMonitoringPeriod: 00:00:10
+ExtendProbeTimeoutDuringDegradation: False
+EnableIndirectProbes: False
+	
+[2023-06-06 09:04:22.302 GMT 7	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.ClusterOptions: 
+ClusterId: testcluster-2023-06-06t09-04-22-218
+ServiceId: 24aab7150a5f4907aff739e5a07d5b34
+	
+[2023-06-06 09:04:22.302 GMT 7	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.ConnectionOptions: 
+ProtocolVersion: Version1
+ConnectionsPerEndpoint: 1
+ConnectionRetryDelay: 00:00:01
+OpenConnectionTimeout: 00:00:05
+	
+[2023-06-06 09:04:22.302 GMT 7	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.ConsistentRingOptions: 
+NumVirtualBucketsConsistentRing: 30
+UseVirtualBucketsConsistentRing: True
+	
+[2023-06-06 09:04:22.302 GMT 7	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.EndpointOptions: 
+AdvertisedIPAddress: 127.0.0.1
+SiloPort: 29956
+GatewayPort: 40411
+SiloListeningEndpoint: 127.0.0.1:29956
+GatewayListeningEndpoint: 127.0.0.1:40411
+	
+[2023-06-06 09:04:22.302 GMT 7	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.GrainCollectionOptions: 
+CollectionQuantum: 00:01:00
+CollectionAge: 02:00:00
+DeactivationTimeout: 00:00:30
+	
+[2023-06-06 09:04:22.302 GMT 7	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.GrainDirectoryOptions: 
+CachingStrategy: Adaptive
+CacheSize: 1000000
+InitialCacheTTL: 00:00:30
+MaximumCacheTTL: 00:04:00
+CacheTTLExtensionFactor: 2
+LazyDeregistrationDelay: 00:01:00
+	
+[2023-06-06 09:04:22.302 GMT 7	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.GrainVersioningOptions: 
+DefaultCompatibilityStrategy: BackwardCompatible
+DefaultVersionSelectorStrategy: AllCompatibleVersions
+	
+[2023-06-06 09:04:22.302 GMT 7	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.LoadSheddingOptions: 
+LoadSheddingEnabled: False
+LoadSheddingLimit: 95
+	
+[2023-06-06 09:04:22.302 GMT 7	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.MemoryGrainStorageOptions-Default: 
+NumStorageGrains: 10
+InitStage: 10000
+	
+[2023-06-06 09:04:22.302 GMT 7	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.MemoryGrainStorageOptions-PubSubStore: 
+NumStorageGrains: 10
+InitStage: 10000
+	
+[2023-06-06 09:04:22.302 GMT 7	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.PerformanceTuningOptions: 
+DefaultConnectionLimit: 200
+Expect100Continue: False
+UseNagleAlgorithm: False
+MinDotNetThreadPoolSize: 0
+MinIOThreadPoolSize: 0
+	
+[2023-06-06 09:04:22.302 GMT 7	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.SchedulingOptions: 
+PerformDeadlockDetection: False
+AllowCallChainReentrancy: True
+MaxActiveThreads: 10
+DelayWarningThreshold: 00:00:10
+ActivationSchedulingQuantum: 00:00:00.1000000
+TurnWarningLengthThreshold: 00:00:00.2000000
+MaxPendingWorkItemsSoftLimit: 0
+EnableWorkerThreadInjection: False
+StoppedActivationWarningInterval: 00:01:00
+	
+[2023-06-06 09:04:22.302 GMT 7	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.SerializationProviderOptions: 
+FallbackSerializationProvider: 
+MaxSustainedSerializationContextCapacity: 64
+	
+[2023-06-06 09:04:22.302 GMT 7	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.SiloMessagingOptions: 
+SiloSenderQueues: 10
+GatewaySenderQueues: 10
+MaxForwardCount: 2
+ClientDropTimeout: 00:01:00
+ClientRegistrationRefresh: 00:05:00
+ClientGatewayShutdownNotificationTimeout: 00:00:05
+MaxEnqueuedRequestsSoftLimit: 0
+MaxEnqueuedRequestsHardLimit: 0
+MaxEnqueuedRequestsSoftLimit_StatelessWorker: 0
+MaxEnqueuedRequestsHardLimit_StatelessWorker: 0
+MaxRequestProcessingTime: 02:00:00
+AssumeHomogenousSilosForTesting: False
+DEFAULT_SHUTDOWN_REROUTE_TIMEOUT: 00:00:10
+ShutdownRerouteTimeout: 00:00:10
+SystemResponseTimeout: 00:00:30
+GrainWorkloadAnalysisPeriod: 00:00:15
+RequestProcessingWarningTime: 00:00:05
+RequestQueueDelayWarningTime: 00:00:10
+WaitForMessageToBeQueuedForOutboundTime: 00:00:02
+ResponseTimeout: 00:00:30
+ResponseTimeoutWithDebugger: 00:30:00
+DropExpiredMessages: True
+BufferPoolBufferSize: 4096
+BufferPoolMaxSize: 10000
+BufferPoolPreallocationSize: 250
+PropagateActivityId: False
+LargeMessageWarningThreshold: 85000
+MaxMessageHeaderSize: 10485760
+MaxMessageBodySize: 104857600
+	
+[2023-06-06 09:04:22.302 GMT 7	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.SiloOptions: 
+SiloName: Secondary_1
+	
+[2023-06-06 09:04:22.302 GMT 7	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.SimpleMessageStreamProviderOptions-AElfIndexer: 
+FireAndForgetDelivery: False
+OptimizeForImmutableData: True
+PubSubType: ExplicitGrainBasedAndImplicit
+	
+[2023-06-06 09:04:22.302 GMT 7	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.StatisticsOptions: 
+PerfCountersWriteInterval: 00:00:30
+LogWriteInterval: 00:05:00
+CollectionLevel: Info
+	
+[2023-06-06 09:04:22.302 GMT 7	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.TelemetryOptions: 
+	
+[2023-06-06 09:04:22.302 GMT 7	Information	0	Orleans.Runtime.SiloOptionsLogger]	Configuration Orleans.Configuration.TypeManagementOptions: 
+TypeMapRefreshInterval: 00:01:00
+	
+[2023-06-06 09:04:22.302 GMT 7	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Orleans.Runtime.SiloOptionsLogger started in stage First (-2147483648) in 0.7735 Milliseconds	
+[2023-06-06 09:04:22.302 GMT 7	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Starting lifecycle stage First (-2147483648) took 0.7772 Milliseconds	
+[2023-06-06 09:04:22.302 GMT 7	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	ConnectionManager started in stage 1999 in 0.0002 Milliseconds	
+[2023-06-06 09:04:22.302 GMT 7	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	GatewayConnectionListener started in stage 1999 in 0.0748 Milliseconds	
+[2023-06-06 09:04:22.302 GMT 21	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	SiloConnectionListener started in stage 1999 in 0.0898 Milliseconds	
+[2023-06-06 09:04:22.302 GMT 21	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Starting lifecycle stage 1999 took 0.0964 Milliseconds	
+[2023-06-06 09:04:22.303 GMT 21	Information	101711	Orleans.Runtime.GrainTypeManager]	Loaded grain type summary for 22 types: 
+Grain class AElfIndexer.Grains.Grain.Blocks.AElfIndexer.Grains.Grain.Blocks.BlockBranchGrain [-1896501614 (0x8EF5AE92)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.Blocks.IBlockBranchGrain [-1542033403 (0xA4167005)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class AElfIndexer.Grains.Grain.Blocks.AElfIndexer.Grains.Grain.Blocks.BlockGrain [-1672887292 (0x9C49C404)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.Blocks.IBlockGrain [717565127 (0x2AC52CC7)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class AElfIndexer.Grains.Grain.Blocks.AElfIndexer.Grains.Grain.Blocks.PrimaryKeyGrain [1963531123 (0x75091B73)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.Blocks.IPrimaryKeyGrain [-1914615838 (0x8DE147E2)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class AElfIndexer.Grains.Grain.BlockScan.AElfIndexer.Grains.Grain.BlockScan.BlockScanCheckGrain [-288810813 (0xEEC918C3)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.BlockScan.IBlockScanCheckGrain [-971113694 (0xC61DFB22)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)], Orleans.IRemindable [-831689659 (0xCE6D6C45)]
+Grain class AElfIndexer.Grains.Grain.BlockScan.AElfIndexer.Grains.Grain.BlockScan.BlockScanGrain [-769025296 (0xD2299AF0)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.BlockScan.IBlockScanGrain [-2123083974 (0x81744F3A)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class AElfIndexer.Grains.Grain.BlockScan.AElfIndexer.Grains.Grain.BlockScan.BlockScanInfoGrain [-862647960 (0xCC950968)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.BlockScan.IBlockScanInfoGrain [1940952844 (0x73B0970C)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class AElfIndexer.Grains.Grain.BlockScan.AElfIndexer.Grains.Grain.BlockScan.BlockScanManagerGrain [2115597917 (0x7E19765D)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.BlockScan.IBlockScanManagerGrain [282002822 (0x10CF0586)]
+Grain class AElfIndexer.Grains.Grain.BlockScan.AElfIndexer.Grains.Grain.BlockScan.ClientGrain [-990250568 (0xC4F9F9B8)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.BlockScan.IClientGrain [-1596927619 (0xA0D0D17D)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class AElfIndexer.Grains.Grain.Chains.AElfIndexer.Grains.Grain.Chains.ChainGrain [1866434816 (0x6F3F8900)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.Chains.IChainGrain [-603471288 (0xDC07C248)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class AElfIndexer.Grains.Grain.Client.AElfIndexer.Grains.Grain.Client.BlockStateSetBucketGrain<T> [2141215091 (0x7FA05973)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.Client.IBlockStateSetBucketGrain<T> [-1827166963 (0x9317A50D)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class AElfIndexer.Grains.Grain.Client.AElfIndexer.Grains.Grain.Client.BlockStateSetGrain<T> [1588119705 (0x5EA8C899)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.Client.IBlockStateSetGrain<T> [-836490589 (0xCE242AA3)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class AElfIndexer.Grains.Grain.Client.AElfIndexer.Grains.Grain.Client.BlockStateSetInfoGrain [-1427109622 (0xAAF0090A)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.Client.IBlockStateSetInfoGrain [-1965857817 (0x8AD363E7)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class AElfIndexer.Grains.Grain.Client.AElfIndexer.Grains.Grain.Client.DappDataGrain [-2005669052 (0x8873EB44)] from AElfIndexer.Grains.dll implementing interfaces: AElfIndexer.Grains.Grain.Client.IDappDataGrain [-1249095191 (0xB58C51E9)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class Orleans.LogConsistency.Orleans.LogConsistency.LogConsistentGrain<TView> [-319513858 (0xECF49AFE)] from Orleans.Core.dll implementing interfaces: 
+Grain class Orleans.Providers.Orleans.Providers.MemoryStreamQueueGrain [1359359215 (0x51062CEF)] from OrleansProviders.dll implementing interfaces: Orleans.Providers.IMemoryStreamQueueGrain [1158152105 (0x4507FFA9)]
+Grain class Orleans.Runtime.Development.Orleans.Runtime.Development.DevelopmentLeaseProviderGrain [940524075 (0x380F422B)] from Orleans.Runtime.dll implementing interfaces: Orleans.Runtime.Development.IDevelopmentLeaseProviderGrain [-1234611069 (0xB6695483)]
+Grain class Orleans.Runtime.Management.Orleans.Runtime.Management.ManagementGrain [1954798034 (0x7483D9D2)] from Orleans.Runtime.dll implementing interfaces: Orleans.Runtime.IManagementGrain [-1734666656 (0x989B1660)]
+Grain class Orleans.Runtime.ReminderService.Orleans.Runtime.ReminderService.GrainBasedReminderTable [-55315191 (0xFCB3F509)] from Orleans.Runtime.dll implementing interfaces: Orleans.IReminderTableGrain [-1135060418 (0xBC585A3E)]
+Grain class Orleans.Runtime.Versions.Orleans.Runtime.Versions.VersionStoreGrain [331003096 (0x13BAB4D8)] from Orleans.Runtime.dll implementing interfaces: Orleans.Runtime.Versions.IVersionStoreGrain [-297600501 (0xEE42FA0B)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class Orleans.Storage.Orleans.Storage.MemoryStorageGrain [819348208 (0x30D642F0)] from OrleansProviders.dll implementing interfaces: Orleans.Storage.IMemoryStorageGrain [577125491 (0x22663C73)]
+Grain class Orleans.Streams.Orleans.Streams.PubSubRendezvousGrain [1903070868 (0x716E8E94)] from Orleans.Runtime.dll implementing interfaces: Orleans.Streams.IPubSubRendezvousGrain [1746702088 (0x681C8F08)]
+Grain class Orleans.TestingHost.Orleans.TestingHost.StorageFaultGrain [165808213 (0x9E20855)] from Orleans.TestingHost.dll implementing interfaces: Orleans.TestingHost.IStorageFaultGrain [-1063077025 (0xC0A2BB5F)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+	
+[2023-06-06 09:04:22.303 GMT 21	Information	100452	Orleans.Runtime.InsideRuntimeClient]	Start InsideRuntimeClient took 0 Milliseconds	
+[2023-06-06 09:04:22.303 GMT 21	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Orleans.Runtime.InsideRuntimeClient started in stage RuntimeInitialize (2000) in 0.4683 Milliseconds	
+[2023-06-06 09:04:22.303 GMT 21	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	SiloStatusListenerManager started in stage RuntimeInitialize (2000) in 0.0001 Milliseconds	
+[2023-06-06 09:04:22.303 GMT 21	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	ClusterMembershipService started in stage RuntimeInitialize (2000) in 0.0025 Milliseconds	
+[2023-06-06 09:04:22.303 GMT 21	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	SiloConnectionMaintainer started in stage RuntimeInitialize (2000) in 0.002 Milliseconds	
+[2023-06-06 09:04:22.303 GMT 21	Information	100401	Orleans.Runtime.Silo]	Silo Start()	
+[2023-06-06 09:04:22.303 GMT 21	Information	100436	Orleans.Runtime.Silo]	Configured .NET ServicePointManager to Expect100Continue=False, DefaultConnectionLimit=200, UseNagleAlgorithm=False to improve Azure storage performance.	
+[2023-06-06 09:04:22.303 GMT 21	Information	100452	Orleans.Runtime.Silo]	ConfigureThreadPoolAndServicePointSettings took 0 Milliseconds to finish	
+[2023-06-06 09:04:22.303 GMT 21	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Orleans.Runtime.Silo started in stage RuntimeInitialize (2000) in 0.0118 Milliseconds	
+[2023-06-06 09:04:22.303 GMT 21	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Starting lifecycle stage RuntimeInitialize (2000) took 0.4925 Milliseconds	
+[2023-06-06 09:04:22.303 GMT 21	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	MembershipAgent started in stage 2001 in 0.0004 Milliseconds	
+[2023-06-06 09:04:22.303 GMT 21	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Starting lifecycle stage 2001 took 0.0021 Milliseconds	
+[2023-06-06 09:04:22.303 GMT 7	Information	100452	Orleans.Runtime.Silo]	Start Message center took 0 Milliseconds to finish	
+[2023-06-06 09:04:22.303 GMT 7	Information	0	Orleans.Runtime.GrainDirectory.LocalGrainDirectory]	Start	
+[2023-06-06 09:04:22.303 GMT 7	Information	0	Runtime.GrainDirectory.AdaptiveDirectoryCacheMaintainer]	Starting AsyncAgent Runtime.GrainDirectory.AdaptiveDirectoryCacheMaintainer on managed thread 7	
+[2023-06-06 09:04:22.303 GMT 7	Information	100452	Orleans.Runtime.Silo]	Start local grain directory took 0 Milliseconds to finish	
+[2023-06-06 09:04:22.303 GMT 7	Information	100452	Orleans.Runtime.Silo]	Init implicit stream subscribe table took 0 Milliseconds to finish	
+[2023-06-06 09:04:22.303 GMT 7	Information	100452	Orleans.Runtime.Silo]	Create system targets and inject dependencies took 0 Milliseconds to finish	
+[2023-06-06 09:04:22.303 GMT 21	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Orleans.Runtime.Silo started in stage RuntimeServices (4000) in 0.1706 Milliseconds	
+[2023-06-06 09:04:22.303 GMT 21	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Starting lifecycle stage RuntimeServices (4000) took 0.172 Milliseconds	
+[2023-06-06 09:04:22.303 GMT 23	Information	100603	Orleans.Runtime.MembershipService.MembershipTableManager]	MembershipOracle starting on host wens-MacBook-Pro.local with SiloAddress S127.0.0.1:29956:423738262 at 2023-06-06 09:04:22.216 GMT	
+[2023-06-06 09:04:22.303 GMT 21	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	HostedClient started in stage RuntimeGrainServices (8000) in 0.0318 Milliseconds	
+[2023-06-06 09:04:22.303 GMT 7	Information	100452	Orleans.Runtime.Silo]	Init grain services took 0 Milliseconds to finish	
+[2023-06-06 09:04:22.303 GMT 21	Information	100452	Orleans.Runtime.Silo]	Init type manager took 0 Milliseconds to finish	
+[2023-06-06 09:04:22.303 GMT 21	Information	100702	Orleans.Runtime.CounterStatistic]	Starting Windows perf counter stats collection with frequency=00:00:30	
+[2023-06-06 09:04:22.303 GMT 21	Information	100452	Orleans.Runtime.Silo]	Start silo statistics took 0 Milliseconds to finish	
+[2023-06-06 09:04:22.303 GMT 23	Information	0	Orleans.Runtime.DeploymentLoadPublisher]	Starting DeploymentLoadPublisher.	
+[2023-06-06 09:04:22.303 GMT 15	Information	0	Orleans.Networking]	Establishing connection to endpoint S127.0.0.1:29955:0	
+[2023-06-06 09:04:22.303 GMT 23	Information	0	Orleans.Runtime.DeploymentLoadPublisher]	Started DeploymentLoadPublisher.	
+[2023-06-06 09:04:22.303 GMT 23	Information	100452	Orleans.Runtime.Silo]	Start deployment load collector took 0 Milliseconds to finish	
+[2023-06-06 09:04:22.303 GMT 23	Information	0	Orleans.Runtime.Watchdog]	Starting Silo Watchdog.	
+[2023-06-06 09:04:22.303 GMT 21	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Orleans.Runtime.Silo started in stage RuntimeGrainServices (8000) in 0.2805 Milliseconds	
+[2023-06-06 09:04:22.304 GMT 21	Information	0	Orleans.Networking]	Connected to endpoint S127.0.0.1:29955:0	
+[2023-06-06 09:04:22.304 GMT 21	Information	0	Orleans.Networking]	Connection [Local: 127.0.0.1:56229, Remote: 127.0.0.1:29955, ConnectionId: 0HMR6DJBO1431] established with S127.0.0.1:29955:0	
+[2023-06-06 09:04:22.304 GMT 21	Information	100645	Orleans.Runtime.MembershipService.MembershipTableManager]	ProcessTableUpdate (called from Refresh) membership table: 1 silos, 1 are Active, 0 are Dead, Version=<2, 4>. All silos: [SiloAddress=S127.0.0.1:29955:423738262 SiloName=Primary Status=Active]	
+[2023-06-06 09:04:22.305 GMT 15	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	MembershipTableManager started in stage RuntimeGrainServices (8000) in 1.4275 Milliseconds	
+[2023-06-06 09:04:22.305 GMT 15	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Starting lifecycle stage RuntimeGrainServices (8000) took 1.431 Milliseconds	
+[2023-06-06 09:04:22.305 GMT 7	Information	100663	Orleans.Runtime.MembershipService.MembershipAgent]	-Joining	
+[2023-06-06 09:04:22.305 GMT 15	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	SiloStatusListenerManager started in stage AfterRuntimeGrainServices (8100) in 0.0003 Milliseconds	
+[2023-06-06 09:04:22.305 GMT 15	Information	103003	Orleans.Runtime.ConsistentRing.VirtualBucketsRingProvider]	Added Server S127.0.0.1:29955:423738262/xE6B65B6A. Current view: [S127.0.0.1:29955:423738262 -> <MultiRange: Size=x565BD75B, %Ring=33.734%>, S127.0.0.1:29956:423738262 -> <MultiRange: Size=xA9A428A5, %Ring=66.266%>]	
+[2023-06-06 09:04:22.305 GMT 15	Information	103005	Orleans.Runtime.ConsistentRing.VirtualBucketsRingProvider]	-NotifyLocalRangeSubscribers about old <MultiRange: Size=x100000000, %Ring=100.000%> new <MultiRange: Size=xA9A428A5, %Ring=66.266%> increased? True	
+[2023-06-06 09:04:22.305 GMT 15	Information	0	Orleans.Runtime.TypeManager]	Expediting cluster type map refresh due to new silo, S127.0.0.1:29955:423738262	
+[2023-06-06 09:04:22.305 GMT 7	Information	0	Orleans.Networking]	Establishing connection to endpoint S127.0.0.1:29955:423738262	
+[2023-06-06 09:04:22.305 GMT 7	Information	100645	Orleans.Runtime.MembershipService.MembershipTableManager]	ProcessTableUpdate (called from TryUpdateMyStatusGlobalOnce) membership table: 2 silos, 1 are Active, 0 are Dead, 1 are Joining, Version=<3, 4>. All silos: [SiloAddress=S127.0.0.1:29955:423738262 SiloName=Primary Status=Active, SiloAddress=S127.0.0.1:29956:423738262 SiloName=Secondary_1 Status=Joining]	
+[2023-06-06 09:04:22.305 GMT 14	Information	0	Orleans.Networking]	Connected to endpoint S127.0.0.1:29955:423738262	
+[2023-06-06 09:04:22.305 GMT 7	Information	0	Orleans.Runtime.MembershipService.MembershipGossiper]	Gossiping S127.0.0.1:29956:423738262 status Joining to 1 partners	
+[2023-06-06 09:04:22.305 GMT 14	Information	0	Orleans.Networking]	Connection [Local: 127.0.0.1:56230, Remote: 127.0.0.1:29955, ConnectionId: 0HMR6DJBO1433] established with S127.0.0.1:29955:423738262	
+[2023-06-06 09:04:22.306 GMT 21	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	MembershipAgent started in stage AfterRuntimeGrainServices (8100) in 1.0157 Milliseconds	
+[2023-06-06 09:04:22.306 GMT 21	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Starting lifecycle stage AfterRuntimeGrainServices (8100) took 1.0205 Milliseconds	
+[2023-06-06 09:04:22.306 GMT 21	Information	0	Orleans.Storage.MemoryGrainStorage]	Init: Name=Default NumStorageGrains=10	
+[2023-06-06 09:04:22.306 GMT 21	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Orleans.Runtime.Versions.GrainVersionStore started in stage ApplicationServices (10000) in 0.0333 Milliseconds	
+[2023-06-06 09:04:22.306 GMT 21	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Starting lifecycle stage ApplicationServices (10000) took 0.0359 Milliseconds	
+[2023-06-06 09:04:22.306 GMT 7	Information	100604	Orleans.Runtime.MembershipService.MembershipAgent]	-BecomeActive	
+[2023-06-06 09:04:22.306 GMT 21	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	IncomingRequestMonitor started in stage BecomeActive (19999) in 0.0007 Milliseconds	
+[2023-06-06 09:04:22.306 GMT 21	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Orleans.ClientLoggingHelper started in stage BecomeActive (19999) in 0.0004 Milliseconds	
+[2023-06-06 09:04:22.306 GMT 7	Information	100614	Orleans.Runtime.MembershipService.MembershipAgent]	About to send pings to 1 nodes in order to validate communication in the Joining state. Pinged nodes = [S127.0.0.1:29955:423738262]	
+[2023-06-06 09:04:22.306 GMT 30	Information	0	Runtime.Messaging.GatewayClientCleanupAgent]	Starting AsyncAgent Runtime.Messaging.GatewayClientCleanupAgent on managed thread 30	
+[2023-06-06 09:04:22.306 GMT 30	Information	100452	Orleans.Runtime.Silo]	Start gateway took 0 Milliseconds to finish	
+[2023-06-06 09:04:22.306 GMT 30	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Orleans.Runtime.Silo started in stage BecomeActive (19999) in 0.0362 Milliseconds	
+[2023-06-06 09:04:22.306 GMT 7	Information	100645	Orleans.Runtime.MembershipService.MembershipTableManager]	ProcessTableUpdate (called from TryUpdateMyStatusGlobalOnce) membership table: 2 silos, 2 are Active, 0 are Dead, Version=<4, 6>. All silos: [SiloAddress=S127.0.0.1:29955:423738262 SiloName=Primary Status=Active, SiloAddress=S127.0.0.1:29956:423738262 SiloName=Secondary_1 Status=Active]	
+[2023-06-06 09:04:22.306 GMT 7	Information	0	Orleans.Runtime.MembershipService.MembershipGossiper]	Gossiping S127.0.0.1:29956:423738262 status Active to 1 partners	
+[2023-06-06 09:04:22.307 GMT 30	Information	100605	Orleans.Runtime.MembershipService.MembershipAgent]	-Finished BecomeActive.	
+[2023-06-06 09:04:22.307 GMT 30	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	MembershipAgent started in stage BecomeActive (19999) in 1.1663 Milliseconds	
+[2023-06-06 09:04:22.307 GMT 30	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Starting lifecycle stage BecomeActive (19999) took 1.1686 Milliseconds	
+[2023-06-06 09:04:22.307 GMT 30	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	ClusterHealthMonitor started in stage Active (20000) in 0.0007 Milliseconds	
+[2023-06-06 09:04:22.307 GMT 30	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Orleans.Runtime.MembershipService.LocalSiloHealthMonitor started in stage Active (20000) in 0.0006 Milliseconds	
+[2023-06-06 09:04:22.307 GMT 30	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	MembershipTableCleanupAgent started in stage Active (20000) in 0.0006 Milliseconds	
+[2023-06-06 09:04:22.307 GMT 30	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Orleans.Runtime.Silo started in stage Active (20000) in 0.0036 Milliseconds	
+[2023-06-06 09:04:22.307 GMT 30	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	GatewayConnectionListener started in stage Active (20000) in 0.0077 Milliseconds	
+[2023-06-06 09:04:22.307 GMT 30	Information	100452	Orleans.Runtime.SiloLifecycleSubject]	Starting lifecycle stage Active (20000) took 0.023 Milliseconds	
+[2023-06-06 09:04:22.307 GMT 15	Information	100612	Orleans.Runtime.MembershipService.ClusterHealthMonitor]	Will watch (actively ping) 1 silos: [S127.0.0.1:29955:423738262]	
+[2023-06-06 09:04:22.307 GMT 7	Information	0	Orleans.Storage.MemoryStorageGrain]	OnActivateAsync	
+[2023-06-06 09:04:22.355 GMT 15	Information	101301	Orleans.Runtime.Messaging.Gateway]	Recorded opened connection from endpoint 127.0.0.1:56231, client ID *cli/02bea88a.	
+[2023-06-06 09:04:24.223 GMT 23	Information	0	Orleans.Storage.MemoryStorageGrain]	OnActivateAsync	
+[2023-06-06 09:04:26.235 GMT 15	Information	0	Orleans.Storage.MemoryStorageGrain]	OnActivateAsync	
+[2023-06-06 09:08:57.303 GMT 97	Warning	100662	Orleans.Runtime.MembershipService.MembershipTableCleanupAgent]	CleanupDefunctSiloEntries operation is not supported by the current implementation of IMembershipTable. Disabling the timer now.	
+[2023-06-06 09:09:22.313 GMT 122	Information	100704	Orleans.Runtime.SiloLogStatistics]	Statistics: ^^^
+App.Requests.Latency.Average.Millis=0.000
+App.Requests.LatencyHistogram.Millis=[0.0016:0.0031]=143, [0.0032:0.0063]=1263, [0.0064:0.0127]=2859, [0.0128:0.0255]=5473, [0.0256:0.0511]=5015, [0.0512:0.1023]=4946, [0.1024:0.2047]=4835, [0.2048:0.4095]=7652, [0.4096:0.8191]=9591, [0.8192:1.6383]=4398, [1.6384:3.2767]=1981, [3.2768:6.5535]=213, [6.5536:13.1071]=138, [13.1072:26.2143]=121, [26.2144:52.4287]=19, [52.4288:104.8575]=33, [104.8576:209.7151]=20, 
+App.Requests.TimedOut.Current=0
+App.Requests.Total.Requests.Current=48700,      Delta=70
+Catalog.Activation.Collection.NumberOfCollections.Current=276,      Delta=1
+Catalog.Activation.ConcurrentRegistrationAttempts.Current=5
+Catalog.Activation.Created.Current=707
+Catalog.Activation.CurrentCount=5
+Catalog.Activation.Destroyed.Current=5
+Catalog.Activation.FailedToActivate.Current=0
+Client.ConnectedGatewayCount=2
+ConsistentRing.AverageRangePercentage=50.000
+ConsistentRing.MyRange.RingDistance=x89D73E44
+ConsistentRing.MyRange.RingPercentage=53.844
+ConsistentRing.Ring=[S127.0.0.1:26941:423738186 -> <MultiRange: Size=x7628C1BC, %Ring=46.156%>, S127.0.0.1:26940:423738185 -> <MultiRange: Size=x89D73E44, %Ring=53.844%>]
+ConsistentRing.RingSize=2
+Directory.CacheSize=0
+Directory.Lookups.Cache.HitRatio=0.70779556, Delta=1
+Directory.Lookups.Cache.Issued.Current=1937,      Delta=3
+Directory.Lookups.Cache.Successes.Current=1371,      Delta=3
+Directory.Lookups.Full.Issued.Current=918
+Directory.Lookups.Local.Issued.Current=3831,      Delta=10
+Directory.Lookups.Local.Successes.Current=2913,      Delta=10
+Directory.Lookups.LocalDirectory.Issued.Current=2812,      Delta=7
+Directory.Lookups.LocalDirectory.Successes.Current=1753,      Delta=7
+Directory.Lookups.Remote.Received.Current=566
+Directory.Lookups.Remote.Sent.Current=566
+Directory.PartitionSize=7
+Directory.Registrations.Issued.Current=746
+Directory.Registrations.Local.Current=783
+Directory.Registrations.Remote.Received.Current=329
+Directory.Registrations.Remote.Sent.Current=146
+Directory.Registrations.SingleAct.Issued.Current=707
+Directory.Registrations.SingleAct.Local.Current=709
+Directory.Registrations.SingleAct.Remote.Received.Current=700
+Directory.Registrations.SingleAct.Remote.Sent.Current=349
+Directory.Ring=[S127.0.0.1:26941:423738186/E415F50F, S127.0.0.1:26940:423738185/41A6687C]
+Directory.Ring.MyPortion.AverageRingPercentage=50.000
+Directory.Ring.MyPortion.RingDistance=2725219473
+Directory.Ring.MyPortion.RingPercentage=63.451
+Directory.Ring.MyPredecessors=[S127.0.0.1:26941:423738186/E415F50F]
+Directory.Ring.MySuccessors=[S127.0.0.1:26941:423738186/E415F50F]
+Directory.Ring.RingSize=2
+Directory.UnRegistrations.Issued.Current=0
+Directory.UnRegistrations.Local.Current=0
+Directory.UnRegistrations.Remote.Received.Current=0
+Directory.UnRegistrations.Remote.Sent.Current=0
+Directory.UnRegistrationsMany.Issued.Current=0
+Directory.UnRegistrationsMany.Remote.Received.Current=0
+Directory.UnRegistrationsMany.Remote.Sent.Current=0
+Directory.Validations.Cache.Received.Current=67
+Directory.Validations.Cache.Sent.Current=67
+Dispatcher.NewPlacement.Current=707
+Gateway.ConnectedClients.Current=88
+Gateway.LoadShedding.Current=0
+Gateway.Received.Current=1092,      Delta=2
+Gateway.Sent.Current=2184,      Delta=4
+Grain.AElfIndexer.Grains.Grain.Client.BlockStateSetBucketGrain`1[[AElfIndexer.Grains.State.Client.LogEventInfo, AElfIndexer.Grains, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].Current=48
+Grain.AElfIndexer.Grains.Grain.Client.BlockStateSetBucketGrain`1[[AElfIndexer.Grains.State.Client.TransactionInfo, AElfIndexer.Grains, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].Current=32
+Grain.AElfIndexer.Grains.Grain.Client.BlockStateSetGrain`1[[AElfIndexer.Grains.State.Client.LogEventInfo, AElfIndexer.Grains, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].Current=48
+Grain.AElfIndexer.Grains.Grain.Client.BlockStateSetGrain`1[[AElfIndexer.Grains.State.Client.TransactionInfo, AElfIndexer.Grains, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].Current=32
+Grain.AElfIndexer.Grains.Grain.Client.DappDataGrain.Current=199
+Grain.Orleans.Runtime.Versions.VersionStoreGrain.Current=44
+Grain.Orleans.Storage.MemoryStorageGrain.Current=299
+Messaging.Expired.AtDispatch.Current=0
+Messaging.Expired.AtInvoke.Current=0
+Messaging.Expired.AtReceive.Current=0
+Messaging.Expired.AtRespond.Current=0
+Messaging.Expired.AtSend.Current=0
+Messaging.Pings.Received.S127.0.0.1:22345:423738366.Current=39
+Messaging.Pings.Received.S127.0.0.1:22346:423738366.Current=40
+Messaging.Pings.Received.S127.0.0.1:23100:423738503.Current=12
+Messaging.Pings.Received.S127.0.0.1:23101:423738504.Current=13
+Messaging.Pings.Received.S127.0.0.1:23115:423738329.Current=47
+Messaging.Pings.Received.S127.0.0.1:23116:423738329.Current=47
+Messaging.Pings.Received.S127.0.0.1:23170:423738243.Current=64
+Messaging.Pings.Received.S127.0.0.1:23171:423738243.Current=64
+Messaging.Pings.Received.S127.0.0.1:23245:423738361.Current=40
+Messaging.Pings.Received.S127.0.0.1:23246:423738361.Current=41
+Messaging.Pings.Received.S127.0.0.1:23510:423738473.Current=18
+Messaging.Pings.Received.S127.0.0.1:23511:423738473.Current=19
+Messaging.Pings.Received.S127.0.0.1:23815:423738464.Current=20
+Messaging.Pings.Received.S127.0.0.1:23816:423738464.Current=21
+Messaging.Pings.Received.S127.0.0.1:23905:423738400.Current=32
+Messaging.Pings.Received.S127.0.0.1:23906:423738400.Current=34
+Messaging.Pings.Received.S127.0.0.1:24245:423738354.Current=42
+Messaging.Pings.Received.S127.0.0.1:24246:423738354.Current=43
+Messaging.Pings.Received.S127.0.0.1:24390:423738451.Current=22
+Messaging.Pings.Received.S127.0.0.1:24391:423738451.Current=23
+Messaging.Pings.Received.S127.0.0.1:24740:423738236.Current=65
+Messaging.Pings.Received.S127.0.0.1:24741:423738236.Current=67,      Delta=1
+Messaging.Pings.Received.S127.0.0.1:24750:423738304.Current=52
+Messaging.Pings.Received.S127.0.0.1:24751:423738304.Current=53
+Messaging.Pings.Received.S127.0.0.1:24875:423738297.Current=53
+Messaging.Pings.Received.S127.0.0.1:24876:423738297.Current=54
+Messaging.Pings.Received.S127.0.0.1:24930:423738458.Current=21
+Messaging.Pings.Received.S127.0.0.1:24931:423738458.Current=22
+Messaging.Pings.Received.S127.0.0.1:25120:423738218.Current=69
+Messaging.Pings.Received.S127.0.0.1:25121:423738218.Current=70
+Messaging.Pings.Received.S127.0.0.1:25300:423738223.Current=68
+Messaging.Pings.Received.S127.0.0.1:25301:423738223.Current=69
+Messaging.Pings.Received.S127.0.0.1:25805:423738426.Current=27
+Messaging.Pings.Received.S127.0.0.1:25806:423738426.Current=28
+Messaging.Pings.Received.S127.0.0.1:25935:423738433.Current=26
+Messaging.Pings.Received.S127.0.0.1:25936:423738433.Current=26
+Messaging.Pings.Received.S127.0.0.1:26120:423738287.Current=55
+Messaging.Pings.Received.S127.0.0.1:26121:423738287.Current=56
+Messaging.Pings.Received.S127.0.0.1:26125:423738392.Current=34
+Messaging.Pings.Received.S127.0.0.1:26126:423738392.Current=35
+Messaging.Pings.Received.S127.0.0.1:26525:423738322.Current=48,      Delta=1
+Messaging.Pings.Received.S127.0.0.1:26526:423738322.Current=49
+Messaging.Pings.Received.S127.0.0.1:26845:423738308.Current=51
+Messaging.Pings.Received.S127.0.0.1:26846:423738308.Current=52
+Messaging.Pings.Received.S127.0.0.1:26940:423738185.Current=75
+Messaging.Pings.Received.S127.0.0.1:26941:423738186.Current=76
+Messaging.Pings.Received.S127.0.0.1:27140:423738268.Current=59
+Messaging.Pings.Received.S127.0.0.1:27141:423738269.Current=59
+Messaging.Pings.Received.S127.0.0.1:27165:423738345.Current=43
+Messaging.Pings.Received.S127.0.0.1:27166:423738345.Current=45
+Messaging.Pings.Received.S127.0.0.1:27180:423738407.Current=31
+Messaging.Pings.Received.S127.0.0.1:27181:423738407.Current=32
+Messaging.Pings.Received.S127.0.0.1:27650:423738340.Current=44
+Messaging.Pings.Received.S127.0.0.1:27651:423738340.Current=45
+Messaging.Pings.Received.S127.0.0.1:27865:423738190.Current=74
+Messaging.Pings.Received.S127.0.0.1:27866:423738191.Current=75
+Messaging.Pings.Received.S127.0.0.1:27965:423738315.Current=49
+Messaging.Pings.Received.S127.0.0.1:27966:423738315.Current=50
+Messaging.Pings.Received.S127.0.0.1:28330:423738333.Current=45
+Messaging.Pings.Received.S127.0.0.1:28331:423738333.Current=47
+Messaging.Pings.Received.S127.0.0.1:28485:423738488.Current=14
+Messaging.Pings.Received.S127.0.0.1:28486:423738489.Current=16
+Messaging.Pings.Received.S127.0.0.1:28555:423738523.Current=8
+Messaging.Pings.Received.S127.0.0.1:28556:423738523.Current=9
+Messaging.Pings.Received.S127.0.0.1:28585:423738385.Current=35
+Messaging.Pings.Received.S127.0.0.1:28586:423738385.Current=36
+Messaging.Pings.Received.S127.0.0.1:28795:423738378.Current=36
+Messaging.Pings.Received.S127.0.0.1:28796:423738378.Current=38
+Messaging.Pings.Received.S127.0.0.1:28820:423738277.Current=57
+Messaging.Pings.Received.S127.0.0.1:28821:423738277.Current=58
+Messaging.Pings.Received.S127.0.0.1:29065:423738282.Current=56
+Messaging.Pings.Received.S127.0.0.1:29066:423738282.Current=57
+Messaging.Pings.Received.S127.0.0.1:29075:423738208.Current=71
+Messaging.Pings.Received.S127.0.0.1:29076:423738208.Current=72
+Messaging.Pings.Received.S127.0.0.1:29515:423738444.Current=23
+Messaging.Pings.Received.S127.0.0.1:29516:423738444.Current=24
+Messaging.Pings.Received.S127.0.0.1:29530:423738200.Current=73
+Messaging.Pings.Received.S127.0.0.1:29531:423738200.Current=73
+Messaging.Pings.Received.S127.0.0.1:29565:423738229.Current=66
+Messaging.Pings.Received.S127.0.0.1:29566:423738229.Current=67
+Messaging.Pings.Received.S127.0.0.1:29650:423738253.Current=62
+Messaging.Pings.Received.S127.0.0.1:29651:423738253.Current=63
+Messaging.Pings.Received.S127.0.0.1:29705:423738551.Current=2
+Messaging.Pings.Received.S127.0.0.1:29706:423738551.Current=3
+Messaging.Pings.Received.S127.0.0.1:29915:423738371.Current=38
+Messaging.Pings.Received.S127.0.0.1:29916:423738371.Current=39
+Messaging.Pings.Received.S127.0.0.1:29955:423738262.Current=60
+Messaging.Pings.Received.S127.0.0.1:29956:423738262.Current=61
+Messaging.Pings.ReplyReceived.S127.0.0.1:22345:423738366.Current=39
+Messaging.Pings.ReplyReceived.S127.0.0.1:22346:423738366.Current=39
+Messaging.Pings.ReplyReceived.S127.0.0.1:23100:423738503.Current=12
+Messaging.Pings.ReplyReceived.S127.0.0.1:23101:423738504.Current=12
+Messaging.Pings.ReplyReceived.S127.0.0.1:23115:423738329.Current=46
+Messaging.Pings.ReplyReceived.S127.0.0.1:23116:423738329.Current=47
+Messaging.Pings.ReplyReceived.S127.0.0.1:23170:423738243.Current=63
+Messaging.Pings.ReplyReceived.S127.0.0.1:23171:423738243.Current=64
+Messaging.Pings.ReplyReceived.S127.0.0.1:23245:423738361.Current=40
+Messaging.Pings.ReplyReceived.S127.0.0.1:23246:423738361.Current=40
+Messaging.Pings.ReplyReceived.S127.0.0.1:23510:423738473.Current=18
+Messaging.Pings.ReplyReceived.S127.0.0.1:23511:423738473.Current=18
+Messaging.Pings.ReplyReceived.S127.0.0.1:23815:423738464.Current=20
+Messaging.Pings.ReplyReceived.S127.0.0.1:23816:423738464.Current=20
+Messaging.Pings.ReplyReceived.S127.0.0.1:23905:423738400.Current=33
+Messaging.Pings.ReplyReceived.S127.0.0.1:23906:423738400.Current=32
+Messaging.Pings.ReplyReceived.S127.0.0.1:24245:423738354.Current=42
+Messaging.Pings.ReplyReceived.S127.0.0.1:24246:423738354.Current=42
+Messaging.Pings.ReplyReceived.S127.0.0.1:24390:423738451.Current=22
+Messaging.Pings.ReplyReceived.S127.0.0.1:24391:423738451.Current=22
+Messaging.Pings.ReplyReceived.S127.0.0.1:24740:423738236.Current=66,      Delta=1
+Messaging.Pings.ReplyReceived.S127.0.0.1:24741:423738236.Current=65
+Messaging.Pings.ReplyReceived.S127.0.0.1:24750:423738304.Current=52
+Messaging.Pings.ReplyReceived.S127.0.0.1:24751:423738304.Current=52
+Messaging.Pings.ReplyReceived.S127.0.0.1:24875:423738297.Current=53
+Messaging.Pings.ReplyReceived.S127.0.0.1:24876:423738297.Current=53
+Messaging.Pings.ReplyReceived.S127.0.0.1:24930:423738458.Current=21
+Messaging.Pings.ReplyReceived.S127.0.0.1:24931:423738458.Current=21
+Messaging.Pings.ReplyReceived.S127.0.0.1:25120:423738218.Current=69
+Messaging.Pings.ReplyReceived.S127.0.0.1:25121:423738218.Current=69
+Messaging.Pings.ReplyReceived.S127.0.0.1:25300:423738223.Current=68
+Messaging.Pings.ReplyReceived.S127.0.0.1:25301:423738223.Current=68
+Messaging.Pings.ReplyReceived.S127.0.0.1:25805:423738426.Current=27
+Messaging.Pings.ReplyReceived.S127.0.0.1:25806:423738426.Current=27
+Messaging.Pings.ReplyReceived.S127.0.0.1:25935:423738433.Current=25
+Messaging.Pings.ReplyReceived.S127.0.0.1:25936:423738433.Current=26
+Messaging.Pings.ReplyReceived.S127.0.0.1:26120:423738287.Current=55
+Messaging.Pings.ReplyReceived.S127.0.0.1:26121:423738287.Current=55
+Messaging.Pings.ReplyReceived.S127.0.0.1:26125:423738392.Current=34
+Messaging.Pings.ReplyReceived.S127.0.0.1:26126:423738392.Current=34
+Messaging.Pings.ReplyReceived.S127.0.0.1:26525:423738322.Current=48
+Messaging.Pings.ReplyReceived.S127.0.0.1:26526:423738322.Current=48,      Delta=1
+Messaging.Pings.ReplyReceived.S127.0.0.1:26845:423738308.Current=51
+Messaging.Pings.ReplyReceived.S127.0.0.1:26846:423738308.Current=51
+Messaging.Pings.ReplyReceived.S127.0.0.1:26940:423738185.Current=75
+Messaging.Pings.ReplyReceived.S127.0.0.1:26941:423738186.Current=75
+Messaging.Pings.ReplyReceived.S127.0.0.1:27140:423738268.Current=58
+Messaging.Pings.ReplyReceived.S127.0.0.1:27141:423738269.Current=59
+Messaging.Pings.ReplyReceived.S127.0.0.1:27165:423738345.Current=44
+Messaging.Pings.ReplyReceived.S127.0.0.1:27166:423738345.Current=43
+Messaging.Pings.ReplyReceived.S127.0.0.1:27180:423738407.Current=31
+Messaging.Pings.ReplyReceived.S127.0.0.1:27181:423738407.Current=31
+Messaging.Pings.ReplyReceived.S127.0.0.1:27650:423738340.Current=44
+Messaging.Pings.ReplyReceived.S127.0.0.1:27651:423738340.Current=44
+Messaging.Pings.ReplyReceived.S127.0.0.1:27865:423738190.Current=74
+Messaging.Pings.ReplyReceived.S127.0.0.1:27866:423738191.Current=74
+Messaging.Pings.ReplyReceived.S127.0.0.1:27965:423738315.Current=49
+Messaging.Pings.ReplyReceived.S127.0.0.1:27966:423738315.Current=49
+Messaging.Pings.ReplyReceived.S127.0.0.1:28330:423738333.Current=46
+Messaging.Pings.ReplyReceived.S127.0.0.1:28331:423738333.Current=45
+Messaging.Pings.ReplyReceived.S127.0.0.1:28485:423738488.Current=15
+Messaging.Pings.ReplyReceived.S127.0.0.1:28486:423738489.Current=14
+Messaging.Pings.ReplyReceived.S127.0.0.1:28555:423738523.Current=8
+Messaging.Pings.ReplyReceived.S127.0.0.1:28556:423738523.Current=8
+Messaging.Pings.ReplyReceived.S127.0.0.1:28585:423738385.Current=35
+Messaging.Pings.ReplyReceived.S127.0.0.1:28586:423738385.Current=35
+Messaging.Pings.ReplyReceived.S127.0.0.1:28795:423738378.Current=37
+Messaging.Pings.ReplyReceived.S127.0.0.1:28796:423738378.Current=36
+Messaging.Pings.ReplyReceived.S127.0.0.1:28820:423738277.Current=57
+Messaging.Pings.ReplyReceived.S127.0.0.1:28821:423738277.Current=57
+Messaging.Pings.ReplyReceived.S127.0.0.1:29065:423738282.Current=56
+Messaging.Pings.ReplyReceived.S127.0.0.1:29066:423738282.Current=56
+Messaging.Pings.ReplyReceived.S127.0.0.1:29075:423738208.Current=71
+Messaging.Pings.ReplyReceived.S127.0.0.1:29076:423738208.Current=71
+Messaging.Pings.ReplyReceived.S127.0.0.1:29515:423738444.Current=23
+Messaging.Pings.ReplyReceived.S127.0.0.1:29516:423738444.Current=23
+Messaging.Pings.ReplyReceived.S127.0.0.1:29530:423738200.Current=72
+Messaging.Pings.ReplyReceived.S127.0.0.1:29531:423738200.Current=73
+Messaging.Pings.ReplyReceived.S127.0.0.1:29565:423738229.Current=66
+Messaging.Pings.ReplyReceived.S127.0.0.1:29566:423738229.Current=66
+Messaging.Pings.ReplyReceived.S127.0.0.1:29650:423738253.Current=62
+Messaging.Pings.ReplyReceived.S127.0.0.1:29651:423738253.Current=62
+Messaging.Pings.ReplyReceived.S127.0.0.1:29705:423738551.Current=2
+Messaging.Pings.ReplyReceived.S127.0.0.1:29706:423738551.Current=2
+Messaging.Pings.ReplyReceived.S127.0.0.1:29915:423738371.Current=38
+Messaging.Pings.ReplyReceived.S127.0.0.1:29916:423738371.Current=38
+Messaging.Pings.ReplyReceived.S127.0.0.1:29955:423738262.Current=60
+Messaging.Pings.ReplyReceived.S127.0.0.1:29956:423738262.Current=60
+Messaging.Pings.Sent.S127.0.0.1:22345:423738366.Current=40
+Messaging.Pings.Sent.S127.0.0.1:22346:423738366.Current=39
+Messaging.Pings.Sent.S127.0.0.1:23100:423738503.Current=13
+Messaging.Pings.Sent.S127.0.0.1:23101:423738504.Current=12
+Messaging.Pings.Sent.S127.0.0.1:23115:423738329.Current=47
+Messaging.Pings.Sent.S127.0.0.1:23116:423738329.Current=47
+Messaging.Pings.Sent.S127.0.0.1:23170:423738243.Current=64
+Messaging.Pings.Sent.S127.0.0.1:23171:423738243.Current=64
+Messaging.Pings.Sent.S127.0.0.1:23245:423738361.Current=41
+Messaging.Pings.Sent.S127.0.0.1:23246:423738361.Current=40
+Messaging.Pings.Sent.S127.0.0.1:23510:423738473.Current=19
+Messaging.Pings.Sent.S127.0.0.1:23511:423738473.Current=18
+Messaging.Pings.Sent.S127.0.0.1:23815:423738464.Current=21
+Messaging.Pings.Sent.S127.0.0.1:23816:423738464.Current=20
+Messaging.Pings.Sent.S127.0.0.1:23905:423738400.Current=34
+Messaging.Pings.Sent.S127.0.0.1:23906:423738400.Current=32
+Messaging.Pings.Sent.S127.0.0.1:24245:423738354.Current=43
+Messaging.Pings.Sent.S127.0.0.1:24246:423738354.Current=42
+Messaging.Pings.Sent.S127.0.0.1:24390:423738451.Current=23
+Messaging.Pings.Sent.S127.0.0.1:24391:423738451.Current=22
+Messaging.Pings.Sent.S127.0.0.1:24740:423738236.Current=67,      Delta=1
+Messaging.Pings.Sent.S127.0.0.1:24741:423738236.Current=65
+Messaging.Pings.Sent.S127.0.0.1:24750:423738304.Current=53
+Messaging.Pings.Sent.S127.0.0.1:24751:423738304.Current=52
+Messaging.Pings.Sent.S127.0.0.1:24875:423738297.Current=54
+Messaging.Pings.Sent.S127.0.0.1:24876:423738297.Current=53
+Messaging.Pings.Sent.S127.0.0.1:24930:423738458.Current=22
+Messaging.Pings.Sent.S127.0.0.1:24931:423738458.Current=21
+Messaging.Pings.Sent.S127.0.0.1:25120:423738218.Current=70
+Messaging.Pings.Sent.S127.0.0.1:25121:423738218.Current=69
+Messaging.Pings.Sent.S127.0.0.1:25300:423738223.Current=69
+Messaging.Pings.Sent.S127.0.0.1:25301:423738223.Current=68
+Messaging.Pings.Sent.S127.0.0.1:25805:423738426.Current=28
+Messaging.Pings.Sent.S127.0.0.1:25806:423738426.Current=27
+Messaging.Pings.Sent.S127.0.0.1:25935:423738433.Current=26
+Messaging.Pings.Sent.S127.0.0.1:25936:423738433.Current=26
+Messaging.Pings.Sent.S127.0.0.1:26120:423738287.Current=56
+Messaging.Pings.Sent.S127.0.0.1:26121:423738287.Current=55
+Messaging.Pings.Sent.S127.0.0.1:26125:423738392.Current=35
+Messaging.Pings.Sent.S127.0.0.1:26126:423738392.Current=34
+Messaging.Pings.Sent.S127.0.0.1:26525:423738322.Current=49
+Messaging.Pings.Sent.S127.0.0.1:26526:423738322.Current=48,      Delta=1
+Messaging.Pings.Sent.S127.0.0.1:26845:423738308.Current=52
+Messaging.Pings.Sent.S127.0.0.1:26846:423738308.Current=51
+Messaging.Pings.Sent.S127.0.0.1:26940:423738185.Current=76
+Messaging.Pings.Sent.S127.0.0.1:26941:423738186.Current=75
+Messaging.Pings.Sent.S127.0.0.1:27140:423738268.Current=59
+Messaging.Pings.Sent.S127.0.0.1:27141:423738269.Current=59
+Messaging.Pings.Sent.S127.0.0.1:27165:423738345.Current=45
+Messaging.Pings.Sent.S127.0.0.1:27166:423738345.Current=43
+Messaging.Pings.Sent.S127.0.0.1:27180:423738407.Current=32
+Messaging.Pings.Sent.S127.0.0.1:27181:423738407.Current=31
+Messaging.Pings.Sent.S127.0.0.1:27650:423738340.Current=45
+Messaging.Pings.Sent.S127.0.0.1:27651:423738340.Current=44
+Messaging.Pings.Sent.S127.0.0.1:27865:423738190.Current=75
+Messaging.Pings.Sent.S127.0.0.1:27866:423738191.Current=74
+Messaging.Pings.Sent.S127.0.0.1:27965:423738315.Current=50
+Messaging.Pings.Sent.S127.0.0.1:27966:423738315.Current=49
+Messaging.Pings.Sent.S127.0.0.1:28330:423738333.Current=47
+Messaging.Pings.Sent.S127.0.0.1:28331:423738333.Current=45
+Messaging.Pings.Sent.S127.0.0.1:28485:423738488.Current=16
+Messaging.Pings.Sent.S127.0.0.1:28486:423738489.Current=14
+Messaging.Pings.Sent.S127.0.0.1:28555:423738523.Current=9
+Messaging.Pings.Sent.S127.0.0.1:28556:423738523.Current=8
+Messaging.Pings.Sent.S127.0.0.1:28585:423738385.Current=36
+Messaging.Pings.Sent.S127.0.0.1:28586:423738385.Current=35
+Messaging.Pings.Sent.S127.0.0.1:28795:423738378.Current=38
+^^^
+	
+[2023-06-06 09:09:22.314 GMT 122	Information	100704	Orleans.Runtime.SiloLogStatistics]	Statistics: ^^^
+Messaging.Pings.Sent.S127.0.0.1:28796:423738378.Current=36
+Messaging.Pings.Sent.S127.0.0.1:28820:423738277.Current=58
+Messaging.Pings.Sent.S127.0.0.1:28821:423738277.Current=57
+Messaging.Pings.Sent.S127.0.0.1:29065:423738282.Current=57
+Messaging.Pings.Sent.S127.0.0.1:29066:423738282.Current=56
+Messaging.Pings.Sent.S127.0.0.1:29075:423738208.Current=72
+Messaging.Pings.Sent.S127.0.0.1:29076:423738208.Current=71
+Messaging.Pings.Sent.S127.0.0.1:29515:423738444.Current=24
+Messaging.Pings.Sent.S127.0.0.1:29516:423738444.Current=23
+Messaging.Pings.Sent.S127.0.0.1:29530:423738200.Current=73
+Messaging.Pings.Sent.S127.0.0.1:29531:423738200.Current=73
+Messaging.Pings.Sent.S127.0.0.1:29565:423738229.Current=67
+Messaging.Pings.Sent.S127.0.0.1:29566:423738229.Current=66
+Messaging.Pings.Sent.S127.0.0.1:29650:423738253.Current=63
+Messaging.Pings.Sent.S127.0.0.1:29651:423738253.Current=62
+Messaging.Pings.Sent.S127.0.0.1:29705:423738551.Current=3
+Messaging.Pings.Sent.S127.0.0.1:29706:423738551.Current=2
+Messaging.Pings.Sent.S127.0.0.1:29915:423738371.Current=39
+Messaging.Pings.Sent.S127.0.0.1:29916:423738371.Current=38
+Messaging.Pings.Sent.S127.0.0.1:29955:423738262.Current=61
+Messaging.Pings.Sent.S127.0.0.1:29956:423738262.Current=60
+Messaging.Processing.ActivationData.All=0
+Messaging.Processing.Dispatcher.Forwarded.Current=10
+Messaging.Processing.Dispatcher.Processed.Errors.Direction.OneWay.Current=0
+Messaging.Processing.Dispatcher.Processed.Errors.Direction.Request.Current=0
+Messaging.Processing.Dispatcher.Processed.Errors.Direction.Response.Current=0
+Messaging.Processing.Dispatcher.Processed.Ok.Direction.OneWay.Current=0
+Messaging.Processing.Dispatcher.Processed.Ok.Direction.Request.Current=3831,      Delta=10
+Messaging.Processing.Dispatcher.Processed.Ok.Direction.Response.Current=2528,      Delta=8
+Messaging.Processing.Dispatcher.Processed.Total.Current=6359,      Delta=18
+Messaging.Processing.Dispatcher.Received.Direction.OneWay.Current=0
+Messaging.Processing.Dispatcher.Received.Direction.Request.Current=3836,      Delta=10
+Messaging.Processing.Dispatcher.Received.Direction.Response.Current=2528,      Delta=8
+Messaging.Processing.Dispatcher.Received.OnActivationContext.Current=4705,      Delta=18
+Messaging.Processing.Dispatcher.Received.OnNullContext.Current=1659
+Messaging.Processing.Dispatcher.Received.Total.Current=6364,      Delta=18
+Messaging.Processing.IMA.Enqueued.ToActivationContex.Current=4705,      Delta=18
+Messaging.Processing.IMA.Enqueued.ToNullContex.Current=1659
+Messaging.Processing.IMA.Enqueued.ToSystemTargetContex.Current=85231,      Delta=118
+Messaging.Processing.IMA.Received.Current=91595,      Delta=136
+Messaging.Received.BatchSize.PerSocketDirection.ClientToGateway=1.000
+Messaging.Received.BatchSize.PerSocketDirection.GatewayToClient=1.000
+Messaging.Received.BatchSize.PerSocketDirection.SiloToSilo=1.000
+Messaging.Received.BatchSizeBytesHistogram.Bytes.PerSocketDirection.ClientToGateway=[128:255]=480, [256:511]=417, [512:1023]=10, [1024:2047]=4, [4096:8191]=181, 
+Messaging.Received.BatchSizeBytesHistogram.Bytes.PerSocketDirection.GatewayToClient=[128:255]=330, [256:511]=356, [512:1023]=333, [1024:2047]=73, 
+Messaging.Received.BatchSizeBytesHistogram.Bytes.PerSocketDirection.SiloToSilo=[128:255]=28953, [256:511]=22583, [512:1023]=1159, [1024:2047]=679, [2048:4095]=4, [4096:8191]=88, 
+Messaging.Received.Bytes.Header.Current=10275749,      Delta=14617
+Messaging.Received.Bytes.Total.Current=16995425,      Delta=22691
+Messaging.Received.Direction.OneWay.Current=0
+Messaging.Received.Direction.Request.Current=28066,      Delta=38
+Messaging.Received.Direction.Response.Current=27584,      Delta=37
+Messaging.Received.Messages.From.S127.0.0.1:22345:0.Current=180,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:22345:423738366.Current=338
+Messaging.Received.Messages.From.S127.0.0.1:22346:423738366.Current=517,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:23100:0.Current=79
+Messaging.Received.Messages.From.S127.0.0.1:23100:423738503.Current=191
+Messaging.Received.Messages.From.S127.0.0.1:23101:423738504.Current=259
+Messaging.Received.Messages.From.S127.0.0.1:23115:0.Current=190,      Delta=2
+Messaging.Received.Messages.From.S127.0.0.1:23115:423738329.Current=436
+Messaging.Received.Messages.From.S127.0.0.1:23116:423738329.Current=627,      Delta=2
+Messaging.Received.Messages.From.S127.0.0.1:23170:0.Current=282
+Messaging.Received.Messages.From.S127.0.0.1:23170:423738243.Current=592
+Messaging.Received.Messages.From.S127.0.0.1:23171:423738243.Current=883
+Messaging.Received.Messages.From.S127.0.0.1:23245:0.Current=157
+Messaging.Received.Messages.From.S127.0.0.1:23245:423738361.Current=387,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:23246:423738361.Current=545,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:23510:0.Current=88
+Messaging.Received.Messages.From.S127.0.0.1:23510:423738473.Current=262
+Messaging.Received.Messages.From.S127.0.0.1:23511:423738473.Current=344
+Messaging.Received.Messages.From.S127.0.0.1:23815:0.Current=89
+Messaging.Received.Messages.From.S127.0.0.1:23815:423738464.Current=217
+Messaging.Received.Messages.From.S127.0.0.1:23816:423738464.Current=300
+Messaging.Received.Messages.From.S127.0.0.1:23905:0.Current=134
+Messaging.Received.Messages.From.S127.0.0.1:23905:423738400.Current=326
+Messaging.Received.Messages.From.S127.0.0.1:23906:423738400.Current=463
+Messaging.Received.Messages.From.S127.0.0.1:24245:0.Current=147,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:24245:423738354.Current=401
+Messaging.Received.Messages.From.S127.0.0.1:24246:423738354.Current=550,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:24390:0.Current=107,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:24390:423738451.Current=224
+Messaging.Received.Messages.From.S127.0.0.1:24391:423738451.Current=332,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:24740:0.Current=219
+Messaging.Received.Messages.From.S127.0.0.1:24740:423738236.Current=636,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:24741:423738236.Current=862,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:24750:0.Current=221
+Messaging.Received.Messages.From.S127.0.0.1:24750:423738304.Current=465,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:24751:423738304.Current=689,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:24875:0.Current=245,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:24875:423738297.Current=474
+Messaging.Received.Messages.From.S127.0.0.1:24876:423738297.Current=716,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:24930:0.Current=102,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:24930:423738458.Current=202
+Messaging.Received.Messages.From.S127.0.0.1:24931:423738458.Current=309,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:25120:0.Current=262
+Messaging.Received.Messages.From.S127.0.0.1:25120:423738218.Current=642,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:25121:423738218.Current=907,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:25300:0.Current=238,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:25300:423738223.Current=649,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:25301:423738223.Current=888,      Delta=2
+Messaging.Received.Messages.From.S127.0.0.1:25805:0.Current=101
+Messaging.Received.Messages.From.S127.0.0.1:25805:423738426.Current=284
+Messaging.Received.Messages.From.S127.0.0.1:25806:423738426.Current=384
+Messaging.Received.Messages.From.S127.0.0.1:25935:0.Current=135
+Messaging.Received.Messages.From.S127.0.0.1:25935:423738433.Current=297,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:25936:423738433.Current=437,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:26120:0.Current=230
+Messaging.Received.Messages.From.S127.0.0.1:26120:423738287.Current=513
+Messaging.Received.Messages.From.S127.0.0.1:26121:423738287.Current=735
+Messaging.Received.Messages.From.S127.0.0.1:26125:0.Current=155
+Messaging.Received.Messages.From.S127.0.0.1:26125:423738392.Current=337,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:26126:423738392.Current=498,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:26525:0.Current=206
+Messaging.Received.Messages.From.S127.0.0.1:26525:423738322.Current=455,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:26526:423738322.Current=658,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:26845:0.Current=207,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:26845:423738308.Current=485
+Messaging.Received.Messages.From.S127.0.0.1:26846:423738308.Current=692,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:26940:0.Current=283,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:26940:423738185.Current=671,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:26941:423738186.Current=956,      Delta=2
+Messaging.Received.Messages.From.S127.0.0.1:27140:0.Current=228
+Messaging.Received.Messages.From.S127.0.0.1:27140:423738268.Current=522
+Messaging.Received.Messages.From.S127.0.0.1:27141:423738269.Current=750
+Messaging.Received.Messages.From.S127.0.0.1:27165:0.Current=162
+Messaging.Received.Messages.From.S127.0.0.1:27165:423738345.Current=414
+Messaging.Received.Messages.From.S127.0.0.1:27166:423738345.Current=568
+Messaging.Received.Messages.From.S127.0.0.1:27180:0.Current=159
+Messaging.Received.Messages.From.S127.0.0.1:27180:423738407.Current=362
+Messaging.Received.Messages.From.S127.0.0.1:27181:423738407.Current=529
+Messaging.Received.Messages.From.S127.0.0.1:27650:0.Current=191
+Messaging.Received.Messages.From.S127.0.0.1:27650:423738340.Current=408,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:27651:423738340.Current=600,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:27865:0.Current=298
+Messaging.Received.Messages.From.S127.0.0.1:27865:423738190.Current=714
+Messaging.Received.Messages.From.S127.0.0.1:27866:423738191.Current=1014
+Messaging.Received.Messages.From.S127.0.0.1:27965:0.Current=189
+Messaging.Received.Messages.From.S127.0.0.1:27965:423738315.Current=485,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:27966:423738315.Current=678,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:28330:0.Current=195,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:28330:423738333.Current=429,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:28331:423738333.Current=624,      Delta=2
+Messaging.Received.Messages.From.S127.0.0.1:28485:0.Current=96
+Messaging.Received.Messages.From.S127.0.0.1:28485:423738488.Current=188
+Messaging.Received.Messages.From.S127.0.0.1:28486:423738489.Current=283
+Messaging.Received.Messages.From.S127.0.0.1:28555:0.Current=56
+Messaging.Received.Messages.From.S127.0.0.1:28555:423738523.Current=174
+Messaging.Received.Messages.From.S127.0.0.1:28556:423738523.Current=245
+Messaging.Received.Messages.From.S127.0.0.1:28585:0.Current=139
+Messaging.Received.Messages.From.S127.0.0.1:28585:423738385.Current=366
+Messaging.Received.Messages.From.S127.0.0.1:28586:423738385.Current=502
+Messaging.Received.Messages.From.S127.0.0.1:28795:0.Current=150
+Messaging.Received.Messages.From.S127.0.0.1:28795:423738378.Current=377
+Messaging.Received.Messages.From.S127.0.0.1:28796:423738378.Current=524
+Messaging.Received.Messages.From.S127.0.0.1:28820:0.Current=208,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:28820:423738277.Current=526
+Messaging.Received.Messages.From.S127.0.0.1:28821:423738277.Current=731,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:29065:0.Current=215
+Messaging.Received.Messages.From.S127.0.0.1:29065:423738282.Current=512,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:29066:423738282.Current=728,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:29075:0.Current=268
+Messaging.Received.Messages.From.S127.0.0.1:29075:423738208.Current=658,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:29076:423738208.Current=924,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:29515:0.Current=113
+Messaging.Received.Messages.From.S127.0.0.1:29515:423738444.Current=248
+Messaging.Received.Messages.From.S127.0.0.1:29516:423738444.Current=365
+Messaging.Received.Messages.From.S127.0.0.1:29530:0.Current=265
+Messaging.Received.Messages.From.S127.0.0.1:29530:423738200.Current=700
+Messaging.Received.Messages.From.S127.0.0.1:29531:423738200.Current=962
+Messaging.Received.Messages.From.S127.0.0.1:29565:0.Current=264,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:29565:423738229.Current=592
+Messaging.Received.Messages.From.S127.0.0.1:29566:423738229.Current=858,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:29650:0.Current=244
+Messaging.Received.Messages.From.S127.0.0.1:29650:423738253.Current=590,      Delta=2
+Messaging.Received.Messages.From.S127.0.0.1:29651:423738253.Current=835,      Delta=2
+Messaging.Received.Messages.From.S127.0.0.1:29705:0.Current=43,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:29705:423738551.Current=79,      Delta=4
+Messaging.Received.Messages.From.S127.0.0.1:29706:423738551.Current=120,      Delta=4
+Messaging.Received.Messages.From.S127.0.0.1:29915:0.Current=163
+Messaging.Received.Messages.From.S127.0.0.1:29915:423738371.Current=382,      Delta=2
+Messaging.Received.Messages.From.S127.0.0.1:29916:423738371.Current=548,      Delta=2
+Messaging.Received.Messages.From.S127.0.0.1:29955:0.Current=252
+Messaging.Received.Messages.From.S127.0.0.1:29955:423738262.Current=555
+Messaging.Received.Messages.From.S127.0.0.1:29956:423738262.Current=807
+Messaging.Received.Messages.From.S127.0.0.1:40410:0.Current=12
+Messaging.Received.Messages.From.S127.0.0.1:40411:0.Current=13
+Messaging.Received.Messages.From.S127.0.0.1:40505:0.Current=13
+Messaging.Received.Messages.From.S127.0.0.1:40506:0.Current=7
+Messaging.Received.Messages.From.S127.0.0.1:41200:0.Current=11
+Messaging.Received.Messages.From.S127.0.0.1:41201:0.Current=6
+Messaging.Received.Messages.From.S127.0.0.1:41395:0.Current=21
+Messaging.Received.Messages.From.S127.0.0.1:41396:0.Current=32
+Messaging.Received.Messages.From.S127.0.0.1:41515:0.Current=8
+Messaging.Received.Messages.From.S127.0.0.1:41516:0.Current=14
+Messaging.Received.Messages.From.S127.0.0.1:41725:0.Current=11
+Messaging.Received.Messages.From.S127.0.0.1:41726:0.Current=11
+Messaging.Received.Messages.From.S127.0.0.1:41755:0.Current=11
+Messaging.Received.Messages.From.S127.0.0.1:41756:0.Current=6
+Messaging.Received.Messages.From.S127.0.0.1:41770:0.Current=21
+Messaging.Received.Messages.From.S127.0.0.1:41771:0.Current=10
+Messaging.Received.Messages.From.S127.0.0.1:41825:0.Current=18
+Messaging.Received.Messages.From.S127.0.0.1:41826:0.Current=5
+Messaging.Received.Messages.From.S127.0.0.1:42100:0.Current=9
+Messaging.Received.Messages.From.S127.0.0.1:42101:0.Current=14
+Messaging.Received.Messages.From.S127.0.0.1:42220:0.Current=8
+Messaging.Received.Messages.From.S127.0.0.1:42221:0.Current=5
+Messaging.Received.Messages.From.S127.0.0.1:42335:0.Current=9
+Messaging.Received.Messages.From.S127.0.0.1:42336:0.Current=21
+Messaging.Received.Messages.From.S127.0.0.1:43340:0.Current=13
+Messaging.Received.Messages.From.S127.0.0.1:43341:0.Current=12
+Messaging.Received.Messages.From.S127.0.0.1:43380:0.Current=13
+Messaging.Received.Messages.From.S127.0.0.1:43381:0.Current=16
+Messaging.Received.Messages.From.S127.0.0.1:43570:0.Current=27
+Messaging.Received.Messages.From.S127.0.0.1:43571:0.Current=8
+Messaging.Received.Messages.From.S127.0.0.1:43595:0.Current=18
+Messaging.Received.Messages.From.S127.0.0.1:43596:0.Current=19
+Messaging.Received.Messages.From.S127.0.0.1:43700:0.Current=15
+Messaging.Received.Messages.From.S127.0.0.1:43701:0.Current=9
+Messaging.Received.Messages.From.S127.0.0.1:43785:0.Current=17
+Messaging.Received.Messages.From.S127.0.0.1:43786:0.Current=8
+Messaging.Received.Messages.From.S127.0.0.1:44930:0.Current=8
+Messaging.Received.Messages.From.S127.0.0.1:44931:0.Current=14
+Messaging.Received.Messages.From.S127.0.0.1:45110:0.Current=32
+Messaging.Received.Messages.From.S127.0.0.1:45111:0.Current=17
+Messaging.Received.Messages.From.S127.0.0.1:45145:0.Current=7
+Messaging.Received.Messages.From.S127.0.0.1:45146:0.Current=9
+Messaging.Received.Messages.From.S127.0.0.1:45190:0.Current=6
+Messaging.Received.Messages.From.S127.0.0.1:45191:0.Current=8
+Messaging.Received.Messages.From.S127.0.0.1:45650:0.Current=13
+Messaging.Received.Messages.From.S127.0.0.1:45651:0.Current=6
+Messaging.Received.Messages.From.S127.0.0.1:45920:0.Current=8
+Messaging.Received.Messages.From.S127.0.0.1:45921:0.Current=6
+Messaging.Received.Messages.From.S127.0.0.1:46265:0.Current=7
+Messaging.Received.Messages.From.S127.0.0.1:46266:0.Current=24
+Messaging.Received.Messages.From.S127.0.0.1:46520:0.Current=8
+Messaging.Received.Messages.From.S127.0.0.1:46521:0.Current=5
+Messaging.Received.Messages.From.S127.0.0.1:46575:0.Current=50
+Messaging.Received.Messages.From.S127.0.0.1:46576:0.Current=20
+Messaging.Received.Messages.From.S127.0.0.1:46900:0.Current=6
+Messaging.Received.Messages.From.S127.0.0.1:46901:0.Current=22
+Messaging.Received.Messages.From.S127.0.0.1:46920:0.Current=12
+Messaging.Received.Messages.From.S127.0.0.1:46921:0.Current=12
+Messaging.Received.Messages.From.S127.0.0.1:47195:0.Current=10
+Messaging.Received.Messages.From.S127.0.0.1:47196:0.Current=31
+Messaging.Received.Messages.From.S127.0.0.1:47345:0.Current=9
+Messaging.Received.Messages.From.S127.0.0.1:47346:0.Current=16
+Messaging.Received.Messages.From.S127.0.0.1:47375:0.Current=17
+Messaging.Received.Messages.From.S127.0.0.1:47376:0.Current=13
+Messaging.Received.Messages.From.S127.0.0.1:47570:0.Current=9
+Messaging.Received.Messages.From.S127.0.0.1:47571:0.Current=6
+Messaging.Received.Messages.From.S127.0.0.1:47630:0.Current=13
+Messaging.Received.Messages.From.S127.0.0.1:47631:0.Current=4
+Messaging.Received.Messages.From.S127.0.0.1:47800:0.Current=9
+Messaging.Received.Messages.From.S127.0.0.1:47801:0.Current=5
+Messaging.Received.Messages.From.S127.0.0.1:47975:0.Current=15
+Messaging.Received.Messages.From.S127.0.0.1:47976:0.Current=4
+Messaging.Received.Messages.From.S127.0.0.1:48155:0.Current=15
+Messaging.Received.Messages.From.S127.0.0.1:48156:0.Current=13
+Messaging.Received.Messages.From.S127.0.0.1:48255:0.Current=16
+Messaging.Received.Messages.From.S127.0.0.1:48256:0.Current=3
+Messaging.Received.Messages.From.S127.0.0.1:48455:0.Current=11
+Messaging.Received.Messages.From.S127.0.0.1:48456:0.Current=15,      Delta=2
+Messaging.Received.Messages.From.S127.0.0.1:48925:0.Current=10
+Messaging.Received.Messages.From.S127.0.0.1:48926:0.Current=9
+Messaging.Received.Messages.From.S127.0.0.1:49120:0.Current=7
+Messaging.Received.Messages.From.S127.0.0.1:49121:0.Current=5
+Messaging.Received.Messages.From.S127.0.0.1:49365:0.Current=11
+Messaging.Received.Messages.From.S127.0.0.1:49366:0.Current=6
+Messaging.Received.Messages.From.S127.0.0.1:49530:0.Current=9
+Messaging.Received.Messages.From.S127.0.0.1:49531:0.Current=15
+Messaging.Received.Messages.From.S127.0.0.1:49800:0.Current=4
+Messaging.Received.Messages.From.S127.0.0.1:49801:0.Current=11
+Messaging.Received.Messages.Total.Current=55650,      Delta=75
+Messaging.Received.MessageSizeHistogram.Bytes=[128:255]=29763, [256:511]=23356, [512:1023]=1502, [1024:2047]=756, [2048:4095]=4, [4096:8191]=269, 
+Messaging.Rerouted.OneWay.Current=0
+Messaging.Rerouted.Request.Current=1004,      Delta=2
+Messaging.Rerouted.Response.Current=0
+Messaging.Sent.BatchSize.PerSocketDirection.ClientToGateway=1.000
+Messaging.Sent.BatchSize.PerSocketDirection.GatewayToClient=1.000
+Messaging.Sent.BatchSize.PerSocketDirection.SiloToSilo=1.000
+Messaging.Sent.BatchSizeBytesHistogram.Bytes.PerSocketDirection.ClientToGateway=[128:255]=330, [256:511]=356, [512:1023]=333, [1024:2047]=73, 
+Messaging.Sent.BatchSizeBytesHistogram.Bytes.PerSocketDirection.GatewayToClient=[128:255]=480, [256:511]=417, [512:1023]=10, [1024:2047]=4, [4096:8191]=181, 
+^^^
+	
+[2023-06-06 09:09:22.314 GMT 122	Information	100704	Orleans.Runtime.SiloLogStatistics]	Statistics: ^^^
+Messaging.Sent.BatchSizeBytesHistogram.Bytes.PerSocketDirection.SiloToSilo=[128:255]=28953, [256:511]=22583, [512:1023]=1159, [1024:2047]=679, [2048:4095]=4, [4096:8191]=88, 
+Messaging.Sent.Bytes.Header.Current=10275749,      Delta=14617
+Messaging.Sent.Bytes.Total.Current=16995425,      Delta=22691
+Messaging.Sent.Direction.OneWay.Current=0
+Messaging.Sent.Direction.Request.Current=28066,      Delta=38
+Messaging.Sent.Direction.Response.Current=27584,      Delta=37
+Messaging.Sent.LocalMessages.Current=42416,      Delta=67
+Messaging.Sent.Messages.To.S127.0.0.1:22345:0.Current=23
+Messaging.Sent.Messages.To.S127.0.0.1:22345:423738366.Current=494,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:22346:423738366.Current=518,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:23100:0.Current=13
+Messaging.Sent.Messages.To.S127.0.0.1:23100:423738503.Current=246
+Messaging.Sent.Messages.To.S127.0.0.1:23101:423738504.Current=270
+Messaging.Sent.Messages.To.S127.0.0.1:23115:0.Current=36
+Messaging.Sent.Messages.To.S127.0.0.1:23115:423738329.Current=591,      Delta=2
+Messaging.Sent.Messages.To.S127.0.0.1:23116:423738329.Current=626,      Delta=2
+Messaging.Sent.Messages.To.S127.0.0.1:23170:0.Current=33
+Messaging.Sent.Messages.To.S127.0.0.1:23170:423738243.Current=850
+Messaging.Sent.Messages.To.S127.0.0.1:23171:423738243.Current=874
+Messaging.Sent.Messages.To.S127.0.0.1:23245:0.Current=19
+Messaging.Sent.Messages.To.S127.0.0.1:23245:423738361.Current=526,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:23246:423738361.Current=544,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:23510:0.Current=10
+Messaging.Sent.Messages.To.S127.0.0.1:23510:423738473.Current=334
+Messaging.Sent.Messages.To.S127.0.0.1:23511:423738473.Current=350
+Messaging.Sent.Messages.To.S127.0.0.1:23815:0.Current=14
+Messaging.Sent.Messages.To.S127.0.0.1:23815:423738464.Current=286
+Messaging.Sent.Messages.To.S127.0.0.1:23816:423738464.Current=306
+Messaging.Sent.Messages.To.S127.0.0.1:23905:0.Current=16
+Messaging.Sent.Messages.To.S127.0.0.1:23905:423738400.Current=447
+Messaging.Sent.Messages.To.S127.0.0.1:23906:423738400.Current=460
+Messaging.Sent.Messages.To.S127.0.0.1:24245:0.Current=21
+Messaging.Sent.Messages.To.S127.0.0.1:24245:423738354.Current=529,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:24246:423738354.Current=548,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:24390:0.Current=11
+Messaging.Sent.Messages.To.S127.0.0.1:24390:423738451.Current=321,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:24391:423738451.Current=331,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:24740:0.Current=30
+Messaging.Sent.Messages.To.S127.0.0.1:24740:423738236.Current=832,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:24741:423738236.Current=855,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:24750:0.Current=31
+Messaging.Sent.Messages.To.S127.0.0.1:24750:423738304.Current=658,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:24751:423738304.Current=686,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:24875:0.Current=30
+Messaging.Sent.Messages.To.S127.0.0.1:24875:423738297.Current=686,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:24876:423738297.Current=719,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:24930:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:24930:423738458.Current=297,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:24931:423738458.Current=304,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:25120:0.Current=31
+Messaging.Sent.Messages.To.S127.0.0.1:25120:423738218.Current=876,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:25121:423738218.Current=904,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:25300:0.Current=34
+Messaging.Sent.Messages.To.S127.0.0.1:25300:423738223.Current=854,      Delta=2
+Messaging.Sent.Messages.To.S127.0.0.1:25301:423738223.Current=887,      Delta=2
+Messaging.Sent.Messages.To.S127.0.0.1:25805:0.Current=16
+Messaging.Sent.Messages.To.S127.0.0.1:25805:423738426.Current=368
+Messaging.Sent.Messages.To.S127.0.0.1:25806:423738426.Current=385
+Messaging.Sent.Messages.To.S127.0.0.1:25935:0.Current=17
+Messaging.Sent.Messages.To.S127.0.0.1:25935:423738433.Current=420,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:25936:423738433.Current=432,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:26120:0.Current=36
+Messaging.Sent.Messages.To.S127.0.0.1:26120:423738287.Current=699
+Messaging.Sent.Messages.To.S127.0.0.1:26121:423738287.Current=743
+Messaging.Sent.Messages.To.S127.0.0.1:26125:0.Current=16
+Messaging.Sent.Messages.To.S127.0.0.1:26125:423738392.Current=482,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:26126:423738392.Current=492,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:26525:0.Current=27
+Messaging.Sent.Messages.To.S127.0.0.1:26525:423738322.Current=631,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:26526:423738322.Current=661,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:26845:0.Current=32
+Messaging.Sent.Messages.To.S127.0.0.1:26845:423738308.Current=660,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:26846:423738308.Current=692,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:26940:0.Current=35
+Messaging.Sent.Messages.To.S127.0.0.1:26940:423738185.Current=921,      Delta=2
+Messaging.Sent.Messages.To.S127.0.0.1:26941:423738186.Current=954,      Delta=2
+Messaging.Sent.Messages.To.S127.0.0.1:27140:0.Current=36
+Messaging.Sent.Messages.To.S127.0.0.1:27140:423738268.Current=714
+Messaging.Sent.Messages.To.S127.0.0.1:27141:423738269.Current=750
+Messaging.Sent.Messages.To.S127.0.0.1:27165:0.Current=24
+Messaging.Sent.Messages.To.S127.0.0.1:27165:423738345.Current=544
+Messaging.Sent.Messages.To.S127.0.0.1:27166:423738345.Current=576
+Messaging.Sent.Messages.To.S127.0.0.1:27180:0.Current=25
+Messaging.Sent.Messages.To.S127.0.0.1:27180:423738407.Current=504
+Messaging.Sent.Messages.To.S127.0.0.1:27181:423738407.Current=521
+Messaging.Sent.Messages.To.S127.0.0.1:27650:0.Current=25
+Messaging.Sent.Messages.To.S127.0.0.1:27650:423738340.Current=575,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:27651:423738340.Current=599,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:27865:0.Current=42
+Messaging.Sent.Messages.To.S127.0.0.1:27865:423738190.Current=972
+Messaging.Sent.Messages.To.S127.0.0.1:27866:423738191.Current=1012
+Messaging.Sent.Messages.To.S127.0.0.1:27965:0.Current=31
+Messaging.Sent.Messages.To.S127.0.0.1:27965:423738315.Current=647,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:27966:423738315.Current=674,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:28330:0.Current=27
+Messaging.Sent.Messages.To.S127.0.0.1:28330:423738333.Current=597,      Delta=2
+Messaging.Sent.Messages.To.S127.0.0.1:28331:423738333.Current=624,      Delta=2
+Messaging.Sent.Messages.To.S127.0.0.1:28485:0.Current=11
+Messaging.Sent.Messages.To.S127.0.0.1:28485:423738488.Current=272
+Messaging.Sent.Messages.To.S127.0.0.1:28486:423738489.Current=284
+Messaging.Sent.Messages.To.S127.0.0.1:28555:0.Current=7
+Messaging.Sent.Messages.To.S127.0.0.1:28555:423738523.Current=238
+Messaging.Sent.Messages.To.S127.0.0.1:28556:423738523.Current=230
+Messaging.Sent.Messages.To.S127.0.0.1:28585:0.Current=19
+Messaging.Sent.Messages.To.S127.0.0.1:28585:423738385.Current=483
+Messaging.Sent.Messages.To.S127.0.0.1:28586:423738385.Current=505
+Messaging.Sent.Messages.To.S127.0.0.1:28795:0.Current=18
+Messaging.Sent.Messages.To.S127.0.0.1:28795:423738378.Current=506
+Messaging.Sent.Messages.To.S127.0.0.1:28796:423738378.Current=527
+Messaging.Sent.Messages.To.S127.0.0.1:28820:0.Current=27
+Messaging.Sent.Messages.To.S127.0.0.1:28820:423738277.Current=704,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:28821:423738277.Current=734,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:29065:0.Current=31
+Messaging.Sent.Messages.To.S127.0.0.1:29065:423738282.Current=697,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:29066:423738282.Current=727,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:29075:0.Current=37
+Messaging.Sent.Messages.To.S127.0.0.1:29075:423738208.Current=887,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:29076:423738208.Current=926,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:29515:0.Current=16
+Messaging.Sent.Messages.To.S127.0.0.1:29515:423738444.Current=349
+Messaging.Sent.Messages.To.S127.0.0.1:29516:423738444.Current=361
+Messaging.Sent.Messages.To.S127.0.0.1:29530:0.Current=44
+Messaging.Sent.Messages.To.S127.0.0.1:29530:423738200.Current=918
+Messaging.Sent.Messages.To.S127.0.0.1:29531:423738200.Current=965
+Messaging.Sent.Messages.To.S127.0.0.1:29565:0.Current=36
+Messaging.Sent.Messages.To.S127.0.0.1:29565:423738229.Current=822,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:29566:423738229.Current=856,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:29650:0.Current=41
+Messaging.Sent.Messages.To.S127.0.0.1:29650:423738253.Current=794,      Delta=2
+Messaging.Sent.Messages.To.S127.0.0.1:29651:423738253.Current=834,      Delta=2
+Messaging.Sent.Messages.To.S127.0.0.1:29705:0.Current=7
+Messaging.Sent.Messages.To.S127.0.0.1:29705:423738551.Current=113,      Delta=4
+Messaging.Sent.Messages.To.S127.0.0.1:29706:423738551.Current=122,      Delta=5
+Messaging.Sent.Messages.To.S127.0.0.1:29915:0.Current=18
+Messaging.Sent.Messages.To.S127.0.0.1:29915:423738371.Current=530,      Delta=2
+Messaging.Sent.Messages.To.S127.0.0.1:29916:423738371.Current=545,      Delta=2
+Messaging.Sent.Messages.To.S127.0.0.1:29955:0.Current=38
+Messaging.Sent.Messages.To.S127.0.0.1:29955:423738262.Current=769
+Messaging.Sent.Messages.To.S127.0.0.1:29956:423738262.Current=807
+Messaging.Sent.Messages.To.S127.0.0.1:40410:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:40411:0.Current=13
+Messaging.Sent.Messages.To.S127.0.0.1:40505:0.Current=10
+Messaging.Sent.Messages.To.S127.0.0.1:40506:0.Current=10
+Messaging.Sent.Messages.To.S127.0.0.1:41200:0.Current=8
+Messaging.Sent.Messages.To.S127.0.0.1:41201:0.Current=9
+Messaging.Sent.Messages.To.S127.0.0.1:41395:0.Current=27
+Messaging.Sent.Messages.To.S127.0.0.1:41396:0.Current=26
+Messaging.Sent.Messages.To.S127.0.0.1:41515:0.Current=11
+Messaging.Sent.Messages.To.S127.0.0.1:41516:0.Current=11
+Messaging.Sent.Messages.To.S127.0.0.1:41725:0.Current=11
+Messaging.Sent.Messages.To.S127.0.0.1:41726:0.Current=11
+Messaging.Sent.Messages.To.S127.0.0.1:41755:0.Current=9
+Messaging.Sent.Messages.To.S127.0.0.1:41756:0.Current=8
+Messaging.Sent.Messages.To.S127.0.0.1:41770:0.Current=16
+Messaging.Sent.Messages.To.S127.0.0.1:41771:0.Current=15
+Messaging.Sent.Messages.To.S127.0.0.1:41825:0.Current=11
+Messaging.Sent.Messages.To.S127.0.0.1:41826:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:42100:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:42101:0.Current=11
+Messaging.Sent.Messages.To.S127.0.0.1:42220:0.Current=7
+Messaging.Sent.Messages.To.S127.0.0.1:42221:0.Current=6
+Messaging.Sent.Messages.To.S127.0.0.1:42335:0.Current=15
+Messaging.Sent.Messages.To.S127.0.0.1:42336:0.Current=15
+Messaging.Sent.Messages.To.S127.0.0.1:43340:0.Current=13
+Messaging.Sent.Messages.To.S127.0.0.1:43341:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:43380:0.Current=15
+Messaging.Sent.Messages.To.S127.0.0.1:43381:0.Current=14
+Messaging.Sent.Messages.To.S127.0.0.1:43570:0.Current=18
+Messaging.Sent.Messages.To.S127.0.0.1:43571:0.Current=17
+Messaging.Sent.Messages.To.S127.0.0.1:43595:0.Current=19
+Messaging.Sent.Messages.To.S127.0.0.1:43596:0.Current=18
+Messaging.Sent.Messages.To.S127.0.0.1:43700:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:43701:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:43785:0.Current=13
+Messaging.Sent.Messages.To.S127.0.0.1:43786:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:44930:0.Current=11
+Messaging.Sent.Messages.To.S127.0.0.1:44931:0.Current=11
+Messaging.Sent.Messages.To.S127.0.0.1:45110:0.Current=24
+Messaging.Sent.Messages.To.S127.0.0.1:45111:0.Current=25
+Messaging.Sent.Messages.To.S127.0.0.1:45145:0.Current=8
+Messaging.Sent.Messages.To.S127.0.0.1:45146:0.Current=8
+Messaging.Sent.Messages.To.S127.0.0.1:45190:0.Current=7
+Messaging.Sent.Messages.To.S127.0.0.1:45191:0.Current=7
+Messaging.Sent.Messages.To.S127.0.0.1:45650:0.Current=10
+Messaging.Sent.Messages.To.S127.0.0.1:45651:0.Current=9
+Messaging.Sent.Messages.To.S127.0.0.1:45920:0.Current=7
+Messaging.Sent.Messages.To.S127.0.0.1:45921:0.Current=7
+Messaging.Sent.Messages.To.S127.0.0.1:46265:0.Current=15
+Messaging.Sent.Messages.To.S127.0.0.1:46266:0.Current=16
+Messaging.Sent.Messages.To.S127.0.0.1:46520:0.Current=7
+Messaging.Sent.Messages.To.S127.0.0.1:46521:0.Current=6
+Messaging.Sent.Messages.To.S127.0.0.1:46575:0.Current=35
+Messaging.Sent.Messages.To.S127.0.0.1:46576:0.Current=35
+Messaging.Sent.Messages.To.S127.0.0.1:46900:0.Current=14
+Messaging.Sent.Messages.To.S127.0.0.1:46901:0.Current=14
+Messaging.Sent.Messages.To.S127.0.0.1:46920:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:46921:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:47195:0.Current=21
+Messaging.Sent.Messages.To.S127.0.0.1:47196:0.Current=20
+Messaging.Sent.Messages.To.S127.0.0.1:47345:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:47346:0.Current=13
+Messaging.Sent.Messages.To.S127.0.0.1:47375:0.Current=15
+Messaging.Sent.Messages.To.S127.0.0.1:47376:0.Current=15
+Messaging.Sent.Messages.To.S127.0.0.1:47570:0.Current=8
+Messaging.Sent.Messages.To.S127.0.0.1:47571:0.Current=7
+Messaging.Sent.Messages.To.S127.0.0.1:47630:0.Current=9
+Messaging.Sent.Messages.To.S127.0.0.1:47631:0.Current=8
+Messaging.Sent.Messages.To.S127.0.0.1:47800:0.Current=7
+Messaging.Sent.Messages.To.S127.0.0.1:47801:0.Current=7
+Messaging.Sent.Messages.To.S127.0.0.1:47975:0.Current=10
+Messaging.Sent.Messages.To.S127.0.0.1:47976:0.Current=9
+Messaging.Sent.Messages.To.S127.0.0.1:48155:0.Current=14
+Messaging.Sent.Messages.To.S127.0.0.1:48156:0.Current=14
+Messaging.Sent.Messages.To.S127.0.0.1:48255:0.Current=10
+Messaging.Sent.Messages.To.S127.0.0.1:48256:0.Current=9
+Messaging.Sent.Messages.To.S127.0.0.1:48455:0.Current=13,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:48456:0.Current=13,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:48925:0.Current=9
+Messaging.Sent.Messages.To.S127.0.0.1:48926:0.Current=10
+Messaging.Sent.Messages.To.S127.0.0.1:49120:0.Current=6
+Messaging.Sent.Messages.To.S127.0.0.1:49121:0.Current=6
+Messaging.Sent.Messages.To.S127.0.0.1:49365:0.Current=9
+Messaging.Sent.Messages.To.S127.0.0.1:49366:0.Current=8
+Messaging.Sent.Messages.To.S127.0.0.1:49530:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:49531:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:49800:0.Current=7
+Messaging.Sent.Messages.To.S127.0.0.1:49801:0.Current=8
+Messaging.Sent.Messages.Total.Current=55650,      Delta=75
+Messaging.Sent.MessageSizeHistogram.Bytes=[128:255]=29763, [256:511]=23356, [512:1023]=1502, [1024:2047]=756, [2048:4095]=4, [4096:8191]=269, 
+Networking.Sockets.ClientToGateway.Closed.Current=0
+Networking.Sockets.ClientToGateway.Opened.Current=88
+Networking.Sockets.GatewayToClient.Closed.Current=0
+Networking.Sockets.GatewayToClient.Opened.Current=88
+Networking.Sockets.Silo.Closed.Current=0
+Networking.Sockets.Silo.Opened.Current=176
+Runtime.IsOverloaded=False
+Scheduler.NumLongQueueWaitTimes.Current=0
+Scheduler.NumLongRunningTurns.Current=0
+Scheduler.WorkItemGroupCount=17
+Serialization.BufferPool.AllocatedBuffers.Current=33000
+Serialization.BufferPool.BuffersInPool=250
+Serialization.BufferPool.CheckedInBuffers.Current=33000
+Serialization.BufferPool.CheckedOutBuffers.Current=33000
+Serialization.BufferPool.DroppedBuffers.Current=0
+Serialization.BufferPool.DroppedTooLargeBuffers.Current=0
+Serialization.BufferPool.InUse.AllocatedAndNotInPool_Buffers=32750
+Serialization.BufferPool.InUse.CheckedOutAndNotCheckedIn_Buffers=0
+Silo.StartTime=2023-06-06 09:03:05.798 GMT
+Storage.Activate.Errors.Current=0
+Storage.Activate.Total.Current=0
+Storage.Clear.Errors.Current=0
+Storage.Clear.Latency=0 Secs
+Storage.Clear.Total.Current=0
+Storage.Read.Errors.Current=0
+Storage.Read.Latency=0.0003474 Secs
+Storage.Read.Total.Current=762
+Storage.Write.Errors.Current=0
+Storage.Write.Latency=0.0002791 Secs
+Storage.Write.Total.Current=1366,      Delta=6
+Watchdog.NumHealthChecks.Current=20
+	
+[2023-06-06 09:14:22.320 GMT 140	Information	100704	Orleans.Runtime.SiloLogStatistics]	Statistics: ^^^
+App.Requests.Latency.Average.Millis=0.000
+App.Requests.LatencyHistogram.Millis=[0.0016:0.0031]=619, [0.0032:0.0063]=3784, [0.0064:0.0127]=8377, [0.0128:0.0255]=18304, [0.0256:0.0511]=11110, [0.0512:0.1023]=9022, [0.1024:0.2047]=8608, [0.2048:0.4095]=13575, [0.4096:0.8191]=21029, [0.8192:1.6383]=16139, [1.6384:3.2767]=10341, [3.2768:6.5535]=1517, [6.5536:13.1071]=692, [13.1072:26.2143]=452, [26.2144:52.4287]=300, [52.4288:104.8575]=38, [104.8576:209.7151]=35, 
+App.Requests.TimedOut.Current=0
+App.Requests.Total.Requests.Current=123942,      Delta=7
+Catalog.Activation.Collection.NumberOfCollections.Current=794,      Delta=1
+Catalog.Activation.ConcurrentRegistrationAttempts.Current=9
+Catalog.Activation.Created.Current=1100
+Catalog.Activation.CurrentCount=5
+Catalog.Activation.Destroyed.Current=10
+Catalog.Activation.FailedToActivate.Current=0
+Client.ConnectedGatewayCount=2
+ConsistentRing.AverageRangePercentage=50.000
+ConsistentRing.MyRange.RingDistance=x89D73E44
+ConsistentRing.MyRange.RingPercentage=53.844
+ConsistentRing.Ring=[S127.0.0.1:26941:423738186 -> <MultiRange: Size=x7628C1BC, %Ring=46.156%>, S127.0.0.1:26940:423738185 -> <MultiRange: Size=x89D73E44, %Ring=53.844%>]
+ConsistentRing.RingSize=2
+Directory.CacheSize=0
+Directory.Lookups.Cache.HitRatio=0.73158854, Delta=0
+Directory.Lookups.Cache.Issued.Current=3286
+Directory.Lookups.Cache.Successes.Current=2404
+Directory.Lookups.Full.Issued.Current=1424
+Directory.Lookups.Local.Issued.Current=6425
+Directory.Lookups.Local.Successes.Current=5001
+Directory.Lookups.LocalDirectory.Issued.Current=4563
+Directory.Lookups.LocalDirectory.Successes.Current=2921
+Directory.Lookups.Remote.Received.Current=882
+Directory.Lookups.Remote.Sent.Current=882
+Directory.PartitionSize=7
+Directory.Registrations.Issued.Current=1228
+Directory.Registrations.Local.Current=1290
+Directory.Registrations.Remote.Received.Current=644
+Directory.Registrations.Remote.Sent.Current=291
+Directory.Registrations.SingleAct.Issued.Current=1100
+Directory.Registrations.SingleAct.Local.Current=1103
+Directory.Registrations.SingleAct.Remote.Received.Current=1065
+Directory.Registrations.SingleAct.Remote.Sent.Current=531
+Directory.Ring=[S127.0.0.1:26941:423738186/E415F50F, S127.0.0.1:26940:423738185/41A6687C]
+Directory.Ring.MyPortion.AverageRingPercentage=50.000
+Directory.Ring.MyPortion.RingDistance=2725219473
+Directory.Ring.MyPortion.RingPercentage=63.451
+Directory.Ring.MyPredecessors=[S127.0.0.1:26941:423738186/E415F50F]
+Directory.Ring.MySuccessors=[S127.0.0.1:26941:423738186/E415F50F]
+Directory.Ring.RingSize=2
+Directory.UnRegistrations.Issued.Current=0
+Directory.UnRegistrations.Local.Current=1
+Directory.UnRegistrations.Remote.Received.Current=0
+Directory.UnRegistrations.Remote.Sent.Current=0
+Directory.UnRegistrationsMany.Issued.Current=1
+Directory.UnRegistrationsMany.Remote.Received.Current=1
+Directory.UnRegistrationsMany.Remote.Sent.Current=1
+Directory.Validations.Cache.Received.Current=102
+Directory.Validations.Cache.Sent.Current=102
+Dispatcher.NewPlacement.Current=1100
+Gateway.ConnectedClients.Current=126
+Gateway.LoadShedding.Current=0
+Gateway.Received.Current=2034
+Gateway.Sent.Current=4068
+Grain.AElfIndexer.Grains.Grain.Client.BlockStateSetBucketGrain`1[[AElfIndexer.Grains.State.Client.LogEventInfo, AElfIndexer.Grains, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].Current=75
+Grain.AElfIndexer.Grains.Grain.Client.BlockStateSetBucketGrain`1[[AElfIndexer.Grains.State.Client.TransactionInfo, AElfIndexer.Grains, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].Current=44
+Grain.AElfIndexer.Grains.Grain.Client.BlockStateSetGrain`1[[AElfIndexer.Grains.State.Client.LogEventInfo, AElfIndexer.Grains, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].Current=75
+Grain.AElfIndexer.Grains.Grain.Client.BlockStateSetGrain`1[[AElfIndexer.Grains.State.Client.TransactionInfo, AElfIndexer.Grains, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].Current=44
+Grain.AElfIndexer.Grains.Grain.Client.DappDataGrain.Current=355
+Grain.Orleans.Runtime.Versions.VersionStoreGrain.Current=63
+Grain.Orleans.Storage.MemoryStorageGrain.Current=434
+Messaging.Expired.AtDispatch.Current=0
+Messaging.Expired.AtInvoke.Current=0
+Messaging.Expired.AtReceive.Current=0
+Messaging.Expired.AtRespond.Current=0
+Messaging.Expired.AtSend.Current=0
+Messaging.Pings.Received.S127.0.0.1:22345:423738366.Current=99
+Messaging.Pings.Received.S127.0.0.1:22346:423738366.Current=100
+Messaging.Pings.Received.S127.0.0.1:22355:423738663.Current=40
+Messaging.Pings.Received.S127.0.0.1:22356:423738663.Current=41
+Messaging.Pings.Received.S127.0.0.1:22515:423738754.Current=21
+Messaging.Pings.Received.S127.0.0.1:22516:423738754.Current=22
+Messaging.Pings.Received.S127.0.0.1:22580:423738733.Current=26
+Messaging.Pings.Received.S127.0.0.1:22581:423738733.Current=27
+Messaging.Pings.Received.S127.0.0.1:22830:423738796.Current=14
+Messaging.Pings.Received.S127.0.0.1:22831:423738796.Current=14
+Messaging.Pings.Received.S127.0.0.1:22950:423738811.Current=10
+Messaging.Pings.Received.S127.0.0.1:22951:423738811.Current=11
+Messaging.Pings.Received.S127.0.0.1:23100:423738503.Current=72
+Messaging.Pings.Received.S127.0.0.1:23101:423738504.Current=73
+Messaging.Pings.Received.S127.0.0.1:23115:423738329.Current=107
+Messaging.Pings.Received.S127.0.0.1:23116:423738329.Current=107
+Messaging.Pings.Received.S127.0.0.1:23170:423738243.Current=124
+Messaging.Pings.Received.S127.0.0.1:23171:423738243.Current=124
+Messaging.Pings.Received.S127.0.0.1:23245:423738361.Current=100
+Messaging.Pings.Received.S127.0.0.1:23246:423738361.Current=101
+Messaging.Pings.Received.S127.0.0.1:23510:423738473.Current=78
+Messaging.Pings.Received.S127.0.0.1:23511:423738473.Current=79
+Messaging.Pings.Received.S127.0.0.1:23815:423738464.Current=80
+Messaging.Pings.Received.S127.0.0.1:23816:423738464.Current=81
+Messaging.Pings.Received.S127.0.0.1:23905:423738400.Current=92
+Messaging.Pings.Received.S127.0.0.1:23906:423738400.Current=94
+Messaging.Pings.Received.S127.0.0.1:24130:423738748.Current=22
+Messaging.Pings.Received.S127.0.0.1:24131:423738749.Current=24,      Delta=1
+Messaging.Pings.Received.S127.0.0.1:24135:423738693.Current=34
+Messaging.Pings.Received.S127.0.0.1:24136:423738693.Current=35
+Messaging.Pings.Received.S127.0.0.1:24145:423738597.Current=53
+Messaging.Pings.Received.S127.0.0.1:24146:423738597.Current=54
+Messaging.Pings.Received.S127.0.0.1:24245:423738354.Current=102
+Messaging.Pings.Received.S127.0.0.1:24246:423738354.Current=103
+Messaging.Pings.Received.S127.0.0.1:24390:423738451.Current=82
+Messaging.Pings.Received.S127.0.0.1:24391:423738451.Current=83
+Messaging.Pings.Received.S127.0.0.1:24530:423738583.Current=55
+Messaging.Pings.Received.S127.0.0.1:24531:423738583.Current=57
+Messaging.Pings.Received.S127.0.0.1:24740:423738236.Current=125
+Messaging.Pings.Received.S127.0.0.1:24741:423738236.Current=127,      Delta=1
+Messaging.Pings.Received.S127.0.0.1:24750:423738304.Current=112
+Messaging.Pings.Received.S127.0.0.1:24751:423738304.Current=113
+Messaging.Pings.Received.S127.0.0.1:24800:423738763.Current=20,      Delta=1
+Messaging.Pings.Received.S127.0.0.1:24801:423738763.Current=21
+Messaging.Pings.Received.S127.0.0.1:24875:423738297.Current=113
+Messaging.Pings.Received.S127.0.0.1:24876:423738297.Current=114
+Messaging.Pings.Received.S127.0.0.1:24930:423738458.Current=81
+Messaging.Pings.Received.S127.0.0.1:24931:423738458.Current=82
+Messaging.Pings.Received.S127.0.0.1:25120:423738218.Current=129
+Messaging.Pings.Received.S127.0.0.1:25121:423738218.Current=130
+Messaging.Pings.Received.S127.0.0.1:25300:423738223.Current=128
+Messaging.Pings.Received.S127.0.0.1:25301:423738223.Current=129
+Messaging.Pings.Received.S127.0.0.1:25360:423738648.Current=43
+Messaging.Pings.Received.S127.0.0.1:25361:423738648.Current=44
+Messaging.Pings.Received.S127.0.0.1:25805:423738426.Current=87
+Messaging.Pings.Received.S127.0.0.1:25806:423738426.Current=88
+Messaging.Pings.Received.S127.0.0.1:25935:423738433.Current=86
+Messaging.Pings.Received.S127.0.0.1:25936:423738433.Current=86
+Messaging.Pings.Received.S127.0.0.1:26120:423738287.Current=115
+Messaging.Pings.Received.S127.0.0.1:26121:423738287.Current=116
+Messaging.Pings.Received.S127.0.0.1:26125:423738392.Current=94
+Messaging.Pings.Received.S127.0.0.1:26126:423738392.Current=95
+Messaging.Pings.Received.S127.0.0.1:26525:423738322.Current=108,      Delta=1
+Messaging.Pings.Received.S127.0.0.1:26526:423738322.Current=109
+Messaging.Pings.Received.S127.0.0.1:26700:423738628.Current=47
+Messaging.Pings.Received.S127.0.0.1:26701:423738628.Current=47
+Messaging.Pings.Received.S127.0.0.1:26845:423738308.Current=111
+Messaging.Pings.Received.S127.0.0.1:26846:423738308.Current=112
+Messaging.Pings.Received.S127.0.0.1:26935:423738778.Current=16
+Messaging.Pings.Received.S127.0.0.1:26936:423738779.Current=17
+Messaging.Pings.Received.S127.0.0.1:26940:423738185.Current=135
+Messaging.Pings.Received.S127.0.0.1:26941:423738186.Current=136
+Messaging.Pings.Received.S127.0.0.1:27140:423738268.Current=119
+Messaging.Pings.Received.S127.0.0.1:27141:423738269.Current=119
+Messaging.Pings.Received.S127.0.0.1:27165:423738345.Current=103
+Messaging.Pings.Received.S127.0.0.1:27166:423738345.Current=105
+Messaging.Pings.Received.S127.0.0.1:27180:423738407.Current=91
+Messaging.Pings.Received.S127.0.0.1:27181:423738407.Current=92
+Messaging.Pings.Received.S127.0.0.1:27650:423738340.Current=104
+Messaging.Pings.Received.S127.0.0.1:27651:423738340.Current=105
+Messaging.Pings.Received.S127.0.0.1:27865:423738190.Current=134
+Messaging.Pings.Received.S127.0.0.1:27866:423738191.Current=135
+Messaging.Pings.Received.S127.0.0.1:27965:423738315.Current=109
+Messaging.Pings.Received.S127.0.0.1:27966:423738315.Current=110
+Messaging.Pings.Received.S127.0.0.1:28125:423738588.Current=54
+Messaging.Pings.Received.S127.0.0.1:28126:423738588.Current=55
+Messaging.Pings.Received.S127.0.0.1:28330:423738333.Current=105
+Messaging.Pings.Received.S127.0.0.1:28331:423738333.Current=107
+Messaging.Pings.Received.S127.0.0.1:28400:423738837.Current=5
+Messaging.Pings.Received.S127.0.0.1:28401:423738837.Current=6
+Messaging.Pings.Received.S127.0.0.1:28485:423738488.Current=74
+Messaging.Pings.Received.S127.0.0.1:28486:423738489.Current=76
+Messaging.Pings.Received.S127.0.0.1:28555:423738523.Current=68
+Messaging.Pings.Received.S127.0.0.1:28556:423738523.Current=69
+Messaging.Pings.Received.S127.0.0.1:28585:423738385.Current=95
+Messaging.Pings.Received.S127.0.0.1:28586:423738385.Current=96
+Messaging.Pings.Received.S127.0.0.1:28795:423738378.Current=96
+Messaging.Pings.Received.S127.0.0.1:28796:423738378.Current=98
+Messaging.Pings.Received.S127.0.0.1:28805:423738632.Current=46
+Messaging.Pings.Received.S127.0.0.1:28806:423738633.Current=47
+Messaging.Pings.Received.S127.0.0.1:28820:423738277.Current=117
+Messaging.Pings.Received.S127.0.0.1:28821:423738277.Current=118
+Messaging.Pings.Received.S127.0.0.1:29065:423738282.Current=116
+Messaging.Pings.Received.S127.0.0.1:29066:423738282.Current=117
+Messaging.Pings.Received.S127.0.0.1:29075:423738208.Current=131
+Messaging.Pings.Received.S127.0.0.1:29076:423738208.Current=132
+Messaging.Pings.Received.S127.0.0.1:29310:423738715.Current=29
+Messaging.Pings.Received.S127.0.0.1:29311:423738715.Current=31
+Messaging.Pings.Received.S127.0.0.1:29375:423738858.Current=1
+Messaging.Pings.Received.S127.0.0.1:29376:423738858.Current=2
+Messaging.Pings.Received.S127.0.0.1:29515:423738444.Current=83
+Messaging.Pings.Received.S127.0.0.1:29516:423738444.Current=84
+Messaging.Pings.Received.S127.0.0.1:29530:423738200.Current=133
+Messaging.Pings.Received.S127.0.0.1:29531:423738200.Current=133
+Messaging.Pings.Received.S127.0.0.1:29565:423738229.Current=126
+Messaging.Pings.Received.S127.0.0.1:29566:423738229.Current=127
+Messaging.Pings.Received.S127.0.0.1:29650:423738253.Current=122
+Messaging.Pings.Received.S127.0.0.1:29651:423738253.Current=123
+Messaging.Pings.Received.S127.0.0.1:29705:423738551.Current=62
+Messaging.Pings.Received.S127.0.0.1:29706:423738551.Current=63
+Messaging.Pings.Received.S127.0.0.1:29885:423738612.Current=50
+Messaging.Pings.Received.S127.0.0.1:29886:423738613.Current=51
+Messaging.Pings.Received.S127.0.0.1:29915:423738371.Current=98
+Messaging.Pings.Received.S127.0.0.1:29916:423738371.Current=99
+Messaging.Pings.Received.S127.0.0.1:29955:423738262.Current=120
+Messaging.Pings.Received.S127.0.0.1:29956:423738262.Current=121
+Messaging.Pings.ReplyReceived.S127.0.0.1:22345:423738366.Current=99
+Messaging.Pings.ReplyReceived.S127.0.0.1:22346:423738366.Current=99
+Messaging.Pings.ReplyReceived.S127.0.0.1:22355:423738663.Current=40
+Messaging.Pings.ReplyReceived.S127.0.0.1:22356:423738663.Current=40
+Messaging.Pings.ReplyReceived.S127.0.0.1:22515:423738754.Current=21
+Messaging.Pings.ReplyReceived.S127.0.0.1:22516:423738754.Current=21
+Messaging.Pings.ReplyReceived.S127.0.0.1:22580:423738733.Current=26
+Messaging.Pings.ReplyReceived.S127.0.0.1:22581:423738733.Current=26
+Messaging.Pings.ReplyReceived.S127.0.0.1:22830:423738796.Current=13
+Messaging.Pings.ReplyReceived.S127.0.0.1:22831:423738796.Current=14
+Messaging.Pings.ReplyReceived.S127.0.0.1:22950:423738811.Current=10
+Messaging.Pings.ReplyReceived.S127.0.0.1:22951:423738811.Current=10
+Messaging.Pings.ReplyReceived.S127.0.0.1:23100:423738503.Current=72
+Messaging.Pings.ReplyReceived.S127.0.0.1:23101:423738504.Current=72
+Messaging.Pings.ReplyReceived.S127.0.0.1:23115:423738329.Current=106
+Messaging.Pings.ReplyReceived.S127.0.0.1:23116:423738329.Current=107
+Messaging.Pings.ReplyReceived.S127.0.0.1:23170:423738243.Current=123
+Messaging.Pings.ReplyReceived.S127.0.0.1:23171:423738243.Current=124
+Messaging.Pings.ReplyReceived.S127.0.0.1:23245:423738361.Current=100
+Messaging.Pings.ReplyReceived.S127.0.0.1:23246:423738361.Current=100
+Messaging.Pings.ReplyReceived.S127.0.0.1:23510:423738473.Current=78
+Messaging.Pings.ReplyReceived.S127.0.0.1:23511:423738473.Current=78
+Messaging.Pings.ReplyReceived.S127.0.0.1:23815:423738464.Current=80
+Messaging.Pings.ReplyReceived.S127.0.0.1:23816:423738464.Current=80
+Messaging.Pings.ReplyReceived.S127.0.0.1:23905:423738400.Current=93
+Messaging.Pings.ReplyReceived.S127.0.0.1:23906:423738400.Current=92
+Messaging.Pings.ReplyReceived.S127.0.0.1:24130:423738748.Current=23,      Delta=1
+Messaging.Pings.ReplyReceived.S127.0.0.1:24131:423738749.Current=22
+Messaging.Pings.ReplyReceived.S127.0.0.1:24135:423738693.Current=34
+Messaging.Pings.ReplyReceived.S127.0.0.1:24136:423738693.Current=34
+Messaging.Pings.ReplyReceived.S127.0.0.1:24145:423738597.Current=53
+Messaging.Pings.ReplyReceived.S127.0.0.1:24146:423738597.Current=53
+Messaging.Pings.ReplyReceived.S127.0.0.1:24245:423738354.Current=102
+Messaging.Pings.ReplyReceived.S127.0.0.1:24246:423738354.Current=102
+Messaging.Pings.ReplyReceived.S127.0.0.1:24390:423738451.Current=82
+Messaging.Pings.ReplyReceived.S127.0.0.1:24391:423738451.Current=82
+Messaging.Pings.ReplyReceived.S127.0.0.1:24530:423738583.Current=56
+Messaging.Pings.ReplyReceived.S127.0.0.1:24531:423738583.Current=55
+Messaging.Pings.ReplyReceived.S127.0.0.1:24740:423738236.Current=126,      Delta=1
+Messaging.Pings.ReplyReceived.S127.0.0.1:24741:423738236.Current=125
+Messaging.Pings.ReplyReceived.S127.0.0.1:24750:423738304.Current=112
+Messaging.Pings.ReplyReceived.S127.0.0.1:24751:423738304.Current=112
+Messaging.Pings.ReplyReceived.S127.0.0.1:24800:423738763.Current=20
+Messaging.Pings.ReplyReceived.S127.0.0.1:24801:423738763.Current=20,      Delta=1
+Messaging.Pings.ReplyReceived.S127.0.0.1:24875:423738297.Current=113
+Messaging.Pings.ReplyReceived.S127.0.0.1:24876:423738297.Current=113
+Messaging.Pings.ReplyReceived.S127.0.0.1:24930:423738458.Current=81
+Messaging.Pings.ReplyReceived.S127.0.0.1:24931:423738458.Current=81
+Messaging.Pings.ReplyReceived.S127.0.0.1:25120:423738218.Current=129
+Messaging.Pings.ReplyReceived.S127.0.0.1:25121:423738218.Current=129
+Messaging.Pings.ReplyReceived.S127.0.0.1:25300:423738223.Current=128
+Messaging.Pings.ReplyReceived.S127.0.0.1:25301:423738223.Current=128
+Messaging.Pings.ReplyReceived.S127.0.0.1:25360:423738648.Current=43
+Messaging.Pings.ReplyReceived.S127.0.0.1:25361:423738648.Current=43
+Messaging.Pings.ReplyReceived.S127.0.0.1:25805:423738426.Current=87
+Messaging.Pings.ReplyReceived.S127.0.0.1:25806:423738426.Current=87
+Messaging.Pings.ReplyReceived.S127.0.0.1:25935:423738433.Current=85
+Messaging.Pings.ReplyReceived.S127.0.0.1:25936:423738433.Current=86
+Messaging.Pings.ReplyReceived.S127.0.0.1:26120:423738287.Current=115
+Messaging.Pings.ReplyReceived.S127.0.0.1:26121:423738287.Current=115
+Messaging.Pings.ReplyReceived.S127.0.0.1:26125:423738392.Current=94
+Messaging.Pings.ReplyReceived.S127.0.0.1:26126:423738392.Current=94
+Messaging.Pings.ReplyReceived.S127.0.0.1:26525:423738322.Current=108
+Messaging.Pings.ReplyReceived.S127.0.0.1:26526:423738322.Current=108,      Delta=1
+Messaging.Pings.ReplyReceived.S127.0.0.1:26700:423738628.Current=46
+Messaging.Pings.ReplyReceived.S127.0.0.1:26701:423738628.Current=47
+Messaging.Pings.ReplyReceived.S127.0.0.1:26845:423738308.Current=111
+Messaging.Pings.ReplyReceived.S127.0.0.1:26846:423738308.Current=111
+Messaging.Pings.ReplyReceived.S127.0.0.1:26935:423738778.Current=16
+Messaging.Pings.ReplyReceived.S127.0.0.1:26936:423738779.Current=16
+Messaging.Pings.ReplyReceived.S127.0.0.1:26940:423738185.Current=135
+Messaging.Pings.ReplyReceived.S127.0.0.1:26941:423738186.Current=135
+Messaging.Pings.ReplyReceived.S127.0.0.1:27140:423738268.Current=118
+Messaging.Pings.ReplyReceived.S127.0.0.1:27141:423738269.Current=119
+Messaging.Pings.ReplyReceived.S127.0.0.1:27165:423738345.Current=104
+Messaging.Pings.ReplyReceived.S127.0.0.1:27166:423738345.Current=103
+Messaging.Pings.ReplyReceived.S127.0.0.1:27180:423738407.Current=91
+Messaging.Pings.ReplyReceived.S127.0.0.1:27181:423738407.Current=91
+Messaging.Pings.ReplyReceived.S127.0.0.1:27650:423738340.Current=104
+Messaging.Pings.ReplyReceived.S127.0.0.1:27651:423738340.Current=104
+Messaging.Pings.ReplyReceived.S127.0.0.1:27865:423738190.Current=134
+Messaging.Pings.ReplyReceived.S127.0.0.1:27866:423738191.Current=134
+Messaging.Pings.ReplyReceived.S127.0.0.1:27965:423738315.Current=109
+Messaging.Pings.ReplyReceived.S127.0.0.1:27966:423738315.Current=109
+Messaging.Pings.ReplyReceived.S127.0.0.1:28125:423738588.Current=54
+Messaging.Pings.ReplyReceived.S127.0.0.1:28126:423738588.Current=54
+Messaging.Pings.ReplyReceived.S127.0.0.1:28330:423738333.Current=106
+Messaging.Pings.ReplyReceived.S127.0.0.1:28331:423738333.Current=105
+Messaging.Pings.ReplyReceived.S127.0.0.1:28400:423738837.Current=5
+Messaging.Pings.ReplyReceived.S127.0.0.1:28401:423738837.Current=5
+Messaging.Pings.ReplyReceived.S127.0.0.1:28485:423738488.Current=75
+Messaging.Pings.ReplyReceived.S127.0.0.1:28486:423738489.Current=74
+Messaging.Pings.ReplyReceived.S127.0.0.1:28555:423738523.Current=68
+Messaging.Pings.ReplyReceived.S127.0.0.1:28556:423738523.Current=68
+Messaging.Pings.ReplyReceived.S127.0.0.1:28585:423738385.Current=95
+Messaging.Pings.ReplyReceived.S127.0.0.1:28586:423738385.Current=95
+Messaging.Pings.ReplyReceived.S127.0.0.1:28795:423738378.Current=97
+Messaging.Pings.ReplyReceived.S127.0.0.1:28796:423738378.Current=96
+Messaging.Pings.ReplyReceived.S127.0.0.1:28805:423738632.Current=46
+Messaging.Pings.ReplyReceived.S127.0.0.1:28806:423738633.Current=46
+Messaging.Pings.ReplyReceived.S127.0.0.1:28820:423738277.Current=117
+Messaging.Pings.ReplyReceived.S127.0.0.1:28821:423738277.Current=117
+Messaging.Pings.ReplyReceived.S127.0.0.1:29065:423738282.Current=116
+Messaging.Pings.ReplyReceived.S127.0.0.1:29066:423738282.Current=116
+Messaging.Pings.ReplyReceived.S127.0.0.1:29075:423738208.Current=131
+Messaging.Pings.ReplyReceived.S127.0.0.1:29076:423738208.Current=131
+Messaging.Pings.ReplyReceived.S127.0.0.1:29310:423738715.Current=30
+Messaging.Pings.ReplyReceived.S127.0.0.1:29311:423738715.Current=29
+Messaging.Pings.ReplyReceived.S127.0.0.1:29375:423738858.Current=1
+Messaging.Pings.ReplyReceived.S127.0.0.1:29376:423738858.Current=1
+^^^
+	
+[2023-06-06 09:14:22.322 GMT 140	Information	100704	Orleans.Runtime.SiloLogStatistics]	Statistics: ^^^
+Messaging.Pings.ReplyReceived.S127.0.0.1:29515:423738444.Current=83
+Messaging.Pings.ReplyReceived.S127.0.0.1:29516:423738444.Current=83
+Messaging.Pings.ReplyReceived.S127.0.0.1:29530:423738200.Current=132
+Messaging.Pings.ReplyReceived.S127.0.0.1:29531:423738200.Current=133
+Messaging.Pings.ReplyReceived.S127.0.0.1:29565:423738229.Current=126
+Messaging.Pings.ReplyReceived.S127.0.0.1:29566:423738229.Current=126
+Messaging.Pings.ReplyReceived.S127.0.0.1:29650:423738253.Current=122
+Messaging.Pings.ReplyReceived.S127.0.0.1:29651:423738253.Current=122
+Messaging.Pings.ReplyReceived.S127.0.0.1:29705:423738551.Current=62
+Messaging.Pings.ReplyReceived.S127.0.0.1:29706:423738551.Current=62
+Messaging.Pings.ReplyReceived.S127.0.0.1:29885:423738612.Current=50
+Messaging.Pings.ReplyReceived.S127.0.0.1:29886:423738613.Current=50
+Messaging.Pings.ReplyReceived.S127.0.0.1:29915:423738371.Current=98
+Messaging.Pings.ReplyReceived.S127.0.0.1:29916:423738371.Current=98
+Messaging.Pings.ReplyReceived.S127.0.0.1:29955:423738262.Current=120
+Messaging.Pings.ReplyReceived.S127.0.0.1:29956:423738262.Current=120
+Messaging.Pings.Sent.S127.0.0.1:22345:423738366.Current=100
+Messaging.Pings.Sent.S127.0.0.1:22346:423738366.Current=99
+Messaging.Pings.Sent.S127.0.0.1:22355:423738663.Current=41
+Messaging.Pings.Sent.S127.0.0.1:22356:423738663.Current=40
+Messaging.Pings.Sent.S127.0.0.1:22515:423738754.Current=22
+Messaging.Pings.Sent.S127.0.0.1:22516:423738754.Current=21
+Messaging.Pings.Sent.S127.0.0.1:22580:423738733.Current=27
+Messaging.Pings.Sent.S127.0.0.1:22581:423738733.Current=26
+Messaging.Pings.Sent.S127.0.0.1:22830:423738796.Current=14
+Messaging.Pings.Sent.S127.0.0.1:22831:423738796.Current=14
+Messaging.Pings.Sent.S127.0.0.1:22950:423738811.Current=11
+Messaging.Pings.Sent.S127.0.0.1:22951:423738811.Current=10
+Messaging.Pings.Sent.S127.0.0.1:23100:423738503.Current=73
+Messaging.Pings.Sent.S127.0.0.1:23101:423738504.Current=72
+Messaging.Pings.Sent.S127.0.0.1:23115:423738329.Current=107
+Messaging.Pings.Sent.S127.0.0.1:23116:423738329.Current=107
+Messaging.Pings.Sent.S127.0.0.1:23170:423738243.Current=124
+Messaging.Pings.Sent.S127.0.0.1:23171:423738243.Current=124
+Messaging.Pings.Sent.S127.0.0.1:23245:423738361.Current=101
+Messaging.Pings.Sent.S127.0.0.1:23246:423738361.Current=100
+Messaging.Pings.Sent.S127.0.0.1:23510:423738473.Current=79
+Messaging.Pings.Sent.S127.0.0.1:23511:423738473.Current=78
+Messaging.Pings.Sent.S127.0.0.1:23815:423738464.Current=81
+Messaging.Pings.Sent.S127.0.0.1:23816:423738464.Current=80
+Messaging.Pings.Sent.S127.0.0.1:23905:423738400.Current=94
+Messaging.Pings.Sent.S127.0.0.1:23906:423738400.Current=92
+Messaging.Pings.Sent.S127.0.0.1:24130:423738748.Current=24,      Delta=1
+Messaging.Pings.Sent.S127.0.0.1:24131:423738749.Current=22
+Messaging.Pings.Sent.S127.0.0.1:24135:423738693.Current=35
+Messaging.Pings.Sent.S127.0.0.1:24136:423738693.Current=34
+Messaging.Pings.Sent.S127.0.0.1:24145:423738597.Current=54
+Messaging.Pings.Sent.S127.0.0.1:24146:423738597.Current=53
+Messaging.Pings.Sent.S127.0.0.1:24245:423738354.Current=103
+Messaging.Pings.Sent.S127.0.0.1:24246:423738354.Current=102
+Messaging.Pings.Sent.S127.0.0.1:24390:423738451.Current=83
+Messaging.Pings.Sent.S127.0.0.1:24391:423738451.Current=82
+Messaging.Pings.Sent.S127.0.0.1:24530:423738583.Current=57
+Messaging.Pings.Sent.S127.0.0.1:24531:423738583.Current=55
+Messaging.Pings.Sent.S127.0.0.1:24740:423738236.Current=127,      Delta=1
+Messaging.Pings.Sent.S127.0.0.1:24741:423738236.Current=125
+Messaging.Pings.Sent.S127.0.0.1:24750:423738304.Current=113
+Messaging.Pings.Sent.S127.0.0.1:24751:423738304.Current=112
+Messaging.Pings.Sent.S127.0.0.1:24800:423738763.Current=21
+Messaging.Pings.Sent.S127.0.0.1:24801:423738763.Current=20,      Delta=1
+Messaging.Pings.Sent.S127.0.0.1:24875:423738297.Current=114
+Messaging.Pings.Sent.S127.0.0.1:24876:423738297.Current=113
+Messaging.Pings.Sent.S127.0.0.1:24930:423738458.Current=82
+Messaging.Pings.Sent.S127.0.0.1:24931:423738458.Current=81
+Messaging.Pings.Sent.S127.0.0.1:25120:423738218.Current=130
+Messaging.Pings.Sent.S127.0.0.1:25121:423738218.Current=129
+Messaging.Pings.Sent.S127.0.0.1:25300:423738223.Current=129
+Messaging.Pings.Sent.S127.0.0.1:25301:423738223.Current=128
+Messaging.Pings.Sent.S127.0.0.1:25360:423738648.Current=44
+Messaging.Pings.Sent.S127.0.0.1:25361:423738648.Current=43
+Messaging.Pings.Sent.S127.0.0.1:25805:423738426.Current=88
+Messaging.Pings.Sent.S127.0.0.1:25806:423738426.Current=87
+Messaging.Pings.Sent.S127.0.0.1:25935:423738433.Current=86
+Messaging.Pings.Sent.S127.0.0.1:25936:423738433.Current=86
+Messaging.Pings.Sent.S127.0.0.1:26120:423738287.Current=116
+Messaging.Pings.Sent.S127.0.0.1:26121:423738287.Current=115
+Messaging.Pings.Sent.S127.0.0.1:26125:423738392.Current=95
+Messaging.Pings.Sent.S127.0.0.1:26126:423738392.Current=94
+Messaging.Pings.Sent.S127.0.0.1:26525:423738322.Current=109
+Messaging.Pings.Sent.S127.0.0.1:26526:423738322.Current=108,      Delta=1
+Messaging.Pings.Sent.S127.0.0.1:26700:423738628.Current=47
+Messaging.Pings.Sent.S127.0.0.1:26701:423738628.Current=47
+Messaging.Pings.Sent.S127.0.0.1:26845:423738308.Current=112
+Messaging.Pings.Sent.S127.0.0.1:26846:423738308.Current=111
+Messaging.Pings.Sent.S127.0.0.1:26935:423738778.Current=17
+Messaging.Pings.Sent.S127.0.0.1:26936:423738779.Current=16
+Messaging.Pings.Sent.S127.0.0.1:26940:423738185.Current=136
+Messaging.Pings.Sent.S127.0.0.1:26941:423738186.Current=135
+Messaging.Pings.Sent.S127.0.0.1:27140:423738268.Current=119
+Messaging.Pings.Sent.S127.0.0.1:27141:423738269.Current=119
+Messaging.Pings.Sent.S127.0.0.1:27165:423738345.Current=105
+Messaging.Pings.Sent.S127.0.0.1:27166:423738345.Current=103
+Messaging.Pings.Sent.S127.0.0.1:27180:423738407.Current=92
+Messaging.Pings.Sent.S127.0.0.1:27181:423738407.Current=91
+Messaging.Pings.Sent.S127.0.0.1:27650:423738340.Current=105
+Messaging.Pings.Sent.S127.0.0.1:27651:423738340.Current=104
+Messaging.Pings.Sent.S127.0.0.1:27865:423738190.Current=135
+Messaging.Pings.Sent.S127.0.0.1:27866:423738191.Current=134
+Messaging.Pings.Sent.S127.0.0.1:27965:423738315.Current=110
+Messaging.Pings.Sent.S127.0.0.1:27966:423738315.Current=109
+Messaging.Pings.Sent.S127.0.0.1:28125:423738588.Current=55
+Messaging.Pings.Sent.S127.0.0.1:28126:423738588.Current=54
+Messaging.Pings.Sent.S127.0.0.1:28330:423738333.Current=107
+Messaging.Pings.Sent.S127.0.0.1:28331:423738333.Current=105
+Messaging.Pings.Sent.S127.0.0.1:28400:423738837.Current=6
+Messaging.Pings.Sent.S127.0.0.1:28401:423738837.Current=5
+Messaging.Pings.Sent.S127.0.0.1:28485:423738488.Current=76
+Messaging.Pings.Sent.S127.0.0.1:28486:423738489.Current=74
+Messaging.Pings.Sent.S127.0.0.1:28555:423738523.Current=69
+Messaging.Pings.Sent.S127.0.0.1:28556:423738523.Current=68
+Messaging.Pings.Sent.S127.0.0.1:28585:423738385.Current=96
+Messaging.Pings.Sent.S127.0.0.1:28586:423738385.Current=95
+Messaging.Pings.Sent.S127.0.0.1:28795:423738378.Current=98
+Messaging.Pings.Sent.S127.0.0.1:28796:423738378.Current=96
+Messaging.Pings.Sent.S127.0.0.1:28805:423738632.Current=47
+Messaging.Pings.Sent.S127.0.0.1:28806:423738633.Current=46
+Messaging.Pings.Sent.S127.0.0.1:28820:423738277.Current=118
+Messaging.Pings.Sent.S127.0.0.1:28821:423738277.Current=117
+Messaging.Pings.Sent.S127.0.0.1:29065:423738282.Current=117
+Messaging.Pings.Sent.S127.0.0.1:29066:423738282.Current=116
+Messaging.Pings.Sent.S127.0.0.1:29075:423738208.Current=132
+Messaging.Pings.Sent.S127.0.0.1:29076:423738208.Current=131
+Messaging.Pings.Sent.S127.0.0.1:29310:423738715.Current=31
+Messaging.Pings.Sent.S127.0.0.1:29311:423738715.Current=29
+Messaging.Pings.Sent.S127.0.0.1:29375:423738858.Current=2
+Messaging.Pings.Sent.S127.0.0.1:29376:423738858.Current=1
+Messaging.Pings.Sent.S127.0.0.1:29515:423738444.Current=84
+Messaging.Pings.Sent.S127.0.0.1:29516:423738444.Current=83
+Messaging.Pings.Sent.S127.0.0.1:29530:423738200.Current=133
+Messaging.Pings.Sent.S127.0.0.1:29531:423738200.Current=133
+Messaging.Pings.Sent.S127.0.0.1:29565:423738229.Current=127
+Messaging.Pings.Sent.S127.0.0.1:29566:423738229.Current=126
+Messaging.Pings.Sent.S127.0.0.1:29650:423738253.Current=123
+Messaging.Pings.Sent.S127.0.0.1:29651:423738253.Current=122
+Messaging.Pings.Sent.S127.0.0.1:29705:423738551.Current=63
+Messaging.Pings.Sent.S127.0.0.1:29706:423738551.Current=62
+Messaging.Pings.Sent.S127.0.0.1:29885:423738612.Current=51
+Messaging.Pings.Sent.S127.0.0.1:29886:423738613.Current=50
+Messaging.Pings.Sent.S127.0.0.1:29915:423738371.Current=99
+Messaging.Pings.Sent.S127.0.0.1:29916:423738371.Current=98
+Messaging.Pings.Sent.S127.0.0.1:29955:423738262.Current=121
+Messaging.Pings.Sent.S127.0.0.1:29956:423738262.Current=120
+Messaging.Processing.ActivationData.All=0
+Messaging.Processing.Dispatcher.Forwarded.Current=18
+Messaging.Processing.Dispatcher.Processed.Errors.Direction.OneWay.Current=0
+Messaging.Processing.Dispatcher.Processed.Errors.Direction.Request.Current=0
+Messaging.Processing.Dispatcher.Processed.Errors.Direction.Response.Current=0
+Messaging.Processing.Dispatcher.Processed.Ok.Direction.OneWay.Current=0
+Messaging.Processing.Dispatcher.Processed.Ok.Direction.Request.Current=6425
+Messaging.Processing.Dispatcher.Processed.Ok.Direction.Response.Current=4291
+Messaging.Processing.Dispatcher.Processed.Total.Current=10716
+Messaging.Processing.Dispatcher.Received.Direction.OneWay.Current=0
+Messaging.Processing.Dispatcher.Received.Direction.Request.Current=6434
+Messaging.Processing.Dispatcher.Received.Direction.Response.Current=4291
+Messaging.Processing.Dispatcher.Received.OnActivationContext.Current=8098
+Messaging.Processing.Dispatcher.Received.OnNullContext.Current=2627
+Messaging.Processing.Dispatcher.Received.Total.Current=10725
+Messaging.Processing.IMA.Enqueued.ToActivationContex.Current=8098
+Messaging.Processing.IMA.Enqueued.ToNullContex.Current=2627
+Messaging.Processing.IMA.Enqueued.ToSystemTargetContex.Current=223105,      Delta=9
+Messaging.Processing.IMA.Received.Current=233830,      Delta=9
+Messaging.Received.BatchSize.PerSocketDirection.ClientToGateway=1.000
+Messaging.Received.BatchSize.PerSocketDirection.GatewayToClient=1.000
+Messaging.Received.BatchSize.PerSocketDirection.SiloToSilo=1.000
+Messaging.Received.BatchSizeBytesHistogram.Bytes.PerSocketDirection.ClientToGateway=[128:255]=875, [256:511]=668, [512:1023]=27, [1024:2047]=5, [4096:8191]=459, 
+Messaging.Received.BatchSizeBytesHistogram.Bytes.PerSocketDirection.GatewayToClient=[128:255]=712, [256:511]=605, [512:1023]=602, [1024:2047]=115, 
+Messaging.Received.BatchSizeBytesHistogram.Bytes.PerSocketDirection.SiloToSilo=[128:255]=75122, [256:511]=56813, [512:1023]=1957, [1024:2047]=1067, [2048:4095]=6, [4096:8191]=126, 
+Messaging.Received.Bytes.Header.Current=25194112,      Delta=2132
+Messaging.Received.Bytes.Total.Current=40398813,      Delta=2499
+Messaging.Received.Direction.OneWay.Current=0
+Messaging.Received.Direction.Request.Current=69990,      Delta=6
+Messaging.Received.Direction.Response.Current=69169,      Delta=6
+Messaging.Received.Messages.From.S127.0.0.1:22345:0.Current=400
+Messaging.Received.Messages.From.S127.0.0.1:22345:423738366.Current=843
+Messaging.Received.Messages.From.S127.0.0.1:22346:423738366.Current=1242
+Messaging.Received.Messages.From.S127.0.0.1:22355:0.Current=203
+Messaging.Received.Messages.From.S127.0.0.1:22355:423738663.Current=464
+Messaging.Received.Messages.From.S127.0.0.1:22356:423738663.Current=653
+Messaging.Received.Messages.From.S127.0.0.1:22515:0.Current=111
+Messaging.Received.Messages.From.S127.0.0.1:22515:423738754.Current=232
+Messaging.Received.Messages.From.S127.0.0.1:22516:423738754.Current=347
+Messaging.Received.Messages.From.S127.0.0.1:22580:0.Current=121
+Messaging.Received.Messages.From.S127.0.0.1:22580:423738733.Current=296
+Messaging.Received.Messages.From.S127.0.0.1:22581:423738733.Current=418
+Messaging.Received.Messages.From.S127.0.0.1:22830:0.Current=68
+Messaging.Received.Messages.From.S127.0.0.1:22830:423738796.Current=170
+Messaging.Received.Messages.From.S127.0.0.1:22831:423738796.Current=249
+Messaging.Received.Messages.From.S127.0.0.1:22950:0.Current=67
+Messaging.Received.Messages.From.S127.0.0.1:22950:423738811.Current=194
+Messaging.Received.Messages.From.S127.0.0.1:22951:423738811.Current=267
+Messaging.Received.Messages.From.S127.0.0.1:23100:0.Current=290
+Messaging.Received.Messages.From.S127.0.0.1:23100:423738503.Current=708
+Messaging.Received.Messages.From.S127.0.0.1:23101:423738504.Current=987
+Messaging.Received.Messages.From.S127.0.0.1:23115:0.Current=404
+Messaging.Received.Messages.From.S127.0.0.1:23115:423738329.Current=947
+Messaging.Received.Messages.From.S127.0.0.1:23116:423738329.Current=1352
+Messaging.Received.Messages.From.S127.0.0.1:23170:0.Current=470
+Messaging.Received.Messages.From.S127.0.0.1:23170:423738243.Current=1128
+Messaging.Received.Messages.From.S127.0.0.1:23171:423738243.Current=1607
+Messaging.Received.Messages.From.S127.0.0.1:23245:0.Current=353
+Messaging.Received.Messages.From.S127.0.0.1:23245:423738361.Current=916
+Messaging.Received.Messages.From.S127.0.0.1:23246:423738361.Current=1270
+Messaging.Received.Messages.From.S127.0.0.1:23510:0.Current=276
+Messaging.Received.Messages.From.S127.0.0.1:23510:423738473.Current=799
+Messaging.Received.Messages.From.S127.0.0.1:23511:423738473.Current=1069
+Messaging.Received.Messages.From.S127.0.0.1:23815:0.Current=308
+Messaging.Received.Messages.From.S127.0.0.1:23815:423738464.Current=722
+Messaging.Received.Messages.From.S127.0.0.1:23816:423738464.Current=1024
+Messaging.Received.Messages.From.S127.0.0.1:23905:0.Current=370
+Messaging.Received.Messages.From.S127.0.0.1:23905:423738400.Current=814
+Messaging.Received.Messages.From.S127.0.0.1:23906:423738400.Current=1187
+Messaging.Received.Messages.From.S127.0.0.1:24130:0.Current=99
+Messaging.Received.Messages.From.S127.0.0.1:24130:423738748.Current=224,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:24131:423738749.Current=321,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:24135:0.Current=160
+Messaging.Received.Messages.From.S127.0.0.1:24135:423738693.Current=379
+Messaging.Received.Messages.From.S127.0.0.1:24136:423738693.Current=531
+Messaging.Received.Messages.From.S127.0.0.1:24145:0.Current=207
+Messaging.Received.Messages.From.S127.0.0.1:24145:423738597.Current=499
+Messaging.Received.Messages.From.S127.0.0.1:24146:423738597.Current=714
+Messaging.Received.Messages.From.S127.0.0.1:24245:0.Current=382
+Messaging.Received.Messages.From.S127.0.0.1:24245:423738354.Current=890
+Messaging.Received.Messages.From.S127.0.0.1:24246:423738354.Current=1274
+Messaging.Received.Messages.From.S127.0.0.1:24390:0.Current=288
+Messaging.Received.Messages.From.S127.0.0.1:24390:423738451.Current=767
+Messaging.Received.Messages.From.S127.0.0.1:24391:423738451.Current=1056
+Messaging.Received.Messages.From.S127.0.0.1:24530:0.Current=212
+Messaging.Received.Messages.From.S127.0.0.1:24530:423738583.Current=496
+Messaging.Received.Messages.From.S127.0.0.1:24531:423738583.Current=708
+Messaging.Received.Messages.From.S127.0.0.1:24740:0.Current=427
+Messaging.Received.Messages.From.S127.0.0.1:24740:423738236.Current=1153,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:24741:423738236.Current=1587,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:24750:0.Current=457
+Messaging.Received.Messages.From.S127.0.0.1:24750:423738304.Current=954
+Messaging.Received.Messages.From.S127.0.0.1:24751:423738304.Current=1414
+Messaging.Received.Messages.From.S127.0.0.1:24800:0.Current=99
+Messaging.Received.Messages.From.S127.0.0.1:24800:423738763.Current=247,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:24801:423738763.Current=347,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:24875:0.Current=482
+Messaging.Received.Messages.From.S127.0.0.1:24875:423738297.Current=961
+Messaging.Received.Messages.From.S127.0.0.1:24876:423738297.Current=1440
+Messaging.Received.Messages.From.S127.0.0.1:24930:0.Current=295
+Messaging.Received.Messages.From.S127.0.0.1:24930:423738458.Current=734
+Messaging.Received.Messages.From.S127.0.0.1:24931:423738458.Current=1034
+Messaging.Received.Messages.From.S127.0.0.1:25120:0.Current=485
+Messaging.Received.Messages.From.S127.0.0.1:25120:423738218.Current=1144
+Messaging.Received.Messages.From.S127.0.0.1:25121:423738218.Current=1632
+Messaging.Received.Messages.From.S127.0.0.1:25300:0.Current=449
+Messaging.Received.Messages.From.S127.0.0.1:25300:423738223.Current=1161
+Messaging.Received.Messages.From.S127.0.0.1:25301:423738223.Current=1611
+Messaging.Received.Messages.From.S127.0.0.1:25360:0.Current=182
+Messaging.Received.Messages.From.S127.0.0.1:25360:423738648.Current=410
+Messaging.Received.Messages.From.S127.0.0.1:25361:423738648.Current=599
+Messaging.Received.Messages.From.S127.0.0.1:25805:0.Current=333
+Messaging.Received.Messages.From.S127.0.0.1:25805:423738426.Current=777
+Messaging.Received.Messages.From.S127.0.0.1:25806:423738426.Current=1109
+Messaging.Received.Messages.From.S127.0.0.1:25935:0.Current=368
+Messaging.Received.Messages.From.S127.0.0.1:25935:423738433.Current=789
+Messaging.Received.Messages.From.S127.0.0.1:25936:423738433.Current=1162
+Messaging.Received.Messages.From.S127.0.0.1:26120:0.Current=409
+Messaging.Received.Messages.From.S127.0.0.1:26120:423738287.Current=1060
+Messaging.Received.Messages.From.S127.0.0.1:26121:423738287.Current=1461
+Messaging.Received.Messages.From.S127.0.0.1:26125:0.Current=388
+Messaging.Received.Messages.From.S127.0.0.1:26125:423738392.Current=828
+Messaging.Received.Messages.From.S127.0.0.1:26126:423738392.Current=1222
+Messaging.Received.Messages.From.S127.0.0.1:26525:0.Current=442,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:26525:423738322.Current=945
+Messaging.Received.Messages.From.S127.0.0.1:26526:423738322.Current=1384,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:26700:0.Current=179
+Messaging.Received.Messages.From.S127.0.0.1:26700:423738628.Current=429
+Messaging.Received.Messages.From.S127.0.0.1:26701:423738628.Current=608
+Messaging.Received.Messages.From.S127.0.0.1:26845:0.Current=433
+Messaging.Received.Messages.From.S127.0.0.1:26845:423738308.Current=984
+Messaging.Received.Messages.From.S127.0.0.1:26846:423738308.Current=1417
+Messaging.Received.Messages.From.S127.0.0.1:26935:0.Current=100
+Messaging.Received.Messages.From.S127.0.0.1:26935:423738778.Current=207
+Messaging.Received.Messages.From.S127.0.0.1:26936:423738779.Current=302
+Messaging.Received.Messages.From.S127.0.0.1:26940:0.Current=511
+Messaging.Received.Messages.From.S127.0.0.1:26940:423738185.Current=1167
+Messaging.Received.Messages.From.S127.0.0.1:26941:423738186.Current=1680
+Messaging.Received.Messages.From.S127.0.0.1:27140:0.Current=446
+Messaging.Received.Messages.From.S127.0.0.1:27140:423738268.Current=1029
+Messaging.Received.Messages.From.S127.0.0.1:27141:423738269.Current=1475
+Messaging.Received.Messages.From.S127.0.0.1:27165:0.Current=404
+Messaging.Received.Messages.From.S127.0.0.1:27165:423738345.Current=898
+Messaging.Received.Messages.From.S127.0.0.1:27166:423738345.Current=1294
+Messaging.Received.Messages.From.S127.0.0.1:27180:0.Current=383
+Messaging.Received.Messages.From.S127.0.0.1:27180:423738407.Current=864
+Messaging.Received.Messages.From.S127.0.0.1:27181:423738407.Current=1255
+Messaging.Received.Messages.From.S127.0.0.1:27650:0.Current=401
+Messaging.Received.Messages.From.S127.0.0.1:27650:423738340.Current=922
+Messaging.Received.Messages.From.S127.0.0.1:27651:423738340.Current=1324
+Messaging.Received.Messages.From.S127.0.0.1:27865:0.Current=506
+Messaging.Received.Messages.From.S127.0.0.1:27865:423738190.Current=1229
+Messaging.Received.Messages.From.S127.0.0.1:27866:423738191.Current=1737
+Messaging.Received.Messages.From.S127.0.0.1:27965:0.Current=396
+Messaging.Received.Messages.From.S127.0.0.1:27965:423738315.Current=1003
+Messaging.Received.Messages.From.S127.0.0.1:27966:423738315.Current=1403
+Messaging.Received.Messages.From.S127.0.0.1:28125:0.Current=228
+Messaging.Received.Messages.From.S127.0.0.1:28125:423738588.Current=516
+^^^
+	
+[2023-06-06 09:14:22.322 GMT 140	Information	100704	Orleans.Runtime.SiloLogStatistics]	Statistics: ^^^
+Messaging.Received.Messages.From.S127.0.0.1:28126:423738588.Current=741
+Messaging.Received.Messages.From.S127.0.0.1:28330:0.Current=436
+Messaging.Received.Messages.From.S127.0.0.1:28330:423738333.Current=912
+Messaging.Received.Messages.From.S127.0.0.1:28331:423738333.Current=1348
+Messaging.Received.Messages.From.S127.0.0.1:28400:0.Current=44
+Messaging.Received.Messages.From.S127.0.0.1:28400:423738837.Current=120
+Messaging.Received.Messages.From.S127.0.0.1:28401:423738837.Current=166
+Messaging.Received.Messages.From.S127.0.0.1:28485:0.Current=301
+Messaging.Received.Messages.From.S127.0.0.1:28485:423738488.Current=708
+Messaging.Received.Messages.From.S127.0.0.1:28486:423738489.Current=1008
+Messaging.Received.Messages.From.S127.0.0.1:28555:0.Current=281
+Messaging.Received.Messages.From.S127.0.0.1:28555:423738523.Current=676
+Messaging.Received.Messages.From.S127.0.0.1:28556:423738523.Current=972
+Messaging.Received.Messages.From.S127.0.0.1:28585:0.Current=359
+Messaging.Received.Messages.From.S127.0.0.1:28585:423738385.Current=871
+Messaging.Received.Messages.From.S127.0.0.1:28586:423738385.Current=1227
+Messaging.Received.Messages.From.S127.0.0.1:28795:0.Current=367
+Messaging.Received.Messages.From.S127.0.0.1:28795:423738378.Current=886
+Messaging.Received.Messages.From.S127.0.0.1:28796:423738378.Current=1250
+Messaging.Received.Messages.From.S127.0.0.1:28805:0.Current=205
+Messaging.Received.Messages.From.S127.0.0.1:28805:423738632.Current=501
+Messaging.Received.Messages.From.S127.0.0.1:28806:423738633.Current=701
+Messaging.Received.Messages.From.S127.0.0.1:28820:0.Current=426
+Messaging.Received.Messages.From.S127.0.0.1:28820:423738277.Current=1032
+Messaging.Received.Messages.From.S127.0.0.1:28821:423738277.Current=1455
+Messaging.Received.Messages.From.S127.0.0.1:29065:0.Current=437
+Messaging.Received.Messages.From.S127.0.0.1:29065:423738282.Current=1014
+Messaging.Received.Messages.From.S127.0.0.1:29066:423738282.Current=1452
+Messaging.Received.Messages.From.S127.0.0.1:29075:0.Current=507
+Messaging.Received.Messages.From.S127.0.0.1:29075:423738208.Current=1143
+Messaging.Received.Messages.From.S127.0.0.1:29076:423738208.Current=1648
+Messaging.Received.Messages.From.S127.0.0.1:29310:0.Current=116
+Messaging.Received.Messages.From.S127.0.0.1:29310:423738715.Current=304
+Messaging.Received.Messages.From.S127.0.0.1:29311:423738715.Current=431
+Messaging.Received.Messages.From.S127.0.0.1:29375:0.Current=15
+Messaging.Received.Messages.From.S127.0.0.1:29375:423738858.Current=41,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:29376:423738858.Current=55,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:29515:0.Current=309
+Messaging.Received.Messages.From.S127.0.0.1:29515:423738444.Current=777
+Messaging.Received.Messages.From.S127.0.0.1:29516:423738444.Current=1090
+Messaging.Received.Messages.From.S127.0.0.1:29530:0.Current=466
+Messaging.Received.Messages.From.S127.0.0.1:29530:423738200.Current=1224
+Messaging.Received.Messages.From.S127.0.0.1:29531:423738200.Current=1687
+Messaging.Received.Messages.From.S127.0.0.1:29565:0.Current=493
+Messaging.Received.Messages.From.S127.0.0.1:29565:423738229.Current=1089
+Messaging.Received.Messages.From.S127.0.0.1:29566:423738229.Current=1584
+Messaging.Received.Messages.From.S127.0.0.1:29650:0.Current=466
+Messaging.Received.Messages.From.S127.0.0.1:29650:423738253.Current=1092
+Messaging.Received.Messages.From.S127.0.0.1:29651:423738253.Current=1559
+Messaging.Received.Messages.From.S127.0.0.1:29705:0.Current=273
+Messaging.Received.Messages.From.S127.0.0.1:29705:423738551.Current=660
+Messaging.Received.Messages.From.S127.0.0.1:29706:423738551.Current=923
+Messaging.Received.Messages.From.S127.0.0.1:29885:0.Current=199
+Messaging.Received.Messages.From.S127.0.0.1:29885:423738612.Current=483
+Messaging.Received.Messages.From.S127.0.0.1:29886:423738613.Current=688
+Messaging.Received.Messages.From.S127.0.0.1:29915:0.Current=402
+Messaging.Received.Messages.From.S127.0.0.1:29915:423738371.Current=868
+Messaging.Received.Messages.From.S127.0.0.1:29916:423738371.Current=1273
+Messaging.Received.Messages.From.S127.0.0.1:29955:0.Current=481
+Messaging.Received.Messages.From.S127.0.0.1:29955:423738262.Current=1052,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:29956:423738262.Current=1533,      Delta=1
+Messaging.Received.Messages.From.S127.0.0.1:40250:0.Current=32
+Messaging.Received.Messages.From.S127.0.0.1:40251:0.Current=21
+Messaging.Received.Messages.From.S127.0.0.1:40285:0.Current=19
+Messaging.Received.Messages.From.S127.0.0.1:40286:0.Current=17
+Messaging.Received.Messages.From.S127.0.0.1:40410:0.Current=15
+Messaging.Received.Messages.From.S127.0.0.1:40411:0.Current=15
+Messaging.Received.Messages.From.S127.0.0.1:40505:0.Current=16
+Messaging.Received.Messages.From.S127.0.0.1:40506:0.Current=9
+Messaging.Received.Messages.From.S127.0.0.1:40675:0.Current=21
+Messaging.Received.Messages.From.S127.0.0.1:40676:0.Current=49
+Messaging.Received.Messages.From.S127.0.0.1:40685:0.Current=27
+Messaging.Received.Messages.From.S127.0.0.1:40686:0.Current=26
+Messaging.Received.Messages.From.S127.0.0.1:41020:0.Current=4
+Messaging.Received.Messages.From.S127.0.0.1:41021:0.Current=6
+Messaging.Received.Messages.From.S127.0.0.1:41200:0.Current=14
+Messaging.Received.Messages.From.S127.0.0.1:41201:0.Current=8
+Messaging.Received.Messages.From.S127.0.0.1:41395:0.Current=23
+Messaging.Received.Messages.From.S127.0.0.1:41396:0.Current=35
+Messaging.Received.Messages.From.S127.0.0.1:41465:0.Current=28
+Messaging.Received.Messages.From.S127.0.0.1:41466:0.Current=23
+Messaging.Received.Messages.From.S127.0.0.1:41515:0.Current=11
+Messaging.Received.Messages.From.S127.0.0.1:41516:0.Current=16
+Messaging.Received.Messages.From.S127.0.0.1:41610:0.Current=15
+Messaging.Received.Messages.From.S127.0.0.1:41611:0.Current=24
+Messaging.Received.Messages.From.S127.0.0.1:41725:0.Current=13
+Messaging.Received.Messages.From.S127.0.0.1:41726:0.Current=14
+Messaging.Received.Messages.From.S127.0.0.1:41755:0.Current=13
+Messaging.Received.Messages.From.S127.0.0.1:41756:0.Current=9
+Messaging.Received.Messages.From.S127.0.0.1:41770:0.Current=23
+Messaging.Received.Messages.From.S127.0.0.1:41771:0.Current=13
+Messaging.Received.Messages.From.S127.0.0.1:41825:0.Current=21
+Messaging.Received.Messages.From.S127.0.0.1:41826:0.Current=7
+Messaging.Received.Messages.From.S127.0.0.1:42100:0.Current=11
+Messaging.Received.Messages.From.S127.0.0.1:42101:0.Current=17
+Messaging.Received.Messages.From.S127.0.0.1:42220:0.Current=10
+Messaging.Received.Messages.From.S127.0.0.1:42221:0.Current=8
+Messaging.Received.Messages.From.S127.0.0.1:42335:0.Current=11
+Messaging.Received.Messages.From.S127.0.0.1:42336:0.Current=24
+Messaging.Received.Messages.From.S127.0.0.1:43340:0.Current=15
+Messaging.Received.Messages.From.S127.0.0.1:43341:0.Current=15
+Messaging.Received.Messages.From.S127.0.0.1:43380:0.Current=15
+Messaging.Received.Messages.From.S127.0.0.1:43381:0.Current=19
+Messaging.Received.Messages.From.S127.0.0.1:43450:0.Current=6
+Messaging.Received.Messages.From.S127.0.0.1:43451:0.Current=6
+Messaging.Received.Messages.From.S127.0.0.1:43525:0.Current=2
+Messaging.Received.Messages.From.S127.0.0.1:43526:0.Current=7
+Messaging.Received.Messages.From.S127.0.0.1:43545:0.Current=31
+Messaging.Received.Messages.From.S127.0.0.1:43546:0.Current=8
+Messaging.Received.Messages.From.S127.0.0.1:43570:0.Current=29
+Messaging.Received.Messages.From.S127.0.0.1:43571:0.Current=11
+Messaging.Received.Messages.From.S127.0.0.1:43595:0.Current=20
+Messaging.Received.Messages.From.S127.0.0.1:43596:0.Current=22
+Messaging.Received.Messages.From.S127.0.0.1:43700:0.Current=18
+Messaging.Received.Messages.From.S127.0.0.1:43701:0.Current=11
+Messaging.Received.Messages.From.S127.0.0.1:43785:0.Current=19
+Messaging.Received.Messages.From.S127.0.0.1:43786:0.Current=11
+Messaging.Received.Messages.From.S127.0.0.1:43810:0.Current=27
+Messaging.Received.Messages.From.S127.0.0.1:43811:0.Current=14
+Messaging.Received.Messages.From.S127.0.0.1:44075:0.Current=18
+Messaging.Received.Messages.From.S127.0.0.1:44076:0.Current=27
+Messaging.Received.Messages.From.S127.0.0.1:44330:0.Current=26
+Messaging.Received.Messages.From.S127.0.0.1:44331:0.Current=14
+Messaging.Received.Messages.From.S127.0.0.1:44930:0.Current=11
+Messaging.Received.Messages.From.S127.0.0.1:44931:0.Current=16
+Messaging.Received.Messages.From.S127.0.0.1:45110:0.Current=35
+Messaging.Received.Messages.From.S127.0.0.1:45111:0.Current=19
+Messaging.Received.Messages.From.S127.0.0.1:45145:0.Current=9
+Messaging.Received.Messages.From.S127.0.0.1:45146:0.Current=12
+Messaging.Received.Messages.From.S127.0.0.1:45190:0.Current=8
+Messaging.Received.Messages.From.S127.0.0.1:45191:0.Current=11
+Messaging.Received.Messages.From.S127.0.0.1:45650:0.Current=15
+Messaging.Received.Messages.From.S127.0.0.1:45651:0.Current=9
+Messaging.Received.Messages.From.S127.0.0.1:45920:0.Current=10
+Messaging.Received.Messages.From.S127.0.0.1:45921:0.Current=9
+Messaging.Received.Messages.From.S127.0.0.1:46265:0.Current=10
+Messaging.Received.Messages.From.S127.0.0.1:46266:0.Current=26
+Messaging.Received.Messages.From.S127.0.0.1:46390:0.Current=27
+Messaging.Received.Messages.From.S127.0.0.1:46391:0.Current=11
+Messaging.Received.Messages.From.S127.0.0.1:46520:0.Current=10
+Messaging.Received.Messages.From.S127.0.0.1:46521:0.Current=8
+Messaging.Received.Messages.From.S127.0.0.1:46575:0.Current=52
+Messaging.Received.Messages.From.S127.0.0.1:46576:0.Current=23
+Messaging.Received.Messages.From.S127.0.0.1:46715:0.Current=6
+Messaging.Received.Messages.From.S127.0.0.1:46716:0.Current=5
+Messaging.Received.Messages.From.S127.0.0.1:46900:0.Current=9
+Messaging.Received.Messages.From.S127.0.0.1:46901:0.Current=24
+Messaging.Received.Messages.From.S127.0.0.1:46920:0.Current=14
+Messaging.Received.Messages.From.S127.0.0.1:46921:0.Current=15
+Messaging.Received.Messages.From.S127.0.0.1:47195:0.Current=12
+Messaging.Received.Messages.From.S127.0.0.1:47196:0.Current=34
+Messaging.Received.Messages.From.S127.0.0.1:47345:0.Current=12
+Messaging.Received.Messages.From.S127.0.0.1:47346:0.Current=18
+Messaging.Received.Messages.From.S127.0.0.1:47375:0.Current=19
+Messaging.Received.Messages.From.S127.0.0.1:47376:0.Current=16
+Messaging.Received.Messages.From.S127.0.0.1:47570:0.Current=11
+Messaging.Received.Messages.From.S127.0.0.1:47571:0.Current=9
+Messaging.Received.Messages.From.S127.0.0.1:47630:0.Current=15
+Messaging.Received.Messages.From.S127.0.0.1:47631:0.Current=7
+Messaging.Received.Messages.From.S127.0.0.1:47640:0.Current=15
+Messaging.Received.Messages.From.S127.0.0.1:47641:0.Current=7
+Messaging.Received.Messages.From.S127.0.0.1:47690:0.Current=9
+Messaging.Received.Messages.From.S127.0.0.1:47691:0.Current=14
+Messaging.Received.Messages.From.S127.0.0.1:47800:0.Current=11
+Messaging.Received.Messages.From.S127.0.0.1:47801:0.Current=8
+Messaging.Received.Messages.From.S127.0.0.1:47975:0.Current=17
+Messaging.Received.Messages.From.S127.0.0.1:47976:0.Current=7
+Messaging.Received.Messages.From.S127.0.0.1:48155:0.Current=17
+Messaging.Received.Messages.From.S127.0.0.1:48156:0.Current=16
+Messaging.Received.Messages.From.S127.0.0.1:48255:0.Current=18
+Messaging.Received.Messages.From.S127.0.0.1:48256:0.Current=6
+Messaging.Received.Messages.From.S127.0.0.1:48455:0.Current=26
+Messaging.Received.Messages.From.S127.0.0.1:48456:0.Current=45
+Messaging.Received.Messages.From.S127.0.0.1:48545:0.Current=19
+Messaging.Received.Messages.From.S127.0.0.1:48546:0.Current=36
+Messaging.Received.Messages.From.S127.0.0.1:48925:0.Current=13
+Messaging.Received.Messages.From.S127.0.0.1:48926:0.Current=11
+Messaging.Received.Messages.From.S127.0.0.1:48955:0.Current=29
+Messaging.Received.Messages.From.S127.0.0.1:48956:0.Current=6
+Messaging.Received.Messages.From.S127.0.0.1:49120:0.Current=9
+Messaging.Received.Messages.From.S127.0.0.1:49121:0.Current=8
+Messaging.Received.Messages.From.S127.0.0.1:49365:0.Current=13
+Messaging.Received.Messages.From.S127.0.0.1:49366:0.Current=9
+Messaging.Received.Messages.From.S127.0.0.1:49530:0.Current=11
+Messaging.Received.Messages.From.S127.0.0.1:49531:0.Current=18
+Messaging.Received.Messages.From.S127.0.0.1:49800:0.Current=7
+Messaging.Received.Messages.From.S127.0.0.1:49801:0.Current=13
+Messaging.Received.Messages.Total.Current=139159,      Delta=12
+Messaging.Received.MessageSizeHistogram.Bytes=[128:255]=76709, [256:511]=58086, [512:1023]=2586, [1024:2047]=1187, [2048:4095]=6, [4096:8191]=585, 
+Messaging.Rerouted.OneWay.Current=0
+Messaging.Rerouted.Request.Current=1908
+Messaging.Rerouted.Response.Current=0
+Messaging.Sent.BatchSize.PerSocketDirection.ClientToGateway=1.000
+Messaging.Sent.BatchSize.PerSocketDirection.GatewayToClient=1.000
+Messaging.Sent.BatchSize.PerSocketDirection.SiloToSilo=1.000
+Messaging.Sent.BatchSizeBytesHistogram.Bytes.PerSocketDirection.ClientToGateway=[128:255]=712, [256:511]=605, [512:1023]=602, [1024:2047]=115, 
+Messaging.Sent.BatchSizeBytesHistogram.Bytes.PerSocketDirection.GatewayToClient=[128:255]=875, [256:511]=668, [512:1023]=27, [1024:2047]=5, [4096:8191]=459, 
+Messaging.Sent.BatchSizeBytesHistogram.Bytes.PerSocketDirection.SiloToSilo=[128:255]=75122, [256:511]=56813, [512:1023]=1957, [1024:2047]=1067, [2048:4095]=6, [4096:8191]=126, 
+Messaging.Sent.Bytes.Header.Current=25194112,      Delta=2132
+Messaging.Sent.Bytes.Total.Current=40398813,      Delta=2499
+Messaging.Sent.Direction.OneWay.Current=0
+Messaging.Sent.Direction.Request.Current=69990,      Delta=6
+Messaging.Sent.Direction.Response.Current=69169,      Delta=6
+Messaging.Sent.LocalMessages.Current=109908,      Delta=2
+Messaging.Sent.Messages.To.S127.0.0.1:22345:0.Current=45
+Messaging.Sent.Messages.To.S127.0.0.1:22345:423738366.Current=1197
+Messaging.Sent.Messages.To.S127.0.0.1:22346:423738366.Current=1243
+Messaging.Sent.Messages.To.S127.0.0.1:22355:0.Current=27
+Messaging.Sent.Messages.To.S127.0.0.1:22355:423738663.Current=626
+Messaging.Sent.Messages.To.S127.0.0.1:22356:423738663.Current=667
+Messaging.Sent.Messages.To.S127.0.0.1:22515:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:22515:423738754.Current=335
+Messaging.Sent.Messages.To.S127.0.0.1:22516:423738754.Current=343
+Messaging.Sent.Messages.To.S127.0.0.1:22580:0.Current=21
+Messaging.Sent.Messages.To.S127.0.0.1:22580:423738733.Current=397
+Messaging.Sent.Messages.To.S127.0.0.1:22581:423738733.Current=417
+Messaging.Sent.Messages.To.S127.0.0.1:22830:0.Current=9
+Messaging.Sent.Messages.To.S127.0.0.1:22830:423738796.Current=240
+Messaging.Sent.Messages.To.S127.0.0.1:22831:423738796.Current=238
+Messaging.Sent.Messages.To.S127.0.0.1:22950:0.Current=10
+Messaging.Sent.Messages.To.S127.0.0.1:22950:423738811.Current=257
+Messaging.Sent.Messages.To.S127.0.0.1:22951:423738811.Current=261
+Messaging.Sent.Messages.To.S127.0.0.1:23100:0.Current=39
+Messaging.Sent.Messages.To.S127.0.0.1:23100:423738503.Current=948
+Messaging.Sent.Messages.To.S127.0.0.1:23101:423738504.Current=998
+Messaging.Sent.Messages.To.S127.0.0.1:23115:0.Current=67
+Messaging.Sent.Messages.To.S127.0.0.1:23115:423738329.Current=1285
+Messaging.Sent.Messages.To.S127.0.0.1:23116:423738329.Current=1351
+Messaging.Sent.Messages.To.S127.0.0.1:23170:0.Current=65
+Messaging.Sent.Messages.To.S127.0.0.1:23170:423738243.Current=1542
+Messaging.Sent.Messages.To.S127.0.0.1:23171:423738243.Current=1598
+Messaging.Sent.Messages.To.S127.0.0.1:23245:0.Current=45
+Messaging.Sent.Messages.To.S127.0.0.1:23245:423738361.Current=1225
+Messaging.Sent.Messages.To.S127.0.0.1:23246:423738361.Current=1269
+Messaging.Sent.Messages.To.S127.0.0.1:23510:0.Current=37
+Messaging.Sent.Messages.To.S127.0.0.1:23510:423738473.Current=1032
+Messaging.Sent.Messages.To.S127.0.0.1:23511:423738473.Current=1075
+Messaging.Sent.Messages.To.S127.0.0.1:23815:0.Current=42
+Messaging.Sent.Messages.To.S127.0.0.1:23815:423738464.Current=982
+Messaging.Sent.Messages.To.S127.0.0.1:23816:423738464.Current=1030
+Messaging.Sent.Messages.To.S127.0.0.1:23905:0.Current=43
+Messaging.Sent.Messages.To.S127.0.0.1:23905:423738400.Current=1144
+Messaging.Sent.Messages.To.S127.0.0.1:23906:423738400.Current=1184
+Messaging.Sent.Messages.To.S127.0.0.1:24130:0.Current=14
+Messaging.Sent.Messages.To.S127.0.0.1:24130:423738748.Current=307,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:24131:423738749.Current=323,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:24135:0.Current=15
+Messaging.Sent.Messages.To.S127.0.0.1:24135:423738693.Current=516
+Messaging.Sent.Messages.To.S127.0.0.1:24136:423738693.Current=539
+Messaging.Sent.Messages.To.S127.0.0.1:24145:0.Current=26
+Messaging.Sent.Messages.To.S127.0.0.1:24145:423738597.Current=688
+Messaging.Sent.Messages.To.S127.0.0.1:24146:423738597.Current=706
+Messaging.Sent.Messages.To.S127.0.0.1:24245:0.Current=51
+Messaging.Sent.Messages.To.S127.0.0.1:24245:423738354.Current=1223
+Messaging.Sent.Messages.To.S127.0.0.1:24246:423738354.Current=1272
+Messaging.Sent.Messages.To.S127.0.0.1:24390:0.Current=38
+Messaging.Sent.Messages.To.S127.0.0.1:24390:423738451.Current=1018
+Messaging.Sent.Messages.To.S127.0.0.1:24391:423738451.Current=1055
+Messaging.Sent.Messages.To.S127.0.0.1:24530:0.Current=36
+Messaging.Sent.Messages.To.S127.0.0.1:24530:423738583.Current=672
+Messaging.Sent.Messages.To.S127.0.0.1:24531:423738583.Current=708
+Messaging.Sent.Messages.To.S127.0.0.1:24740:0.Current=54
+Messaging.Sent.Messages.To.S127.0.0.1:24740:423738236.Current=1533,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:24741:423738236.Current=1580,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:24750:0.Current=59
+Messaging.Sent.Messages.To.S127.0.0.1:24750:423738304.Current=1355
+Messaging.Sent.Messages.To.S127.0.0.1:24751:423738304.Current=1411
+Messaging.Sent.Messages.To.S127.0.0.1:24800:0.Current=10
+Messaging.Sent.Messages.To.S127.0.0.1:24800:423738763.Current=337,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:24801:423738763.Current=346,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:24875:0.Current=55
+Messaging.Sent.Messages.To.S127.0.0.1:24875:423738297.Current=1385
+Messaging.Sent.Messages.To.S127.0.0.1:24876:423738297.Current=1443
+Messaging.Sent.Messages.To.S127.0.0.1:24930:0.Current=33
+Messaging.Sent.Messages.To.S127.0.0.1:24930:423738458.Current=1001
+Messaging.Sent.Messages.To.S127.0.0.1:24931:423738458.Current=1029
+Messaging.Sent.Messages.To.S127.0.0.1:25120:0.Current=49
+Messaging.Sent.Messages.To.S127.0.0.1:25120:423738218.Current=1583
+Messaging.Sent.Messages.To.S127.0.0.1:25121:423738218.Current=1629
+Messaging.Sent.Messages.To.S127.0.0.1:25300:0.Current=60
+Messaging.Sent.Messages.To.S127.0.0.1:25300:423738223.Current=1551
+Messaging.Sent.Messages.To.S127.0.0.1:25301:423738223.Current=1610
+Messaging.Sent.Messages.To.S127.0.0.1:25360:0.Current=24
+Messaging.Sent.Messages.To.S127.0.0.1:25360:423738648.Current=575
+Messaging.Sent.Messages.To.S127.0.0.1:25361:423738648.Current=592
+Messaging.Sent.Messages.To.S127.0.0.1:25805:0.Current=33
+Messaging.Sent.Messages.To.S127.0.0.1:25805:423738426.Current=1076
+Messaging.Sent.Messages.To.S127.0.0.1:25806:423738426.Current=1110
+Messaging.Sent.Messages.To.S127.0.0.1:25935:0.Current=41
+Messaging.Sent.Messages.To.S127.0.0.1:25935:423738433.Current=1121
+Messaging.Sent.Messages.To.S127.0.0.1:25936:423738433.Current=1157
+Messaging.Sent.Messages.To.S127.0.0.1:26120:0.Current=61
+Messaging.Sent.Messages.To.S127.0.0.1:26120:423738287.Current=1400
+Messaging.Sent.Messages.To.S127.0.0.1:26121:423738287.Current=1469
+Messaging.Sent.Messages.To.S127.0.0.1:26125:0.Current=42
+Messaging.Sent.Messages.To.S127.0.0.1:26125:423738392.Current=1180
+Messaging.Sent.Messages.To.S127.0.0.1:26126:423738392.Current=1216
+Messaging.Sent.Messages.To.S127.0.0.1:26525:0.Current=55,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:26525:423738322.Current=1329
+Messaging.Sent.Messages.To.S127.0.0.1:26526:423738322.Current=1387,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:26700:0.Current=29
+Messaging.Sent.Messages.To.S127.0.0.1:26700:423738628.Current=579
+Messaging.Sent.Messages.To.S127.0.0.1:26701:423738628.Current=608
+^^^
+	
+[2023-06-06 09:14:22.323 GMT 140	Information	100704	Orleans.Runtime.SiloLogStatistics]	Statistics: ^^^
+Messaging.Sent.Messages.To.S127.0.0.1:26845:0.Current=57
+Messaging.Sent.Messages.To.S127.0.0.1:26845:423738308.Current=1360
+Messaging.Sent.Messages.To.S127.0.0.1:26846:423738308.Current=1417
+Messaging.Sent.Messages.To.S127.0.0.1:26935:0.Current=9
+Messaging.Sent.Messages.To.S127.0.0.1:26935:423738778.Current=293
+Messaging.Sent.Messages.To.S127.0.0.1:26936:423738779.Current=307
+Messaging.Sent.Messages.To.S127.0.0.1:26940:0.Current=65
+Messaging.Sent.Messages.To.S127.0.0.1:26940:423738185.Current=1615
+Messaging.Sent.Messages.To.S127.0.0.1:26941:423738186.Current=1678
+Messaging.Sent.Messages.To.S127.0.0.1:27140:0.Current=61
+Messaging.Sent.Messages.To.S127.0.0.1:27140:423738268.Current=1414
+Messaging.Sent.Messages.To.S127.0.0.1:27141:423738269.Current=1475
+Messaging.Sent.Messages.To.S127.0.0.1:27165:0.Current=54
+Messaging.Sent.Messages.To.S127.0.0.1:27165:423738345.Current=1240
+Messaging.Sent.Messages.To.S127.0.0.1:27166:423738345.Current=1302
+Messaging.Sent.Messages.To.S127.0.0.1:27180:0.Current=46
+Messaging.Sent.Messages.To.S127.0.0.1:27180:423738407.Current=1209
+Messaging.Sent.Messages.To.S127.0.0.1:27181:423738407.Current=1247
+Messaging.Sent.Messages.To.S127.0.0.1:27650:0.Current=48
+Messaging.Sent.Messages.To.S127.0.0.1:27650:423738340.Current=1276
+Messaging.Sent.Messages.To.S127.0.0.1:27651:423738340.Current=1323
+Messaging.Sent.Messages.To.S127.0.0.1:27865:0.Current=63
+Messaging.Sent.Messages.To.S127.0.0.1:27865:423738190.Current=1674
+Messaging.Sent.Messages.To.S127.0.0.1:27866:423738191.Current=1735
+Messaging.Sent.Messages.To.S127.0.0.1:27965:0.Current=60
+Messaging.Sent.Messages.To.S127.0.0.1:27965:423738315.Current=1343
+Messaging.Sent.Messages.To.S127.0.0.1:27966:423738315.Current=1399
+Messaging.Sent.Messages.To.S127.0.0.1:28125:0.Current=26
+Messaging.Sent.Messages.To.S127.0.0.1:28125:423738588.Current=715
+Messaging.Sent.Messages.To.S127.0.0.1:28126:423738588.Current=744
+Messaging.Sent.Messages.To.S127.0.0.1:28330:0.Current=60
+Messaging.Sent.Messages.To.S127.0.0.1:28330:423738333.Current=1288
+Messaging.Sent.Messages.To.S127.0.0.1:28331:423738333.Current=1348
+Messaging.Sent.Messages.To.S127.0.0.1:28400:0.Current=8
+Messaging.Sent.Messages.To.S127.0.0.1:28400:423738837.Current=158
+Messaging.Sent.Messages.To.S127.0.0.1:28401:423738837.Current=164
+Messaging.Sent.Messages.To.S127.0.0.1:28485:0.Current=32
+Messaging.Sent.Messages.To.S127.0.0.1:28485:423738488.Current=976
+Messaging.Sent.Messages.To.S127.0.0.1:28486:423738489.Current=1009
+Messaging.Sent.Messages.To.S127.0.0.1:28555:0.Current=28
+Messaging.Sent.Messages.To.S127.0.0.1:28555:423738523.Current=944
+Messaging.Sent.Messages.To.S127.0.0.1:28556:423738523.Current=957
+Messaging.Sent.Messages.To.S127.0.0.1:28585:0.Current=43
+Messaging.Sent.Messages.To.S127.0.0.1:28585:423738385.Current=1184
+Messaging.Sent.Messages.To.S127.0.0.1:28586:423738385.Current=1230
+Messaging.Sent.Messages.To.S127.0.0.1:28795:0.Current=43
+Messaging.Sent.Messages.To.S127.0.0.1:28795:423738378.Current=1207
+Messaging.Sent.Messages.To.S127.0.0.1:28796:423738378.Current=1253
+Messaging.Sent.Messages.To.S127.0.0.1:28805:0.Current=24
+Messaging.Sent.Messages.To.S127.0.0.1:28805:423738632.Current=677
+Messaging.Sent.Messages.To.S127.0.0.1:28806:423738633.Current=706
+Messaging.Sent.Messages.To.S127.0.0.1:28820:0.Current=55
+Messaging.Sent.Messages.To.S127.0.0.1:28820:423738277.Current=1400
+Messaging.Sent.Messages.To.S127.0.0.1:28821:423738277.Current=1458
+Messaging.Sent.Messages.To.S127.0.0.1:29065:0.Current=53
+Messaging.Sent.Messages.To.S127.0.0.1:29065:423738282.Current=1399
+Messaging.Sent.Messages.To.S127.0.0.1:29066:423738282.Current=1451
+Messaging.Sent.Messages.To.S127.0.0.1:29075:0.Current=66
+Messaging.Sent.Messages.To.S127.0.0.1:29075:423738208.Current=1582
+Messaging.Sent.Messages.To.S127.0.0.1:29076:423738208.Current=1650
+Messaging.Sent.Messages.To.S127.0.0.1:29310:0.Current=13
+Messaging.Sent.Messages.To.S127.0.0.1:29310:423738715.Current=418
+Messaging.Sent.Messages.To.S127.0.0.1:29311:423738715.Current=420
+Messaging.Sent.Messages.To.S127.0.0.1:29375:0.Current=5
+Messaging.Sent.Messages.To.S127.0.0.1:29375:423738858.Current=50,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:29376:423738858.Current=56,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:29515:0.Current=41
+Messaging.Sent.Messages.To.S127.0.0.1:29515:423738444.Current=1049
+Messaging.Sent.Messages.To.S127.0.0.1:29516:423738444.Current=1086
+Messaging.Sent.Messages.To.S127.0.0.1:29530:0.Current=76
+Messaging.Sent.Messages.To.S127.0.0.1:29530:423738200.Current=1611
+Messaging.Sent.Messages.To.S127.0.0.1:29531:423738200.Current=1690
+Messaging.Sent.Messages.To.S127.0.0.1:29565:0.Current=65
+Messaging.Sent.Messages.To.S127.0.0.1:29565:423738229.Current=1519
+Messaging.Sent.Messages.To.S127.0.0.1:29566:423738229.Current=1582
+Messaging.Sent.Messages.To.S127.0.0.1:29650:0.Current=69
+Messaging.Sent.Messages.To.S127.0.0.1:29650:423738253.Current=1490
+Messaging.Sent.Messages.To.S127.0.0.1:29651:423738253.Current=1558
+Messaging.Sent.Messages.To.S127.0.0.1:29705:0.Current=39
+Messaging.Sent.Messages.To.S127.0.0.1:29705:423738551.Current=884
+Messaging.Sent.Messages.To.S127.0.0.1:29706:423738551.Current=933
+Messaging.Sent.Messages.To.S127.0.0.1:29885:0.Current=25
+Messaging.Sent.Messages.To.S127.0.0.1:29885:423738612.Current=663
+Messaging.Sent.Messages.To.S127.0.0.1:29886:423738613.Current=682
+Messaging.Sent.Messages.To.S127.0.0.1:29915:0.Current=45
+Messaging.Sent.Messages.To.S127.0.0.1:29915:423738371.Current=1228
+Messaging.Sent.Messages.To.S127.0.0.1:29916:423738371.Current=1270
+Messaging.Sent.Messages.To.S127.0.0.1:29955:0.Current=65,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:29955:423738262.Current=1468
+Messaging.Sent.Messages.To.S127.0.0.1:29956:423738262.Current=1533,      Delta=1
+Messaging.Sent.Messages.To.S127.0.0.1:40250:0.Current=26
+Messaging.Sent.Messages.To.S127.0.0.1:40251:0.Current=27
+Messaging.Sent.Messages.To.S127.0.0.1:40285:0.Current=18
+Messaging.Sent.Messages.To.S127.0.0.1:40286:0.Current=18
+Messaging.Sent.Messages.To.S127.0.0.1:40410:0.Current=15
+Messaging.Sent.Messages.To.S127.0.0.1:40411:0.Current=15
+Messaging.Sent.Messages.To.S127.0.0.1:40505:0.Current=13
+Messaging.Sent.Messages.To.S127.0.0.1:40506:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:40675:0.Current=35
+Messaging.Sent.Messages.To.S127.0.0.1:40676:0.Current=35
+Messaging.Sent.Messages.To.S127.0.0.1:40685:0.Current=26
+Messaging.Sent.Messages.To.S127.0.0.1:40686:0.Current=27
+Messaging.Sent.Messages.To.S127.0.0.1:41020:0.Current=5
+Messaging.Sent.Messages.To.S127.0.0.1:41021:0.Current=5
+Messaging.Sent.Messages.To.S127.0.0.1:41200:0.Current=11
+Messaging.Sent.Messages.To.S127.0.0.1:41201:0.Current=11
+Messaging.Sent.Messages.To.S127.0.0.1:41395:0.Current=29
+Messaging.Sent.Messages.To.S127.0.0.1:41396:0.Current=29
+Messaging.Sent.Messages.To.S127.0.0.1:41465:0.Current=26
+Messaging.Sent.Messages.To.S127.0.0.1:41466:0.Current=25
+Messaging.Sent.Messages.To.S127.0.0.1:41515:0.Current=14
+Messaging.Sent.Messages.To.S127.0.0.1:41516:0.Current=13
+Messaging.Sent.Messages.To.S127.0.0.1:41610:0.Current=20
+Messaging.Sent.Messages.To.S127.0.0.1:41611:0.Current=19
+Messaging.Sent.Messages.To.S127.0.0.1:41725:0.Current=13
+Messaging.Sent.Messages.To.S127.0.0.1:41726:0.Current=14
+Messaging.Sent.Messages.To.S127.0.0.1:41755:0.Current=11
+Messaging.Sent.Messages.To.S127.0.0.1:41756:0.Current=11
+Messaging.Sent.Messages.To.S127.0.0.1:41770:0.Current=18
+Messaging.Sent.Messages.To.S127.0.0.1:41771:0.Current=18
+Messaging.Sent.Messages.To.S127.0.0.1:41825:0.Current=14
+Messaging.Sent.Messages.To.S127.0.0.1:41826:0.Current=14
+Messaging.Sent.Messages.To.S127.0.0.1:42100:0.Current=14
+Messaging.Sent.Messages.To.S127.0.0.1:42101:0.Current=14
+Messaging.Sent.Messages.To.S127.0.0.1:42220:0.Current=9
+Messaging.Sent.Messages.To.S127.0.0.1:42221:0.Current=9
+Messaging.Sent.Messages.To.S127.0.0.1:42335:0.Current=17
+Messaging.Sent.Messages.To.S127.0.0.1:42336:0.Current=18
+Messaging.Sent.Messages.To.S127.0.0.1:43340:0.Current=15
+Messaging.Sent.Messages.To.S127.0.0.1:43341:0.Current=15
+Messaging.Sent.Messages.To.S127.0.0.1:43380:0.Current=17
+Messaging.Sent.Messages.To.S127.0.0.1:43381:0.Current=17
+Messaging.Sent.Messages.To.S127.0.0.1:43450:0.Current=6
+Messaging.Sent.Messages.To.S127.0.0.1:43451:0.Current=6
+Messaging.Sent.Messages.To.S127.0.0.1:43525:0.Current=4
+Messaging.Sent.Messages.To.S127.0.0.1:43526:0.Current=5
+Messaging.Sent.Messages.To.S127.0.0.1:43545:0.Current=20
+Messaging.Sent.Messages.To.S127.0.0.1:43546:0.Current=19
+Messaging.Sent.Messages.To.S127.0.0.1:43570:0.Current=20
+Messaging.Sent.Messages.To.S127.0.0.1:43571:0.Current=20
+Messaging.Sent.Messages.To.S127.0.0.1:43595:0.Current=21
+Messaging.Sent.Messages.To.S127.0.0.1:43596:0.Current=21
+Messaging.Sent.Messages.To.S127.0.0.1:43700:0.Current=15
+Messaging.Sent.Messages.To.S127.0.0.1:43701:0.Current=14
+Messaging.Sent.Messages.To.S127.0.0.1:43785:0.Current=15
+Messaging.Sent.Messages.To.S127.0.0.1:43786:0.Current=15
+Messaging.Sent.Messages.To.S127.0.0.1:43810:0.Current=20
+Messaging.Sent.Messages.To.S127.0.0.1:43811:0.Current=21
+Messaging.Sent.Messages.To.S127.0.0.1:44075:0.Current=23
+Messaging.Sent.Messages.To.S127.0.0.1:44076:0.Current=22
+Messaging.Sent.Messages.To.S127.0.0.1:44330:0.Current=20
+Messaging.Sent.Messages.To.S127.0.0.1:44331:0.Current=20
+Messaging.Sent.Messages.To.S127.0.0.1:44930:0.Current=14
+Messaging.Sent.Messages.To.S127.0.0.1:44931:0.Current=13
+Messaging.Sent.Messages.To.S127.0.0.1:45110:0.Current=27
+Messaging.Sent.Messages.To.S127.0.0.1:45111:0.Current=27
+Messaging.Sent.Messages.To.S127.0.0.1:45145:0.Current=10
+Messaging.Sent.Messages.To.S127.0.0.1:45146:0.Current=11
+Messaging.Sent.Messages.To.S127.0.0.1:45190:0.Current=9
+Messaging.Sent.Messages.To.S127.0.0.1:45191:0.Current=10
+Messaging.Sent.Messages.To.S127.0.0.1:45650:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:45651:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:45920:0.Current=9
+Messaging.Sent.Messages.To.S127.0.0.1:45921:0.Current=10
+Messaging.Sent.Messages.To.S127.0.0.1:46265:0.Current=18
+Messaging.Sent.Messages.To.S127.0.0.1:46266:0.Current=18
+Messaging.Sent.Messages.To.S127.0.0.1:46390:0.Current=19
+Messaging.Sent.Messages.To.S127.0.0.1:46391:0.Current=19
+Messaging.Sent.Messages.To.S127.0.0.1:46520:0.Current=9
+Messaging.Sent.Messages.To.S127.0.0.1:46521:0.Current=9
+Messaging.Sent.Messages.To.S127.0.0.1:46575:0.Current=37
+Messaging.Sent.Messages.To.S127.0.0.1:46576:0.Current=38
+Messaging.Sent.Messages.To.S127.0.0.1:46715:0.Current=6
+Messaging.Sent.Messages.To.S127.0.0.1:46716:0.Current=5
+Messaging.Sent.Messages.To.S127.0.0.1:46900:0.Current=17
+Messaging.Sent.Messages.To.S127.0.0.1:46901:0.Current=16
+Messaging.Sent.Messages.To.S127.0.0.1:46920:0.Current=14
+Messaging.Sent.Messages.To.S127.0.0.1:46921:0.Current=15
+Messaging.Sent.Messages.To.S127.0.0.1:47195:0.Current=23
+Messaging.Sent.Messages.To.S127.0.0.1:47196:0.Current=23
+Messaging.Sent.Messages.To.S127.0.0.1:47345:0.Current=15
+Messaging.Sent.Messages.To.S127.0.0.1:47346:0.Current=15
+Messaging.Sent.Messages.To.S127.0.0.1:47375:0.Current=17
+Messaging.Sent.Messages.To.S127.0.0.1:47376:0.Current=18
+Messaging.Sent.Messages.To.S127.0.0.1:47570:0.Current=10
+Messaging.Sent.Messages.To.S127.0.0.1:47571:0.Current=10
+Messaging.Sent.Messages.To.S127.0.0.1:47630:0.Current=11
+Messaging.Sent.Messages.To.S127.0.0.1:47631:0.Current=11
+Messaging.Sent.Messages.To.S127.0.0.1:47640:0.Current=11
+Messaging.Sent.Messages.To.S127.0.0.1:47641:0.Current=11
+Messaging.Sent.Messages.To.S127.0.0.1:47690:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:47691:0.Current=11
+Messaging.Sent.Messages.To.S127.0.0.1:47800:0.Current=9
+Messaging.Sent.Messages.To.S127.0.0.1:47801:0.Current=10
+Messaging.Sent.Messages.To.S127.0.0.1:47975:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:47976:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:48155:0.Current=16
+Messaging.Sent.Messages.To.S127.0.0.1:48156:0.Current=17
+Messaging.Sent.Messages.To.S127.0.0.1:48255:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:48256:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:48455:0.Current=36
+Messaging.Sent.Messages.To.S127.0.0.1:48456:0.Current=35
+Messaging.Sent.Messages.To.S127.0.0.1:48545:0.Current=27
+Messaging.Sent.Messages.To.S127.0.0.1:48546:0.Current=28
+Messaging.Sent.Messages.To.S127.0.0.1:48925:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:48926:0.Current=12
+Messaging.Sent.Messages.To.S127.0.0.1:48955:0.Current=18
+Messaging.Sent.Messages.To.S127.0.0.1:48956:0.Current=17
+Messaging.Sent.Messages.To.S127.0.0.1:49120:0.Current=8
+Messaging.Sent.Messages.To.S127.0.0.1:49121:0.Current=9
+Messaging.Sent.Messages.To.S127.0.0.1:49365:0.Current=11
+Messaging.Sent.Messages.To.S127.0.0.1:49366:0.Current=11
+Messaging.Sent.Messages.To.S127.0.0.1:49530:0.Current=14
+Messaging.Sent.Messages.To.S127.0.0.1:49531:0.Current=15
+Messaging.Sent.Messages.To.S127.0.0.1:49800:0.Current=10
+Messaging.Sent.Messages.To.S127.0.0.1:49801:0.Current=10
+Messaging.Sent.Messages.Total.Current=139159,      Delta=12
+Messaging.Sent.MessageSizeHistogram.Bytes
