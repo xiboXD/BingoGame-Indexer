@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "/Users/xibo/practice/bingo-indexer/test/Portkey.Indexer.CA.Tests/Portkey.Indexer.CA.Tests.csproj": {}
+    "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.CA.Tests/BingoGame.Indexer.CA.Tests.csproj": {}
   },
   "projects": {
     "/Users/xibo/practice/bingo-indexer/src/BingoGame.Indexer.CA/BingoGame.Indexer.CA.csproj": {
@@ -63,14 +63,14 @@
         }
       }
     },
-    "/Users/xibo/practice/bingo-indexer/test/Portkey.Indexer.CA.Tests/Portkey.Indexer.CA.Tests.csproj": {
+    "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.CA.Tests/BingoGame.Indexer.CA.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/xibo/practice/bingo-indexer/test/Portkey.Indexer.CA.Tests/Portkey.Indexer.CA.Tests.csproj",
-        "projectName": "Portkey.Indexer.CA.Tests",
-        "projectPath": "/Users/xibo/practice/bingo-indexer/test/Portkey.Indexer.CA.Tests/Portkey.Indexer.CA.Tests.csproj",
+        "projectUniqueName": "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.CA.Tests/BingoGame.Indexer.CA.Tests.csproj",
+        "projectName": "BingoGame.Indexer.CA.Tests",
+        "projectPath": "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.CA.Tests/BingoGame.Indexer.CA.Tests.csproj",
         "packagesPath": "/Users/xibo/.nuget/packages/",
-        "outputPath": "/Users/xibo/practice/bingo-indexer/test/Portkey.Indexer.CA.Tests/obj/",
+        "outputPath": "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.CA.Tests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/xibo/.nuget/NuGet/NuGet.Config"

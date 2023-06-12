@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DC6D5F28-CD0F-49C9-BD0D-564A059595BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingoGame.Indexer.CA", "src\BingoGame.Indexer.CA\BingoGame.Indexer.CA.csproj", "{70CD7448-F1CD-4C60-A4F4-9FF25F910AD3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{FFF6C1F0-1595-4D71-9F12-D4CE3696A5CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingoGame.Indexer.TestDapp", "test\PortKey.Indexer.TestDapp\BingoGame.Indexer.TestDapp.csproj", "{978F2E2F-EDB5-4351-9C6E-6EA18BDF9FD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingoGame.Indexer.TestBase", "test\BingoGame.Indexer.TestBase\BingoGame.Indexer.TestBase.csproj", "{3F376A1C-4DA4-4731-9BF3-E3B897D8745E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingoGame.Indexer.CA.Tests", "test\BingoGame.Indexer.CA.Tests\BingoGame.Indexer.CA.Tests.csproj", "{F2459FE7-C354-4EAF-AA17-38ED81416371}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingoGame.Indexer.Orleans.TestBase", "test\BingoGame.Indexer.Orleans.TestBase\BingoGame.Indexer.Orleans.TestBase.csproj", "{FA25457F-F57D-4BA3-85A0-D89D09510B08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{70CD7448-F1CD-4C60-A4F4-9FF25F910AD3} = {DC6D5F28-CD0F-49C9-BD0D-564A059595BD}
+		{978F2E2F-EDB5-4351-9C6E-6EA18BDF9FD0} = {FFF6C1F0-1595-4D71-9F12-D4CE3696A5CE}
+		{3F376A1C-4DA4-4731-9BF3-E3B897D8745E} = {FFF6C1F0-1595-4D71-9F12-D4CE3696A5CE}
+		{F2459FE7-C354-4EAF-AA17-38ED81416371} = {FFF6C1F0-1595-4D71-9F12-D4CE3696A5CE}
+		{FA25457F-F57D-4BA3-85A0-D89D09510B08} = {FFF6C1F0-1595-4D71-9F12-D4CE3696A5CE}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70CD7448-F1CD-4C60-A4F4-9FF25F910AD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70CD7448-F1CD-4C60-A4F4-9FF25F910AD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70CD7448-F1CD-4C60-A4F4-9FF25F910AD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70CD7448-F1CD-4C60-A4F4-9FF25F910AD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{978F2E2F-EDB5-4351-9C6E-6EA18BDF9FD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{978F2E2F-EDB5-4351-9C6E-6EA18BDF9FD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{978F2E2F-EDB5-4351-9C6E-6EA18BDF9FD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{978F2E2F-EDB5-4351-9C6E-6EA18BDF9FD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F376A1C-4DA4-4731-9BF3-E3B897D8745E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F376A1C-4DA4-4731-9BF3-E3B897D8745E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F376A1C-4DA4-4731-9BF3-E3B897D8745E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F376A1C-4DA4-4731-9BF3-E3B897D8745E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2459FE7-C354-4EAF-AA17-38ED81416371}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2459FE7-C354-4EAF-AA17-38ED81416371}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2459FE7-C354-4EAF-AA17-38ED81416371}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2459FE7-C354-4EAF-AA17-38ED81416371}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA25457F-F57D-4BA3-85A0-D89D09510B08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA25457F-F57D-4BA3-85A0-D89D09510B08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA25457F-F57D-4BA3-85A0-D89D09510B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA25457F-F57D-4BA3-85A0-D89D09510B08}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

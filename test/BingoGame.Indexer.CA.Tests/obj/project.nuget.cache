@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ni13ygX14UwgtL6dESjqFuvPjezOjubbv+udWugxU+qmqeZoLaWUknkFfP7THpENGgMnBveV+0k0ya/v8f34HQ==",
+  "dgSpecHash": "IIMBBZrC0EpDOodkEEHZuXJMPS29glZDnoMXW1OxG5aroKedcydhPIFUul+IexsesuZtkgfn26o0QhqHR9g15g==",
   "success": true,
   "projectFilePath": "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.CA.Tests/BingoGame.Indexer.CA.Tests.csproj",
   "expectedPackageFiles": [

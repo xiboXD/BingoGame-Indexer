@@ -14,13 +14,15 @@
         "outputPath": "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.TestBase/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
+          "/Users/xibo/practice/bingo-indexer/NuGet.Config",
           "/Users/xibo/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/aelf-project-dev/api/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {

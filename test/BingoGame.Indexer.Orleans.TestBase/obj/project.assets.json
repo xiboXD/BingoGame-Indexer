@@ -10950,13 +10950,13 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "AElf.Orleans.EventSourcing.Snapshot >= 1.0.3",
+      "BingoGame.Indexer.TestBase >= 1.0.0",
       "Microsoft.Orleans.Client >= 3.6.5",
       "Microsoft.Orleans.CodeGenerator.MSBuild >= 3.6.5",
       "Microsoft.Orleans.Core >= 3.6.5",
       "Microsoft.Orleans.Core.Abstractions >= 3.6.5",
       "Microsoft.Orleans.Server >= 3.6.5",
       "Microsoft.Orleans.TestingHost >= 3.6.5",
-      "BingoGame.Indexer.TestBase >= 1.0.0",
       "xunit >= 2.4.2",
       "xunit.runner.console >= 2.4.2",
       "xunit.runner.visualstudio >= 2.4.5"
@@ -10975,13 +10975,15 @@
       "outputPath": "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.Orleans.TestBase/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
+        "/Users/xibo/practice/bingo-indexer/NuGet.Config",
         "/Users/xibo/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.myget.org/F/aelf-project-dev/api/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {

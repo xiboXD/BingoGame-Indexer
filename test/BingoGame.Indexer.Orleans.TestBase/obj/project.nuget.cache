@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bkv7eIAtyVyVS3I0twNpJ0ViAhxEhTKzkCHrfDNOVcvuWF0biPiX8BJCACT2JThDVLs804ZPIRHUzAr4st8fyA==",
+  "dgSpecHash": "+s825P7B5rKKE+KTFtPTMZiBDhsbFOQcJ4ISS26mY/JcEeDcVcYJ7gGnkymzEDnxsAGX1LRP1Ly0b/q+dxm+kQ==",
   "success": true,
   "projectFilePath": "/Users/xibo/practice/bingo-indexer/test/BingoGame.Indexer.Orleans.TestBase/BingoGame.Indexer.Orleans.TestBase.csproj",
   "expectedPackageFiles": [
