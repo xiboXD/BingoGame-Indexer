@@ -1,7 +1,0 @@
-﻿[2023-06-01 07:12:33.614 GMT 19	Information	100313	Orleans.OutsideRuntimeClient]	---------- Initializing OutsideRuntimeClient on localhost at 10.0.0.158 Client Id = *cli/c9d6bfa2 ----------	
-[2023-06-01 07:12:33.614 GMT 19	Information	100314	Orleans.OutsideRuntimeClient]	---------- Starting OutsideRuntimeClient with runtime Version='3.6.5. Commit Hash: 54382a15b653f80784520c9055614cbf429a1b16+54382a15b653f80784520c9055614cbf429a1b16 (Release).' in AppDomain=<AppDomain.Id=1, AppDomain.FriendlyName=testhost>	
-[2023-06-01 07:12:33.624 GMT 21	Information	101309	Orleans.Messaging.GatewayManager]	Found 2 gateways: [gwy.tcp://127.0.0.1:42370/0, gwy.tcp://127.0.0.1:42371/0]	
-[2023-06-01 07:12:33.628 GMT 8	Information	0	Orleans.Networking]	Establishing connection to endpoint S127.0.0.1:42370:0	
-[2023-06-01 07:12:33.630 GMT 10	Information	0	Orleans.Networking]	Connected to endpoint S127.0.0.1:42370:0	
-[2023-06-01 07:12:33.630 GMT 10	Information	0	Orleans.Networking]	Connection [Local: 127.0.0.1:60351, Remote: 127.0.0.1:42370, ConnectionId: 0HMR2DU8V37VF] established with S127.0.0.1:42370:0	
-[2023-06-01 07:12:33.662 GMT 18	Information	0	Orleans.Networking]	Establishing connection to endpoint S127.0.0.1:42371:0	

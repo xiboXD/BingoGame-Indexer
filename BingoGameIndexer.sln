@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingoGame.Indexer.CA", "src
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{FFF6C1F0-1595-4D71-9F12-D4CE3696A5CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingoGame.Indexer.TestDapp", "test\PortKey.Indexer.TestDapp\BingoGame.Indexer.TestDapp.csproj", "{978F2E2F-EDB5-4351-9C6E-6EA18BDF9FD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingoGame.Indexer.TestDapp", "test\BingoGame.Indexer.TestDapp\BingoGame.Indexer.TestDapp.csproj", "{978F2E2F-EDB5-4351-9C6E-6EA18BDF9FD0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingoGame.Indexer.TestBase", "test\BingoGame.Indexer.TestBase\BingoGame.Indexer.TestBase.csproj", "{3F376A1C-4DA4-4731-9BF3-E3B897D8745E}"
 EndProject
