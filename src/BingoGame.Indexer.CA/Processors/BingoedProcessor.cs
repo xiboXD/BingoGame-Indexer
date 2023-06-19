@@ -8,34 +8,23 @@ using Portkey.Contracts.BingoGameContract;
 using BingoGame.Indexer.CA.Entities;
 using BingoGame.Indexer.CA.GraphQL;
 using Volo.Abp.ObjectMapping;
+using BingoGame.Indexer.CA.Processors;
 
 namespace BingoGame.Indexer.CA.Processors;
 
-public class BingoedProcessor : CAHolderTransactionProcessorBase<Bingoed>
+public class BingoedProcessor : BingoGameProcessorBase<Bingoed>
 {   
 
-    private readonly IAElfIndexerClientEntityRepository<CAHolderIndex, LogEventInfo> _repository;
     private readonly IAElfIndexerClientEntityRepository<BingoGameIndex, TransactionInfo> _bingoIndexRepository;
     private readonly IAElfIndexerClientEntityRepository<BingoGameStaticsIndex, TransactionInfo> _bingoStaticsIndexRepository;
     private readonly IObjectMapper _objectMapper;
     public BingoedProcessor(ILogger<BingoedProcessor> logger,
-        IAElfIndexerClientEntityRepository<CAHolderIndex, LogEventInfo> repository,
         IAElfIndexerClientEntityRepository<BingoGameIndex, TransactionInfo> bingoIndexRepository,
         IAElfIndexerClientEntityRepository<BingoGameStaticsIndex, TransactionInfo> bingoStaticsIndexRepository,
-        IAElfIndexerClientEntityRepository<CAHolderIndex, LogEventInfo> caHolderIndexRepository,
-        IAElfIndexerClientEntityRepository<CAHolderManagerIndex, LogEventInfo> caHolderManagerIndexRepository,
-        IAElfIndexerClientEntityRepository<CAHolderTransactionIndex, TransactionInfo>
-            caHolderTransactionIndexRepository,
-        IAElfIndexerClientEntityRepository<CAHolderTransactionAddressIndex, TransactionInfo>
-            caHolderTransactionAddressIndexRepository,
         IOptionsSnapshot<ContractInfoOptions> contractInfoOptions,
-        IOptionsSnapshot<CAHolderTransactionInfoOptions> caHolderTransactionInfoOptions, IObjectMapper objectMapper) :
-        base(logger, caHolderIndexRepository,caHolderManagerIndexRepository, caHolderTransactionIndexRepository, 
-            caHolderTransactionAddressIndexRepository, contractInfoOptions,
-            caHolderTransactionInfoOptions, objectMapper)
+        IObjectMapper objectMapper) :
+        base(logger,objectMapper,contractInfoOptions)
     {
-   
-        _repository = repository;
         _bingoIndexRepository = bingoIndexRepository;
         _objectMapper = objectMapper;
         _bingoStaticsIndexRepository = bingoStaticsIndexRepository;
@@ -52,32 +41,7 @@ public class BingoedProcessor : CAHolderTransactionProcessorBase<Bingoed>
         {
             return;
         }
-        
-        // await ProcessCAHolderTransactionAsync(context, eventValue.PlayerAddress.ToBase58());
-        if (!IsValidTransaction(context.ChainId, context.To, context.MethodName, context.Params)) return;
-        var holder = await CAHolderIndexRepository.GetFromBlockStateSetAsync(IdGenerateHelper.GetId(context.ChainId,
-            eventValue.PlayerAddress.ToBase58()), context.ChainId);
-        if (holder == null) return;
-
-        var transIndex = new CAHolderTransactionIndex
-        {
-            Id = IdGenerateHelper.GetId(context.BlockHash, context.TransactionId),
-            Timestamp = context.BlockTime.ToTimestamp().Seconds,
-            FromAddress = eventValue.PlayerAddress.ToBase58(),
-            TransactionFee = GetTransactionFee(context.ExtraProperties),
-            TransferInfo = new TransferInfo
-            {
-                FromAddress = GetContractAddress(context.ChainId),
-                ToAddress = eventValue.PlayerAddress.ToBase58(),
-                Amount = (eventValue.Amount + eventValue.Award) / 100000000,
-                FromChainId = context.ChainId,
-                ToChainId = context.ChainId,
-            },
-        };
-        ObjectMapper.Map(context, transIndex);
-        transIndex.MethodName = GetMethodName(context.MethodName, context.Params);
-
-        await CAHolderTransactionIndexRepository.AddOrUpdateAsync(transIndex);
+        //update bingoIndex
         var index = await _bingoIndexRepository.GetFromBlockStateSetAsync(eventValue.PlayId.ToHex(), context.ChainId);
         if (index == null)
         {

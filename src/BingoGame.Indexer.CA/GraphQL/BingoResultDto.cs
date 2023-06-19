@@ -41,3 +41,10 @@ public class BingoStatics
     public long Amount { get; set; }
     public string PlayerAddress { get; set; }
 }
+
+public class TransactionFee
+{
+    public string Symbol { get; set; }
+    
+    public long Amount { get; set; }
+}

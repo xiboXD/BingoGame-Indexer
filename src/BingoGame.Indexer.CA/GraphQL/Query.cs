@@ -13,8 +13,8 @@ namespace BingoGame.Indexer.CA.GraphQL;
 
 public class Query
 {
-    [Name("caHolderBingoInfo")]
-    public static async Task<BingoResultDto> CAHolderBingoInfo(
+    [Name("BingoGameInfo")]
+    public static async Task<BingoResultDto> BingoGameInfo(
         [FromServices] IAElfIndexerClientEntityRepository<BingoGameIndex, LogEventInfo> repository,
         [FromServices] IAElfIndexerClientEntityRepository<BingoGameStaticsIndex, LogEventInfo> staticsrepository,
         [FromServices] IObjectMapper objectMapper,  GetBingoDto dto)

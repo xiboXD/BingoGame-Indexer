@@ -13,29 +13,21 @@ using Volo.Abp.ObjectMapping;
 
 namespace BingoGame.Indexer.CA.Processors;
 
-public class PlayedProcessor : CAHolderTransactionProcessorBase<Played>
+public class PlayedProcessor : BingoGameProcessorBase<Played>
 {
-    private readonly IObjectMapper _objectMapper;
-    private readonly IAElfIndexerClientEntityRepository<CAHolderIndex, LogEventInfo> _repository;
     private readonly IAElfIndexerClientEntityRepository<BingoGameIndex, TransactionInfo> _bingoIndexRepository;
+    private readonly IAElfIndexerClientEntityRepository<BingoGameStaticsIndex, TransactionInfo> _bingoStaticsIndexRepository;
+    private readonly IObjectMapper _objectMapper;
     public PlayedProcessor(ILogger<PlayedProcessor> logger,
-        IAElfIndexerClientEntityRepository<CAHolderIndex, LogEventInfo> caHolderIndexRepository,
-        IAElfIndexerClientEntityRepository<CAHolderIndex, LogEventInfo> repository,
         IAElfIndexerClientEntityRepository<BingoGameIndex, TransactionInfo> bingoIndexRepository,
-        IAElfIndexerClientEntityRepository<CAHolderManagerIndex, LogEventInfo> caHolderManagerIndexRepository,
-        IAElfIndexerClientEntityRepository<CAHolderTransactionIndex, TransactionInfo>
-            caHolderTransactionIndexRepository,
-        IAElfIndexerClientEntityRepository<CAHolderTransactionAddressIndex, TransactionInfo>
-            caHolderTransactionAddressIndexRepository,
+        IAElfIndexerClientEntityRepository<BingoGameStaticsIndex, TransactionInfo> bingoStaticsIndexRepository,
         IOptionsSnapshot<ContractInfoOptions> contractInfoOptions,
-        IOptionsSnapshot<CAHolderTransactionInfoOptions> caHolderTransactionInfoOptions, IObjectMapper objectMapper) :
-        base(logger, caHolderIndexRepository,caHolderManagerIndexRepository, caHolderTransactionIndexRepository, 
-            caHolderTransactionAddressIndexRepository, contractInfoOptions,
-            caHolderTransactionInfoOptions, objectMapper)
+        IObjectMapper objectMapper) :
+        base(logger,objectMapper,contractInfoOptions)
     {
-        _objectMapper = objectMapper;
-        _repository = repository;
         _bingoIndexRepository = bingoIndexRepository;
+        _objectMapper = objectMapper;
+        _bingoStaticsIndexRepository = bingoStaticsIndexRepository;
     }
 
     public override string GetContractAddress(string chainId)
@@ -49,31 +41,7 @@ public class PlayedProcessor : CAHolderTransactionProcessorBase<Played>
         {
             return;
         }
-        // await ProcessCAHolderTransactionAsync(context, eventValue.PlayerAddress.ToBase58());
-        if (!IsValidTransaction(context.ChainId, context.To, context.MethodName, context.Params)) return;
-        var holder = await CAHolderIndexRepository.GetFromBlockStateSetAsync(IdGenerateHelper.GetId(context.ChainId,
-            eventValue.PlayerAddress.ToBase58()), context.ChainId);
-        if (holder == null) return;
 
-        var transIndex = new CAHolderTransactionIndex
-        {
-            Id = IdGenerateHelper.GetId(context.BlockHash, context.TransactionId),
-            Timestamp = context.BlockTime.ToTimestamp().Seconds,
-            FromAddress = eventValue.PlayerAddress.ToBase58(),
-            TransactionFee = GetTransactionFee(context.ExtraProperties),
-            TransferInfo = new TransferInfo
-            {
-                FromAddress = eventValue.PlayerAddress.ToBase58(),
-                ToAddress = GetContractAddress(context.ChainId),
-                Amount = eventValue.Amount / 100000000,
-                FromChainId = context.ChainId,
-                ToChainId = context.ChainId,
-            },
-        };
-        ObjectMapper.Map(context, transIndex);
-        transIndex.MethodName = GetMethodName(context.MethodName, context.Params);
-
-        await CAHolderTransactionIndexRepository.AddOrUpdateAsync(transIndex);
         var index = await _bingoIndexRepository.GetFromBlockStateSetAsync(eventValue.PlayId.ToHex(), context.ChainId);
         if (index != null)
         {

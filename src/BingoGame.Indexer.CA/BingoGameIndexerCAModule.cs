@@ -16,11 +16,9 @@ public class BingoGameIndexerCAModule:AElfIndexerClientPluginBaseModule<BingoGam
     {
         var configuration = serviceCollection.GetConfiguration();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<TransactionInfo>, BingoedProcessor>();
-        serviceCollection.AddSingleton<IAElfLogEventProcessor<TransactionInfo>, RegisteredProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<TransactionInfo>, PlayedProcessor>();
 
         Configure<ContractInfoOptions>(configuration.GetSection("ContractInfo"));
-        Configure<CAHolderTransactionInfoOptions>(configuration.GetSection("CAHolderTransactionInfo"));
     }
 
     protected override string ClientId => "AElfIndexer_DApp";
