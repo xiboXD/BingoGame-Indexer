@@ -10,7 +10,7 @@ namespace BingoGame.Indexer.CA;
 
 
 [DependsOn(typeof(AElfIndexerClientModule))]
-public class BingoGameIndexerCAModule:AElfIndexerClientPluginBaseModule<BingoGameIndexerCAModule, PortKeyIndexerCASchema, Query>
+public class BingoGameIndexerCAModule:AElfIndexerClientPluginBaseModule<BingoGameIndexerCAModule, BingoGameIndexerCASchema, Query>
 {
     protected override void ConfigureServices(IServiceCollection serviceCollection)
     {
